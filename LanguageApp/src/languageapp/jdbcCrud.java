@@ -20,9 +20,7 @@ public class jdbcCrud {
     public static void insertEmp() {
         Connection con = connectDB.getConnection();
         Statement stmt = null;
-        String sqlString = ("INSERT INTO Student  \n"
-              +  "VALUES (1066789101, 'Simpson', 'Worker', 20010),\n"
-              + "(1066789102, 'Walker', 'Worker', 12345)");
+        String sqlString = ("");
         try {
             con.setAutoCommit(false);
             stmt = con.createStatement();
@@ -48,15 +46,20 @@ public class jdbcCrud {
             }
         }
     }
-      public static void insertEmp(int id, String forname, String surename, String emailaddress) {
+      public static void insertData(int id, String forname, String surename, String emailaddress, String password, int completed, int inProgress) {
 
         Connection con = connectDB.getConnection();
         Statement stmt = null;
-        int stuID = id;
-        String stuForname = forname;
-        String stuSurename = surename;
-        String stuEmailAddress = emailaddress;
-        String sqlString = "INSERT INTO Student (FirstName, SecondName, EmailAddress) VALUES ('" + id + "'," + forname + "," + surename + ",'" + emailaddress + "')";
+        int ID = id;
+        String studentFname = forname;
+        String studentSname = surename;
+        String studentEmail = emailaddress;
+        String studentPassword = password;
+        int completedActivity = completed;
+        int Progress = inProgress; 
+        
+        String sqlString = "INSERT INTO Student (FirstName, SureName, EmailAddress) VALUES (" + id + ", " + forname + ", " + surename + ", " + emailaddress + ", " + password + ", " + 
+                            completedActivity + ", " + inProgress + ")";
         try {
             con.setAutoCommit(false);
             stmt = con.createStatement();
