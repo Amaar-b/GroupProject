@@ -21,10 +21,13 @@ public class createTable {
         Statement stmt = null;
         String createString;
         createString = "CREATE TABLE if not exists student (\n"
-                + "            stuID     INTEGER      PRIMARY KEY,\n"
-                + "            stuName  VARCHAR (15),\n"
-                + "            stuJob  VARCHAR (15),\n"
-                + "            stuSal   INT (11)\n" + ") ;";
+                + "            ID     INTEGER      PRIMARY KEY,\n"
+                + "            Firstname  VARCHAR (15),\n"
+                + "            Surname VARCHAR (15),\n"
+                + "            Email   VARCHAR (25),\n"
+                + "            Password  VARCHAR (15),\n"
+                + "            InProgress  VARCHAR (15),\n"
+                + "            CompletedActivity   VARCHAR (25)\n" + ") ;";
         try {
             stmt = con.createStatement();
             stmt.executeUpdate(createString);
