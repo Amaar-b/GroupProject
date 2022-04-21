@@ -46,20 +46,20 @@ public class jdbcCrud {
             }
         }
     }
-      public static void insertData(int id, String forname, String surename, String emailaddress, String password, int completed, int inProgress) {
+      public static void insertData(int id, String forename, String surname, String emailaddress, String password, int completed, int inProgress) {
 
         Connection con = connectDB.getConnection();
         Statement stmt = null;
         int ID = id;
-        String studentFname = forname;
-        String studentSname = surename;
+        String studentFname = forename;
+        String studentSname = surname;
         String studentEmail = emailaddress;
         String studentPassword = password;
         int completedActivity = completed;
         int Progress = inProgress; 
         
-        String sqlString = "INSERT INTO Student (FirstName, SureName, EmailAddress) VALUES (" + id + ", " + forname + ", " + surename + ", " + emailaddress + ", " + password + ", " + 
-                            completedActivity + ", " + inProgress + ")";
+        String sqlString = "INSERT INTO Student (FirstName, SureName, EmailAddress) VALUES (" + ID + ", " + studentFname + ", " + studentSname + ", " + studentEmail + ", " + studentPassword + ", " + 
+                            completedActivity + ", " + Progress + ")";
         try {
             con.setAutoCommit(false);
             stmt = con.createStatement();

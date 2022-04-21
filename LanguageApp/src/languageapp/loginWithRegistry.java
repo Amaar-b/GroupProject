@@ -49,14 +49,14 @@ public class loginWithRegistry extends javax.swing.JFrame {
         jPanel2 = new javax.swing.JPanel();
         jLabel2 = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
-        jTextField3 = new javax.swing.JTextField();
+        signupFname = new javax.swing.JTextField();
         jLabel8 = new javax.swing.JLabel();
-        jTextField4 = new javax.swing.JTextField();
+        signupSname = new javax.swing.JTextField();
         jLabel5 = new javax.swing.JLabel();
         signupEmail = new javax.swing.JTextField();
         jLabel7 = new javax.swing.JLabel();
         signupPass = new javax.swing.JPasswordField();
-        signUpBtn = new javax.swing.JButton();
+        signupBtn = new javax.swing.JButton();
         jPanel3 = new javax.swing.JPanel();
         jLabel9 = new javax.swing.JLabel();
         jLabel10 = new javax.swing.JLabel();
@@ -145,16 +145,16 @@ public class loginWithRegistry extends javax.swing.JFrame {
 
         jLabel6.setText("Forename:");
 
-        jTextField3.setText("jTextField3");
-        jTextField3.addActionListener(new java.awt.event.ActionListener() {
+        signupFname.setText("jTextField3");
+        signupFname.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField3ActionPerformed(evt);
+                signupFnameActionPerformed(evt);
             }
         });
 
         jLabel8.setText("Surename:");
 
-        jTextField4.setText("jTextField4");
+        signupSname.setText("jTextField4");
 
         jLabel5.setText("Email:");
 
@@ -169,13 +169,13 @@ public class loginWithRegistry extends javax.swing.JFrame {
 
         signupPass.setText("Password");
 
-        signUpBtn.setText("Sign-Up");
-        signUpBtn.setFocusable(false);
-        signUpBtn.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        signUpBtn.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
-        signUpBtn.addActionListener(new java.awt.event.ActionListener() {
+        signupBtn.setText("Sign-Up");
+        signupBtn.setFocusable(false);
+        signupBtn.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        signupBtn.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
+        signupBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                signUpBtnActionPerformed(evt);
+                signupBtnActionPerformed(evt);
             }
         });
 
@@ -194,13 +194,13 @@ public class loginWithRegistry extends javax.swing.JFrame {
                             .addComponent(jLabel5))
                         .addGap(42, 42, 42)
                         .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(jTextField3, javax.swing.GroupLayout.DEFAULT_SIZE, 147, Short.MAX_VALUE)
-                            .addComponent(jTextField4)
+                            .addComponent(signupFname, javax.swing.GroupLayout.DEFAULT_SIZE, 147, Short.MAX_VALUE)
+                            .addComponent(signupSname)
                             .addComponent(signupEmail)
                             .addComponent(signupPass)
                             .addGroup(jPanel2Layout.createSequentialGroup()
                                 .addGap(19, 19, 19)
-                                .addComponent(signUpBtn))))
+                                .addComponent(signupBtn))))
                     .addGroup(jPanel2Layout.createSequentialGroup()
                         .addGap(148, 148, 148)
                         .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)))
@@ -214,11 +214,11 @@ public class loginWithRegistry extends javax.swing.JFrame {
                 .addGap(24, 24, 24)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(jLabel6)
-                    .addComponent(jTextField3, javax.swing.GroupLayout.PREFERRED_SIZE, 19, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(signupFname, javax.swing.GroupLayout.PREFERRED_SIZE, 19, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel8)
-                    .addComponent(jTextField4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(signupSname, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel5)
@@ -228,12 +228,12 @@ public class loginWithRegistry extends javax.swing.JFrame {
                     .addComponent(jLabel7)
                     .addComponent(signupPass, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 42, Short.MAX_VALUE)
-                .addComponent(signUpBtn)
+                .addComponent(signupBtn)
                 .addGap(31, 31, 31))
         );
 
         jLabel9.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        jLabel9.setText("Welsome to the Language Practice App");
+        jLabel9.setText("Welcome to the Language Practice App");
 
         jLabel10.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
         jLabel10.setText("Please Login or Register to access the App ");
@@ -306,13 +306,13 @@ public class loginWithRegistry extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_loginEmailActionPerformed
 
-    private void jTextField3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField3ActionPerformed
+    private void signupFnameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_signupFnameActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField3ActionPerformed
+    }//GEN-LAST:event_signupFnameActionPerformed
 
-    private void signUpBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_signUpBtnActionPerformed
+    private void signupBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_signupBtnActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_signUpBtnActionPerformed
+    }//GEN-LAST:event_signupBtnActionPerformed
 
     private void signupEmailActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_signupEmailActionPerformed
         // TODO add your handling code here:
@@ -320,28 +320,28 @@ public class loginWithRegistry extends javax.swing.JFrame {
 
     private void loginBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_loginBtnActionPerformed
         // TODO add your handling code here:
-        try {
-            Connection con = connectDB.getConnection();
-            Statement stmt = null;
-            System.out.println("con" + con);
-            
-            String sql = "Select * from USER where userEmail=?";
-            
-            
-            if(rs.next())
-            {
+//        try {
+//            Connection con = connectDB.getConnection();
+//            Statement stmt = null;
+//            System.out.println("con" + con);
 //            
-            }else {
-            JOptionPane.showMessageDialog(null, "Invalid entry, Please try again.");
-            }
-            
-            
-            
-        
-        }
-        catch (Exception e) {
-        JOptionPane.showMessageDialog(null, "User Not Found");
-        }
+//            String sql = "Select * from USER where userEmail=?";
+//            
+//            
+//            if(rs.next())
+//            {
+////            
+//            }else {
+//            JOptionPane.showMessageDialog(null, "Invalid entry, Please try again.");
+//            }
+//            
+//            
+//            
+//        
+//        }
+//        catch (Exception e) {
+//        JOptionPane.showMessageDialog(null, "User Not Found");
+//        }
     }//GEN-LAST:event_loginBtnActionPerformed
 
     /**
@@ -395,13 +395,13 @@ public class loginWithRegistry extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel3;
     private javax.swing.JSeparator jSeparator1;
     private javax.swing.JSeparator jSeparator2;
-    private javax.swing.JTextField jTextField3;
-    private javax.swing.JTextField jTextField4;
     private javax.swing.JButton loginBtn;
     private javax.swing.JTextField loginEmail;
     private javax.swing.JPasswordField loginPass;
-    private javax.swing.JButton signUpBtn;
+    private javax.swing.JButton signupBtn;
     private javax.swing.JTextField signupEmail;
+    private javax.swing.JTextField signupFname;
     private javax.swing.JPasswordField signupPass;
+    private javax.swing.JTextField signupSname;
     // End of variables declaration//GEN-END:variables
 }
