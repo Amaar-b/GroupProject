@@ -27,7 +27,9 @@ public class createTable {
                 + "            Email   VARCHAR (25),\n"
                 + "            Password  VARCHAR (15),\n"
                 + "            InProgress  VARCHAR (15),\n"
-                + "            CompletedActivity   VARCHAR (25)\n" + ") ;";
+                + "            CompletedActivity  VARCHAR (15),\n"
+                + "            encryptedPublicKey  VARCHAR (15),\n"
+                + "            encryptedPassword   VARCHAR (25)\n" + ") ;";
         try {
             stmt = con.createStatement();
             stmt.executeUpdate(createString);
