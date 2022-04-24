@@ -18,7 +18,7 @@ import java.util.*;
 
 /**
  *
- * @author MTM
+ * @author Muhammad
  */
 public class loginWithRegistry extends javax.swing.JFrame {
 
@@ -321,46 +321,46 @@ public class loginWithRegistry extends javax.swing.JFrame {
     private void loginBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_loginBtnActionPerformed
         // TODO add your handling code here:
         
-//        try {
-//            
-//            Connection con = connectDB.getConnection();
-//            Statement stmt = null;
-//            System.out.println("con" + con);
-//            
-//            String sql = "Select * from USER where loginEmail=?";
-//            PreparedStatement pst = con.prepareStatement(sql);
-//            System.out.println("pst: " +pst);
-//            pst.setString(1, loginEmail.getText());
-//            System.out.println("1: " + pst);
-//            
-////            System.out.println("Hello " +loginEmail.getText());
-//            ResultSet rs = pst.executeQuery();
-//            System.out.println("rs: " + rs.getString(1));
-//            
-//            
-//            if(rs.next()){
-//                //salt = Public Key
-//            salt = rs.getString("encryptedPublicKey");
-//            
-//                System.out.println("salt: " + salt);
-//                securePassword = rs.getString("encryptedPassword");
-//                System.out.println("securePwd: " + securePassword);
-//                if(VerifyProvidedPassword(loginPass.getText())){
-//                JOptionPane.showMessageDialog(null, "Login OKAY");
-//                }
-//                
-//            }else {
-//            JOptionPane.showMessageDialog(null, "Invalid entry, Please try again.");
-//            }
-//            
-//            
-//            
-//        
-//        }
-////        con.close();
-//        catch (Exception e) {
-//        JOptionPane.showMessageDialog(null, "User Not Found");
-//        }
+        try {
+            
+            Connection con = connectDB.getConnection();
+            Statement stmt = null;
+            System.out.println("con" + con);
+            
+            String sql = "Select * from USER where loginEmail=?";
+            PreparedStatement pst = con.prepareStatement(sql);
+            System.out.println("pst: " +pst);
+            pst.setString(1, loginEmail.getText());
+            System.out.println("1: " + pst);
+            
+//            System.out.println("Hello " +loginEmail.getText());
+            ResultSet rs = pst.executeQuery();
+            System.out.println("rs: " + rs.getString(1));
+            
+            
+            if(rs.next()){
+                //salt = Public Key
+            salt = rs.getString("encryptedPublicKey");
+            
+                System.out.println("salt: " + salt);
+                securePassword = rs.getString("encryptedPassword");
+                System.out.println("securePwd: " + securePassword);
+                if(VerifyProvidedPassword(loginPass.getText())){
+                JOptionPane.showMessageDialog(null, "Login OKAY");
+                }
+                
+            }else {
+            JOptionPane.showMessageDialog(null, "Invalid entry, Please try again.");
+            }
+            
+            
+            
+        
+        }
+//        con.close();
+        catch (Exception e) {
+        JOptionPane.showMessageDialog(null, "User Not Found");
+        }
     }//GEN-LAST:event_loginBtnActionPerformed
 
     /**
