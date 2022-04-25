@@ -101,7 +101,7 @@ public class loginSelection extends javax.swing.JFrame {
         
         //Stores variable to selected Student login
         option = "S";
-        
+        //closes selection tab(current tab) and opens login page. 
         loginWithRegistry emp = new loginWithRegistry();
         emp.setVisible(true);
         setVisible(false); //Closes This window
