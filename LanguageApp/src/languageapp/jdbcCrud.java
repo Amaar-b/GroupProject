@@ -46,11 +46,11 @@ public class jdbcCrud {
             }
         }
     }
-      public static void insertData(int id, String forename, String surname, String emailaddress, String password, String completed, String inProgress) {
+      public static void insertStu(int id, String forename, String surname, String emailaddress, String password, String completed, String inProgress) {
 
         Connection con = connectDB.getConnection();
         Statement stmt = null;
-        int ID = id;
+//        int ID = id;
         String studentFname = forename;
         String studentSname = surname;
         String studentEmail = emailaddress;
@@ -58,9 +58,10 @@ public class jdbcCrud {
         String completedActivity = completed;
         String Progress = inProgress; 
         
-        String sqlString = "INSERT INTO student (ID, Firstname, Surname, Email, Password, InProgress, CompletedActivity, encryptedPublicKey, encryptedPassword) VALUES \n"
-                + "(" + ID + ", " + studentFname + ", " + studentSname + ", " + studentEmail + ", " + studentPassword + ", " + 
-                            completedActivity + ", " + Progress + ")";
+        String sqlString = "INSERT INTO student ( Firstname, Surname, Email, Password, InProgress, CompletedActivity) VALUES \n"
+                + "('" + studentFname + "', '" + studentSname + "', '" + studentEmail + "', '" + studentPassword + "', '" + 
+                            completedActivity + "', '" + Progress + "')";
+        
         try {
             con.setAutoCommit(false);
             stmt = con.createStatement();
@@ -125,9 +126,11 @@ public class jdbcCrud {
             }
         }
      }
+
      public static void main(String[] args){
      //insertStu
-     insertStu();
+//     insertStu();
+//         insertStu(2, "rack", "e", "g", "f", "s", "d");
          
      } 
 }

@@ -1,14 +1,7 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package languageapp;
 
-/**
- *
- * @author Amaar
- */
+
 public class loginSelection extends javax.swing.JFrame {
 
     /**
@@ -92,8 +85,11 @@ public class loginSelection extends javax.swing.JFrame {
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         // TODO add your handling code here:
+
+        //states variable to selected Teacher login
         option = "T";
         
+        //closes selection tab(current) and opens login page.
         loginWithRegistry emp = new loginWithRegistry();
         emp.setVisible(true);
         setVisible(false); //Closes This window
@@ -102,6 +98,8 @@ public class loginSelection extends javax.swing.JFrame {
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
+        
+        //Stores variable to selected Student login
         option = "S";
         
         loginWithRegistry emp = new loginWithRegistry();

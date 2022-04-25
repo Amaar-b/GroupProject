@@ -15,7 +15,10 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.*;
 
-
+/**
+ *
+ * @author Muhammad
+ */
 /**
  *
  * @author Muhammad
@@ -27,6 +30,7 @@ public class loginWithRegistry extends javax.swing.JFrame {
     private String securePassword;
     private Boolean isEmailExist;
     private String mySecurePassword;
+    private int g;
 
     /**
      * Creates new form loginWithRegistry
@@ -341,13 +345,16 @@ public class loginWithRegistry extends javax.swing.JFrame {
 //        }
 
 //        loginEmail.setText(loginSelection.option); // test selection INPUT "S" / "T"
+
+//jdbcCrud.insertData(13,signupFname.getText(),signupSname.getText(), signupEmail.getText(),signupPass.getText(),0,0);
+       
         try {
             
             Connection con = connectDB.getConnection();
             Statement stmt = null;
             System.out.println("con" + con);
-            
-            String sql = "Select * from USER where loginEmail=?";
+//            if(loginSelection.option = "S"){}
+            String sql = "Select * from student where loginEmail=?";
             PreparedStatement pst = con.prepareStatement(sql);
             System.out.println("pst: " +pst);
             pst.setString(1, loginEmail.getText());
@@ -457,6 +464,8 @@ public class loginWithRegistry extends javax.swing.JFrame {
     // End of variables declaration//GEN-END:variables
 
     private boolean VerifyProvidedPassword(String providedPassword) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
+        return true;
+//        "Select * from students "
+    
+}
 }

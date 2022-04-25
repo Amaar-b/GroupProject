@@ -7,7 +7,7 @@ package languageapp;
 
 /**
  *
- * @author MTM
+ * @author Muhammad
  */
 public class profilePage extends javax.swing.JFrame {
 
