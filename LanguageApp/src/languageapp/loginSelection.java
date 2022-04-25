@@ -14,6 +14,7 @@ public class loginSelection extends javax.swing.JFrame {
     /**
      * Creates new form loginSelection
      */
+    static String option = "";
     public loginSelection() {
         initComponents();
     }
@@ -37,6 +38,11 @@ public class loginSelection extends javax.swing.JFrame {
         jButton1.setBackground(new java.awt.Color(102, 204, 255));
         jButton1.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jButton1.setText("Student");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
 
         jButton2.setBackground(new java.awt.Color(102, 204, 255));
         jButton2.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
@@ -86,8 +92,24 @@ public class loginSelection extends javax.swing.JFrame {
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         // TODO add your handling code here:
+        option = "T";
+        
+        loginWithRegistry emp = new loginWithRegistry();
+        emp.setVisible(true);
+        setVisible(false); //Closes This window
+        
     }//GEN-LAST:event_jButton2ActionPerformed
 
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        // TODO add your handling code here:
+        option = "S";
+        
+        loginWithRegistry emp = new loginWithRegistry();
+        emp.setVisible(true);
+        setVisible(false); //Closes This window
+    }//GEN-LAST:event_jButton1ActionPerformed
+
+ 
     /**
      * @param args the command line arguments
      */

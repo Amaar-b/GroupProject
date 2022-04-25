@@ -21,6 +21,12 @@ import java.util.*;
  * @author Muhammad
  */
 public class loginWithRegistry extends javax.swing.JFrame {
+    
+    private static String UName;
+    private String salt;
+    private String securePassword;
+    private Boolean isEmailExist;
+    private String mySecurePassword;
 
     /**
      * Creates new form loginWithRegistry
@@ -60,9 +66,11 @@ public class loginWithRegistry extends javax.swing.JFrame {
         jPanel3 = new javax.swing.JPanel();
         jLabel9 = new javax.swing.JLabel();
         jLabel10 = new javax.swing.JLabel();
+        backBtn = new javax.swing.JButton();
         jSeparator2 = new javax.swing.JSeparator();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setResizable(false);
         setSize(new java.awt.Dimension(800, 400));
 
         jSeparator1.setOrientation(javax.swing.SwingConstants.VERTICAL);
@@ -74,7 +82,6 @@ public class loginWithRegistry extends javax.swing.JFrame {
 
         jLabel3.setText("Email:");
 
-        loginEmail.setText("jTextField1");
         loginEmail.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 loginEmailActionPerformed(evt);
@@ -83,8 +90,7 @@ public class loginWithRegistry extends javax.swing.JFrame {
 
         jLabel4.setText("Password:");
 
-        loginPass.setText("jPasswordField1");
-
+        loginBtn.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         loginBtn.setText("Login");
         loginBtn.setFocusable(false);
         loginBtn.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
@@ -110,15 +116,13 @@ public class loginWithRegistry extends javax.swing.JFrame {
                         .addComponent(loginBtn)
                         .addGap(0, 0, Short.MAX_VALUE))
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addComponent(loginEmail, javax.swing.GroupLayout.DEFAULT_SIZE, 85, Short.MAX_VALUE)
-                        .addGap(114, 114, 114))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(loginPass, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(loginPass, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel1Layout.createSequentialGroup()
                                 .addGap(16, 16, 16)
-                                .addComponent(jLabel1)))
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
+                                .addComponent(jLabel1))
+                            .addComponent(loginEmail, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addContainerGap(79, Short.MAX_VALUE))))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -169,6 +173,7 @@ public class loginWithRegistry extends javax.swing.JFrame {
 
         signupPass.setText("Password");
 
+        signupBtn.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         signupBtn.setText("Sign-Up");
         signupBtn.setFocusable(false);
         signupBtn.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
@@ -194,13 +199,13 @@ public class loginWithRegistry extends javax.swing.JFrame {
                             .addComponent(jLabel5))
                         .addGap(42, 42, 42)
                         .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(signupFname, javax.swing.GroupLayout.DEFAULT_SIZE, 147, Short.MAX_VALUE)
                             .addComponent(signupSname)
                             .addComponent(signupEmail)
-                            .addComponent(signupPass)
+                            .addComponent(signupPass, javax.swing.GroupLayout.DEFAULT_SIZE, 147, Short.MAX_VALUE)
                             .addGroup(jPanel2Layout.createSequentialGroup()
                                 .addGap(19, 19, 19)
-                                .addComponent(signupBtn))))
+                                .addComponent(signupBtn))
+                            .addComponent(signupFname)))
                     .addGroup(jPanel2Layout.createSequentialGroup()
                         .addGap(148, 148, 148)
                         .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)))
@@ -238,6 +243,14 @@ public class loginWithRegistry extends javax.swing.JFrame {
         jLabel10.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
         jLabel10.setText("Please Login or Register to access the App ");
 
+        backBtn.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        backBtn.setText("Back");
+        backBtn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                backBtnActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
         jPanel3.setLayout(jPanel3Layout);
         jPanel3Layout.setHorizontalGroup(
@@ -245,7 +258,8 @@ public class loginWithRegistry extends javax.swing.JFrame {
             .addGroup(jPanel3Layout.createSequentialGroup()
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel3Layout.createSequentialGroup()
-                        .addGap(244, 244, 244)
+                        .addComponent(backBtn)
+                        .addGap(171, 171, 171)
                         .addComponent(jLabel9, javax.swing.GroupLayout.PREFERRED_SIZE, 234, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(jPanel3Layout.createSequentialGroup()
                         .addGap(235, 235, 235)
@@ -256,7 +270,9 @@ public class loginWithRegistry extends javax.swing.JFrame {
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel3Layout.createSequentialGroup()
                 .addGap(6, 6, 6)
-                .addComponent(jLabel9, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel9, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(backBtn))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jLabel10, javax.swing.GroupLayout.DEFAULT_SIZE, 23, Short.MAX_VALUE)
                 .addGap(22, 22, 22))
@@ -320,7 +336,11 @@ public class loginWithRegistry extends javax.swing.JFrame {
 
     private void loginBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_loginBtnActionPerformed
         // TODO add your handling code here:
-        
+//        if (loginEmail.getText().equals("") || loginPass.getText().equals("")){
+//            JOptionPane.showMessageDialog(null, "Please make sure all fields are filled in.");
+//        }
+
+//        loginEmail.setText(loginSelection.option); // test selection INPUT "S" / "T"
         try {
             
             Connection con = connectDB.getConnection();
@@ -333,24 +353,28 @@ public class loginWithRegistry extends javax.swing.JFrame {
             pst.setString(1, loginEmail.getText());
             System.out.println("1: " + pst);
             
-//            System.out.println("Hello " +loginEmail.getText());
             ResultSet rs = pst.executeQuery();
             System.out.println("rs: " + rs.getString(1));
             
-            
             if(rs.next()){
                 //salt = Public Key
-            salt = rs.getString("encryptedPublicKey");
-            
+                salt = rs.getString("encryptedPublicKey");
+
                 System.out.println("salt: " + salt);
                 securePassword = rs.getString("encryptedPassword");
                 System.out.println("securePwd: " + securePassword);
-                if(VerifyProvidedPassword(loginPass.getText())){
-                JOptionPane.showMessageDialog(null, "Login OKAY");
+                if(VerifyProvidedPassword(loginPass.getText())) {
+                JOptionPane.showMessageDialog(null, "Login GOOD");
+                
+                profilePage emp = new profilePage();
+                emp.setVisible(true); // Opens next window 
+                con.close(); // Disconnects from DB
+                setVisible(false); //Closes This window
                 }
                 
             }else {
             JOptionPane.showMessageDialog(null, "Invalid entry, Please try again.");
+            loginPass.setText("");
             }
             
             
@@ -362,6 +386,13 @@ public class loginWithRegistry extends javax.swing.JFrame {
         JOptionPane.showMessageDialog(null, "User Not Found");
         }
     }//GEN-LAST:event_loginBtnActionPerformed
+
+    private void backBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_backBtnActionPerformed
+        // TODO add your handling code here:
+        loginSelection emp = new loginSelection();
+        emp.setVisible(true);
+        setVisible(false); //Closes This window
+    }//GEN-LAST:event_backBtnActionPerformed
 
     /**
      * @param args the command line arguments
@@ -399,6 +430,7 @@ public class loginWithRegistry extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton backBtn;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel2;
@@ -423,4 +455,8 @@ public class loginWithRegistry extends javax.swing.JFrame {
     private javax.swing.JPasswordField signupPass;
     private javax.swing.JTextField signupSname;
     // End of variables declaration//GEN-END:variables
+
+    private boolean VerifyProvidedPassword(String providedPassword) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
 }
