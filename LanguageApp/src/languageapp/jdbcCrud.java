@@ -58,7 +58,8 @@ public class jdbcCrud {
         String completedActivity = completed;
         String Progress = inProgress; 
         
-        String sqlString = "INSERT INTO student (ID, Firstname, Surname, Email, Password, InProgress, CompletedActivity, encryptedPublicKey, encryptedPassword) VALUES (" + ID + ", " + studentFname + ", " + studentSname + ", " + studentEmail + ", " + studentPassword + ", " + 
+        String sqlString = "INSERT INTO student (ID, Firstname, Surname, Email, Password, InProgress, CompletedActivity, encryptedPublicKey, encryptedPassword) VALUES \n"
+                + "(" + ID + ", " + studentFname + ", " + studentSname + ", " + studentEmail + ", " + studentPassword + ", " + 
                             completedActivity + ", " + Progress + ")";
         try {
             con.setAutoCommit(false);
