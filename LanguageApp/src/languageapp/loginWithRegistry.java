@@ -52,7 +52,7 @@ public class loginWithRegistry extends javax.swing.JFrame {
         jPanel1 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
-        loginEmail = new javax.swing.JTextField();
+        Email = new javax.swing.JTextField();
         jLabel4 = new javax.swing.JLabel();
         loginPass = new javax.swing.JPasswordField();
         loginBtn = new javax.swing.JButton();
@@ -86,9 +86,9 @@ public class loginWithRegistry extends javax.swing.JFrame {
 
         jLabel3.setText("Email:");
 
-        loginEmail.addActionListener(new java.awt.event.ActionListener() {
+        Email.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                loginEmailActionPerformed(evt);
+                EmailActionPerformed(evt);
             }
         });
 
@@ -125,7 +125,7 @@ public class loginWithRegistry extends javax.swing.JFrame {
                             .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel1Layout.createSequentialGroup()
                                 .addGap(16, 16, 16)
                                 .addComponent(jLabel1))
-                            .addComponent(loginEmail, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(Email, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addContainerGap(79, Short.MAX_VALUE))))
         );
         jPanel1Layout.setVerticalGroup(
@@ -136,7 +136,7 @@ public class loginWithRegistry extends javax.swing.JFrame {
                 .addGap(32, 32, 32)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel3)
-                    .addComponent(loginEmail, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(Email, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel4)
@@ -153,7 +153,6 @@ public class loginWithRegistry extends javax.swing.JFrame {
 
         jLabel6.setText("Forename:");
 
-        signupFname.setText("jTextField3");
         signupFname.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 signupFnameActionPerformed(evt);
@@ -162,11 +161,8 @@ public class loginWithRegistry extends javax.swing.JFrame {
 
         jLabel8.setText("Surename:");
 
-        signupSname.setText("jTextField4");
-
         jLabel5.setText("Email:");
 
-        signupEmail.setText("jTextField5");
         signupEmail.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 signupEmailActionPerformed(evt);
@@ -174,8 +170,6 @@ public class loginWithRegistry extends javax.swing.JFrame {
         });
 
         jLabel7.setText("Password:");
-
-        signupPass.setText("Password");
 
         signupBtn.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         signupBtn.setText("Sign-Up");
@@ -220,23 +214,26 @@ public class loginWithRegistry extends javax.swing.JFrame {
             .addGroup(jPanel2Layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jLabel2)
-                .addGap(24, 24, 24)
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jLabel6)
-                    .addComponent(signupFname, javax.swing.GroupLayout.PREFERRED_SIZE, 19, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addGroup(jPanel2Layout.createSequentialGroup()
+                        .addGap(30, 30, 30)
+                        .addComponent(jLabel6))
+                    .addGroup(jPanel2Layout.createSequentialGroup()
+                        .addGap(24, 24, 24)
+                        .addComponent(signupFname, javax.swing.GroupLayout.DEFAULT_SIZE, 27, Short.MAX_VALUE)))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel8)
-                    .addComponent(signupSname, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(signupSname, javax.swing.GroupLayout.DEFAULT_SIZE, 27, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel5)
-                    .addComponent(signupEmail, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
+                    .addComponent(signupEmail, javax.swing.GroupLayout.DEFAULT_SIZE, 27, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel7)
-                    .addComponent(signupPass, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 42, Short.MAX_VALUE)
+                    .addComponent(signupPass, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(42, 42, 42)
                 .addComponent(signupBtn)
                 .addGap(31, 31, 31))
         );
@@ -322,9 +319,9 @@ public class loginWithRegistry extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void loginEmailActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_loginEmailActionPerformed
+    private void EmailActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_EmailActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_loginEmailActionPerformed
+    }//GEN-LAST:event_EmailActionPerformed
 
     private void signupFnameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_signupFnameActionPerformed
         // TODO add your handling code here:
@@ -352,12 +349,14 @@ public class loginWithRegistry extends javax.swing.JFrame {
             
             Connection con = connectDB.getConnection();
             Statement stmt = null;
+            
             System.out.println("con" + con);
-//            if(loginSelection.option = "S"){}
-            String sql = "Select * from student where loginEmail=?";
+            
+            String sql = "Select * from student where Email=? and Password=?";
             PreparedStatement pst = con.prepareStatement(sql);
             System.out.println("pst: " +pst);
-            pst.setString(1, loginEmail.getText());
+            pst.setString(1, Email.getText());
+            pst.setString(2, loginPass.getText());
             System.out.println("1: " + pst);
             
             ResultSet rs = pst.executeQuery();
@@ -383,10 +382,6 @@ public class loginWithRegistry extends javax.swing.JFrame {
             JOptionPane.showMessageDialog(null, "Invalid entry, Please try again.");
             loginPass.setText("");
             }
-            
-            
-            
-        
         }
 //        con.close();
         catch (Exception e) {
@@ -437,6 +432,7 @@ public class loginWithRegistry extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JTextField Email;
     private javax.swing.JButton backBtn;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
@@ -454,7 +450,6 @@ public class loginWithRegistry extends javax.swing.JFrame {
     private javax.swing.JSeparator jSeparator1;
     private javax.swing.JSeparator jSeparator2;
     private javax.swing.JButton loginBtn;
-    private javax.swing.JTextField loginEmail;
     private javax.swing.JPasswordField loginPass;
     private javax.swing.JButton signupBtn;
     private javax.swing.JTextField signupEmail;
