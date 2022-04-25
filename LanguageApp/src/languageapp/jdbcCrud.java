@@ -17,7 +17,7 @@ import java.sql.Statement;
  * @author Amaar
  */
 public class jdbcCrud {
-    public static void insertEmp() {
+    public static void insertStu() {
         Connection con = connectDB.getConnection();
         Statement stmt = null;
         String sqlString = ("");
@@ -46,7 +46,7 @@ public class jdbcCrud {
             }
         }
     }
-      public static void insertData(int id, String forename, String surname, String emailaddress, String password, int completed, int inProgress) {
+      public static void insertData(int id, String forename, String surname, String emailaddress, String password, String completed, String inProgress) {
 
         Connection con = connectDB.getConnection();
         Statement stmt = null;
@@ -55,10 +55,10 @@ public class jdbcCrud {
         String studentSname = surname;
         String studentEmail = emailaddress;
         String studentPassword = password;
-        int completedActivity = completed;
-        int Progress = inProgress; 
+        String completedActivity = completed;
+        String Progress = inProgress; 
         
-        String sqlString = "INSERT INTO Student (id, FirstName, SureName, EmailAddress, Password) VALUES (" + ID + ", " + studentFname + ", " + studentSname + ", " + studentEmail + ", " + studentPassword + ", " + 
+        String sqlString = "INSERT INTO student (ID, Firstname, Surname, Email, Password, InProgress, CompletedActivity, encryptedPublicKey, encryptedPassword) VALUES (" + ID + ", " + studentFname + ", " + studentSname + ", " + studentEmail + ", " + studentPassword + ", " + 
                             completedActivity + ", " + Progress + ")";
         try {
             con.setAutoCommit(false);
@@ -91,7 +91,7 @@ public class jdbcCrud {
         Statement stmt = null;
         try {
             stmt = con.createStatement();
-            ResultSet rs = stmt.executeQuery("Select * from students ");        
+            ResultSet rs = stmt.executeQuery("Select * from student ");        
 
             int n = 0;
             while (rs.next()) {
@@ -124,5 +124,10 @@ public class jdbcCrud {
             }
         }
      }
+     public static void main(String[] args){
+     //insertStu
+     insertStu();
+         
+     } 
 }
 
