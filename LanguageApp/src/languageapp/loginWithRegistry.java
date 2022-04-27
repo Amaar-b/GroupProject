@@ -14,10 +14,13 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.*;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 /**
  *
- * @author Muhammad
+ * @author w1776316 / w1740779
+ * 
  */
 /**
  *
@@ -67,6 +70,8 @@ public class loginWithRegistry extends javax.swing.JFrame {
         jLabel7 = new javax.swing.JLabel();
         signupPass = new javax.swing.JPasswordField();
         signupBtn = new javax.swing.JButton();
+        jLabel12 = new javax.swing.JLabel();
+        signupPass2 = new javax.swing.JPasswordField();
         jPanel3 = new javax.swing.JPanel();
         jLabel9 = new javax.swing.JLabel();
         jLabel10 = new javax.swing.JLabel();
@@ -84,7 +89,7 @@ public class loginWithRegistry extends javax.swing.JFrame {
         jLabel1.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jLabel1.setText("Login");
 
-        jLabel3.setText("Email:");
+        jLabel3.setText("Username:");
 
         Email.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -161,7 +166,7 @@ public class loginWithRegistry extends javax.swing.JFrame {
 
         jLabel8.setText("Surename:");
 
-        jLabel5.setText("Email:");
+        jLabel5.setText("Username:");
 
         signupEmail.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -182,6 +187,8 @@ public class loginWithRegistry extends javax.swing.JFrame {
             }
         });
 
+        jLabel12.setText("Confirm: ");
+
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
         jPanel2Layout.setHorizontalGroup(
@@ -189,24 +196,30 @@ public class loginWithRegistry extends javax.swing.JFrame {
             .addGroup(jPanel2Layout.createSequentialGroup()
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addGap(29, 29, 29)
-                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(jLabel7, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(jLabel6)
-                            .addComponent(jLabel8, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(jLabel5))
-                        .addGap(42, 42, 42)
-                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(signupSname)
-                            .addComponent(signupEmail)
-                            .addComponent(signupPass, javax.swing.GroupLayout.DEFAULT_SIZE, 147, Short.MAX_VALUE)
-                            .addGroup(jPanel2Layout.createSequentialGroup()
-                                .addGap(19, 19, 19)
-                                .addComponent(signupBtn))
-                            .addComponent(signupFname)))
-                    .addGroup(jPanel2Layout.createSequentialGroup()
                         .addGap(148, 148, 148)
-                        .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPanel2Layout.createSequentialGroup()
+                        .addGap(29, 29, 29)
+                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(jPanel2Layout.createSequentialGroup()
+                                .addComponent(jLabel12)
+                                .addGap(50, 50, 50)
+                                .addComponent(signupPass2, javax.swing.GroupLayout.DEFAULT_SIZE, 147, Short.MAX_VALUE))
+                            .addGroup(jPanel2Layout.createSequentialGroup()
+                                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                    .addComponent(jLabel7, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(jLabel6)
+                                    .addComponent(jLabel8, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(jLabel5))
+                                .addGap(42, 42, 42)
+                                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                    .addComponent(signupSname)
+                                    .addComponent(signupEmail)
+                                    .addComponent(signupPass, javax.swing.GroupLayout.DEFAULT_SIZE, 147, Short.MAX_VALUE)
+                                    .addGroup(jPanel2Layout.createSequentialGroup()
+                                        .addGap(19, 19, 19)
+                                        .addComponent(signupBtn))
+                                    .addComponent(signupFname))))))
                 .addContainerGap(91, Short.MAX_VALUE))
         );
         jPanel2Layout.setVerticalGroup(
@@ -233,9 +246,13 @@ public class loginWithRegistry extends javax.swing.JFrame {
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel7)
                     .addComponent(signupPass, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(42, 42, 42)
+                .addGap(18, 18, 18)
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel12)
+                    .addComponent(signupPass2, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(signupBtn)
-                .addGap(31, 31, 31))
+                .addGap(23, 23, 23))
         );
 
         jLabel9.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
@@ -295,7 +312,7 @@ public class loginWithRegistry extends javax.swing.JFrame {
                                 .addComponent(jSeparator1, javax.swing.GroupLayout.PREFERRED_SIZE, 14, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                        .addGap(0, 15, Short.MAX_VALUE))
+                        .addGap(0, 13, Short.MAX_VALUE))
                     .addComponent(jSeparator2, javax.swing.GroupLayout.Alignment.TRAILING))
                 .addContainerGap())
         );
@@ -329,6 +346,94 @@ public class loginWithRegistry extends javax.swing.JFrame {
 
     private void signupBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_signupBtnActionPerformed
         // TODO add your handling code here:
+        // get data from fields
+        String fname = signupFname.getText();
+        String lname = signupSname.getText();
+        String uname = signupEmail.getText();
+        String pass1 = String.valueOf(signupPass.getPassword());
+        String pass2 = String.valueOf(signupPass2.getPassword());
+        
+        //check if the data are empty
+        if(verifyFields())
+         {
+             if (loginSelection.option == "S"){
+        //check if the username already exists     
+        if(!checkStuUsername(uname))
+             {
+                 PreparedStatement pst;
+                 ResultSet rs;
+                 
+               
+                 String sql = "INSERT INTO `student`(`Firstname`,`Surname`, `Email`, `Password`) VALUES (?,?,?,?);";
+            
+                 
+                 try {
+                     Connection con = connectDB.getConnection();
+                     
+                     pst = con.prepareStatement(sql);
+                     pst.setString(1, fname);
+                     pst.setString(2, lname);
+                     pst.setString(3, uname);
+                     pst.setString(4, pass1);
+                     pst.execute();
+                     System.out.println("new user registered sucessfully");
+                     JOptionPane.showMessageDialog(null, "Registration Successful");
+                     signupFname.setText("");
+                     signupSname.setText("");
+                     signupEmail.setText("");
+                     signupPass.setText("");
+                     signupPass2.setText("");
+                    
+                     
+             
+                     
+                 } catch (SQLException ex) {
+                     Logger.getLogger(loginWithRegistry.class.getName()).log(Level.SEVERE, null, ex);
+                     System.out.println("reg failed");
+                 }
+                 
+             }
+         }
+             //if teacher selected, sign up via teacher table 
+             else {
+                 if(!checkTeaUsername(uname))
+             {
+                 PreparedStatement pst;
+                 ResultSet rs;
+                 
+               
+                 String sql = "INSERT INTO `teacher`(`Firstname`,`Surname`, `Email`, `Password`) VALUES (?,?,?,?);";
+            
+                 
+                 try {
+                     Connection con = connectDB.getConnection();
+                     
+                     pst = con.prepareStatement(sql);
+                     pst.setString(1, fname);
+                     pst.setString(2, lname);
+                     pst.setString(3, uname);
+                     pst.setString(4, pass1);
+                     pst.execute();
+                     System.out.println("new user registered sucessfully");
+                     JOptionPane.showMessageDialog(null, "Registration Successful");
+                     signupFname.setText("");
+                     signupSname.setText("");
+                     signupEmail.setText("");
+                     signupPass.setText("");
+                     signupPass2.setText("");
+                    
+                     
+             
+                     
+                 } catch (SQLException ex) {
+                     Logger.getLogger(loginWithRegistry.class.getName()).log(Level.SEVERE, null, ex);
+                     System.out.println("reg failed");
+                 }
+                 
+             }
+             
+             }
+         }                                      
     }//GEN-LAST:event_signupBtnActionPerformed
 
     private void signupEmailActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_signupEmailActionPerformed
@@ -436,6 +541,7 @@ public class loginWithRegistry extends javax.swing.JFrame {
     private javax.swing.JButton backBtn;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
+    private javax.swing.JLabel jLabel12;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
@@ -455,6 +561,7 @@ public class loginWithRegistry extends javax.swing.JFrame {
     private javax.swing.JTextField signupEmail;
     private javax.swing.JTextField signupFname;
     private javax.swing.JPasswordField signupPass;
+    private javax.swing.JPasswordField signupPass2;
     private javax.swing.JTextField signupSname;
     // End of variables declaration//GEN-END:variables
 
@@ -463,4 +570,88 @@ public class loginWithRegistry extends javax.swing.JFrame {
 //        "Select * from students "
     
 }
+     public boolean verifyFields()
+    {
+        String fname = signupFname.getText();
+        String lname = signupSname.getText();
+        String uname = signupEmail.getText();
+        String pass1 = String.valueOf(signupPass.getPassword());
+        String pass2 = String.valueOf(signupPass2.getPassword());
+        
+        //check empty fields
+        if(fname.trim().equals("") || lname.trim().equals("") || uname.trim().equals("") || pass1.trim().equals("") || pass2.trim().equals(""))
+        {
+            JOptionPane.showMessageDialog(null, "One Or More Fields Are Empty","Empty Fields",2);
+            return false;
+        }
+        
+        //check if the two password are equals or not
+        else if(!pass1.equals(pass2))
+        {
+           JOptionPane.showMessageDialog(null, "Password Doesn't Match","Confirm Password",2); 
+           return false;
+        }
+        
+        //// if everything is ok
+        else{
+            return true;
+        }
+        
+    }
+     
+     // create a function to check if the entered username already exists in the database
+     public boolean checkStuUsername(String username){
+        PreparedStatement st;
+        ResultSet rs;
+        boolean username_exist = false;
+        
+        String sql = "SELECT * FROM `student` WHERE `Email` = ?";
+        
+        try {
+            Connection con = connectDB.getConnection();
+            
+            
+            PreparedStatement pst = con.prepareStatement(sql);
+            pst.setString(1, username);
+            rs = pst.executeQuery();
+        
+            if(rs.next())
+            {
+                username_exist = true;
+                JOptionPane.showMessageDialog(null, "This Username is Already Taken, Choose Another One", "Username Failed", 2);
+            }
+            
+        } catch (SQLException ex) {
+            Logger.getLogger(loginWithRegistry.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        return username_exist;
+     }
+     
+      public boolean checkTeaUsername(String username){
+        PreparedStatement st;
+        ResultSet rs;
+        boolean username_exist = false;
+        
+        String sql = "SELECT * FROM `student` WHERE `Email` = ?";
+        
+        try {
+            Connection con = connectDB.getConnection();
+            
+            
+            PreparedStatement pst = con.prepareStatement(sql);
+            pst.setString(1, username);
+            rs = pst.executeQuery();
+        
+            if(rs.next())
+            {
+                username_exist = true;
+                JOptionPane.showMessageDialog(null, "This Username is Already Taken, Choose Another One", "Username Failed", 2);
+            }
+            
+        } catch (SQLException ex) {
+            Logger.getLogger(loginWithRegistry.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        return username_exist;
+     }
+    
 }

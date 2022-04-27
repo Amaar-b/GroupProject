@@ -21,7 +21,7 @@ public class teacherTable {
         String createString;
         
         // the table is created with all fields mention below
-        createString = "CREATE TABLE if not exists student (\n"
+        createString = "CREATE TABLE if not exists teacher (\n"
                 + "            ID     INTEGER      PRIMARY KEY,\n"
                 + "            Firstname  VARCHAR (15),\n"
                 + "            Surname VARCHAR (15),\n"
