@@ -20,7 +20,11 @@ public class connectDB {
 
         try {
             Class.forName("org.sqlite.JDBC");
+            
+            // Creates connection to the database file 
             String url = "jdbc:sqlite:StudentRecord.db";
+            
+            // This establishes the connection to the String url which contain the file
             Connection con = DriverManager.getConnection(url);
             //JOptionPane.showMessageDialog(null, "Connection Established");
             return con;
