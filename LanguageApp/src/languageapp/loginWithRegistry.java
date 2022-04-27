@@ -22,10 +22,7 @@ import java.util.logging.Logger;
  * @author w1776316 / w1740779
  * 
  */
-/**
- *
- * @author Muhammad
- */
+
 public class loginWithRegistry extends javax.swing.JFrame {
     
     private static String UName;
@@ -256,7 +253,7 @@ public class loginWithRegistry extends javax.swing.JFrame {
         );
 
         jLabel9.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        jLabel9.setText("Welcome to the Language Practice App");
+        jLabel9.setText("Welcome to the Language Exchange Practice App");
 
         jLabel10.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
         jLabel10.setText("Please Login or Register to access the App ");
@@ -277,10 +274,10 @@ public class loginWithRegistry extends javax.swing.JFrame {
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel3Layout.createSequentialGroup()
                         .addComponent(backBtn)
-                        .addGap(171, 171, 171)
-                        .addComponent(jLabel9, javax.swing.GroupLayout.PREFERRED_SIZE, 234, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(158, 158, 158)
+                        .addComponent(jLabel9, javax.swing.GroupLayout.PREFERRED_SIZE, 292, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(jPanel3Layout.createSequentialGroup()
-                        .addGap(235, 235, 235)
+                        .addGap(237, 237, 237)
                         .addComponent(jLabel10)))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
@@ -334,6 +331,7 @@ public class loginWithRegistry extends javax.swing.JFrame {
         );
 
         pack();
+        setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
     private void EmailActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_EmailActionPerformed
@@ -448,9 +446,7 @@ public class loginWithRegistry extends javax.swing.JFrame {
 //            JOptionPane.showMessageDialog(null, "Please make sure all fields are filled in.");
 //        }
 
-//        loginEmail.setText(loginSelection.option); // test selection INPUT "S" / "T"
-
-//jdbcCrud.insertData(13,signupFname.getText(),signupSname.getText(), signupEmail.getText(),signupPass.getText(),0,0);
+       // test selection INPUT "S" / "T" from selection window
        if(loginSelection.option == "S"){
         try {
             
