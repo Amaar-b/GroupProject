@@ -34,9 +34,11 @@ class Connect {
     private Connection con;
 
     public Connect() {
+        // This defines the type of file and the name of the file
         urlSQLite = "jdbc:sqlite:StudentRecord.db";
 
         try {
+            // Download the database file onto the user device
             driverSQLite = new org.sqlite.JDBC();
             DriverManager.registerDriver(driverSQLite);
             System.out.println("Driver for SQLite downloaded.");
@@ -45,13 +47,15 @@ class Connect {
         }
 
         try {
-            con = DriverManager.getConnection(urlSQLite);// create database if it does not exist.
+            // create database if it does not exist.
+            con = DriverManager.getConnection(urlSQLite);
             System.out.println("Connection to SQLite is done.");
         } catch (SQLException e) {
             System.out.println("Problem with connection to SQLite: " + e.getMessage());
         }
 
         try {
+            // This closes the connection to SQLite
             if (!con.isClosed()) {
                 con.close();
                 System.out.println("Connection to SQLite closed.");
