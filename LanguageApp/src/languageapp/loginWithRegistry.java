@@ -163,7 +163,7 @@ public class loginWithRegistry extends javax.swing.JFrame {
 
         jLabel8.setText("Surename:");
 
-        jLabel5.setText("Username:");
+        jLabel5.setText("Email :");
 
         signupEmail.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -473,7 +473,7 @@ public class loginWithRegistry extends javax.swing.JFrame {
                 securePassword = rs.getString("encryptedPassword");
                 System.out.println("securePwd: " + securePassword);
                 if(VerifyProvidedPassword(loginPass.getText())) {
-                JOptionPane.showMessageDialog(null, "Login GOOD");
+                JOptionPane.showMessageDialog(null, "Login Successful");
                 
                 profilePage emp = new profilePage();
                 emp.setVisible(true); // Opens next window 
