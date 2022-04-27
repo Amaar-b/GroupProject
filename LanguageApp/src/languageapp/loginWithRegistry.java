@@ -360,12 +360,14 @@ public class loginWithRegistry extends javax.swing.JFrame {
         //check if the username already exists     
         if(!checkStuUsername(uname))
              {
+                 
                  PreparedStatement pst;
                  ResultSet rs;
                  
                
                  String sql = "INSERT INTO `student`(`Firstname`,`Surname`, `Email`, `Password`) VALUES (?,?,?,?);";
-            
+                
+           
                  
                  try {
                      Connection con = connectDB.getConnection();
@@ -449,7 +451,7 @@ public class loginWithRegistry extends javax.swing.JFrame {
 //        loginEmail.setText(loginSelection.option); // test selection INPUT "S" / "T"
 
 //jdbcCrud.insertData(13,signupFname.getText(),signupSname.getText(), signupEmail.getText(),signupPass.getText(),0,0);
-       
+       if(loginSelection.option == "S"){
         try {
             
             Connection con = connectDB.getConnection();
@@ -488,10 +490,59 @@ public class loginWithRegistry extends javax.swing.JFrame {
             loginPass.setText("");
             }
         }
-//        con.close();
+       
+        
         catch (Exception e) {
         JOptionPane.showMessageDialog(null, "User Not Found");
         }
+       }
+       
+       else {
+           try {
+            
+            Connection con = connectDB.getConnection();
+            Statement stmt = null;
+            
+            System.out.println("con" + con);
+            
+            String sql = "Select * from teacher where Email=? and Password=?";
+            PreparedStatement pst = con.prepareStatement(sql);
+            System.out.println("pst: " +pst);
+            pst.setString(1, Email.getText());
+            pst.setString(2, loginPass.getText());
+            System.out.println("1: " + pst);
+            
+            ResultSet rs = pst.executeQuery();
+            System.out.println("rs: " + rs.getString(1));
+            
+            if(rs.next()){
+                //salt = Public Key
+                salt = rs.getString("encryptedPublicKey");
+
+                System.out.println("salt: " + salt);
+                securePassword = rs.getString("encryptedPassword");
+                System.out.println("securePwd: " + securePassword);
+                if(VerifyProvidedPassword(loginPass.getText())) {
+                JOptionPane.showMessageDialog(null, "Login GOOD");
+                
+                profilePage emp = new profilePage();
+                emp.setVisible(true); // Opens next window 
+                con.close(); // Disconnects from DB
+                setVisible(false); //Closes This window
+                }
+                
+            }else {
+            JOptionPane.showMessageDialog(null, "Invalid entry, Please try again.");
+            loginPass.setText("");
+            }
+        }
+       
+        
+        catch (Exception e) {
+        JOptionPane.showMessageDialog(null, "User Not Found");
+        }
+       
+       }
     }//GEN-LAST:event_loginBtnActionPerformed
 
     private void backBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_backBtnActionPerformed
@@ -632,7 +683,7 @@ public class loginWithRegistry extends javax.swing.JFrame {
         ResultSet rs;
         boolean username_exist = false;
         
-        String sql = "SELECT * FROM `student` WHERE `Email` = ?";
+        String sql = "SELECT * FROM `teacher` WHERE `Email` = ?";
         
         try {
             Connection con = connectDB.getConnection();

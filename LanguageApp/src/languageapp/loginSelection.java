@@ -7,7 +7,7 @@ public class loginSelection extends javax.swing.JFrame {
     /**
      * Creates new form loginSelection
      */
-    static String option = "";
+    static String option = "S";
     public loginSelection() {
         initComponents();
     }
