@@ -17,9 +17,12 @@ import java.sql.Statement;
  */
 public class createTable {
     public static void main(String[] args) {
+        // This uses the class connectDB to create a connection to the database
         Connection con = connectDB.getConnection();
         Statement stmt = null;
         String createString;
+        
+        // the table is created with all fields mention below
         createString = "CREATE TABLE if not exists student (\n"
                 + "            ID     INTEGER      PRIMARY KEY,\n"
                 + "            Firstname  VARCHAR (15),\n"
@@ -32,6 +35,8 @@ public class createTable {
                 + "            encryptedPassword   VARCHAR (25)\n" + ") ;";
         try {
             stmt = con.createStatement();
+            
+            // this will update the database and add the student table
             stmt.executeUpdate(createString);
             con.commit();
         } catch (SQLException ex) {
