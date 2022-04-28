@@ -42,7 +42,6 @@ public class profilePage extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Lanuage App");
         setMinimumSize(new java.awt.Dimension(930, 530));
-        setPreferredSize(new java.awt.Dimension(930, 530));
 
         jPanel1.setBackground(new java.awt.Color(0, 181, 204));
 
@@ -74,8 +73,6 @@ public class profilePage extends javax.swing.JFrame {
                 jButton1ActionPerformed(evt);
             }
         });
-
-        jLabelPic.setIcon(new javax.swing.ImageIcon("C:\\Users\\MTM\\Documents\\NetBeansProjects\\GroupProject\\LanguageApp\\src\\earth-globeprofile-page.png")); // NOI18N
 
         jButton2.setText("Scenario");
         jButton2.addActionListener(new java.awt.event.ActionListener() {
