@@ -284,62 +284,62 @@ public class teacherPage extends javax.swing.JFrame {
 
     private void jTable1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jTable1MouseClicked
         // TODO add your handling code here:
-        int row = jTable1.getSelectedRow();
-        
-        System.out.println("row clicked : " + row);
-        String tc = jTable1.getModel().getValueAt(row, 0).toString();
-        int tc_id = Integer.parseInt((String)jTable1.getModel().getValueAt(row, 0));
-        int idl = Integer.valueOf((String)jTable1.getModel().getValueAt(row, 0));
-        System.out.println("tc_id" + tc_id + "idl" + idl);
-        System.out.println("data at clicked row" + tc);
-        Connection con = connectDB.getConnection();
-        Statement stmt = null;
-        ResultSet rs = null;
-        //ResultSet rs = null;
-        try {
-            
-            String sql = "select * from student where ID=" + tc_id;
-            System.out.println("sql string for table row data : " + sql);
-            stmt = con.createStatement();
-            rs = stmt.executeQuery(sql);
-            
-            if (rs.next()){
-                
-                int id = rs.getInt("ID");
-                String firstName = rs.getString("Firstname");
-                String lastName = rs.getString("Surname");
-                String email = rs.getString("Email");
-                String progress = rs.getString("InProgress");
-                String completed = rs.getString("CompletedActivity");
-                String encryptpublic = rs.getString("encryptedPublicKey");
-                String encryptpassword = rs.getString("encryptedPassword");
-                
-                System.out.println("row data : " + firstName + " " + lastName + " " + email + " " + progress + " " + completed + " " + encryptpublic + " " + encryptpassword);
-            }
-        } catch (SQLException e){
-            JOptionPane.showMessageDialog(null, e);
-        }
-                
-        finally {
-            
-            try{
-                rs.close();
-            }catch (SQLException e){
-                JOptionPane.showMessageDialog(null, e);
-            }
-            
-            try{
-                stmt.close();
-            }catch (SQLException e){
-                JOptionPane.showMessageDialog(null, e);
-            }
-            
-            try{
-                con.close();
-            }catch (SQLException e){
-                JOptionPane.showMessageDialog(null, e);
-            }
-        }
+//        int row = jTable1.getSelectedRow();
+//        
+//        System.out.println("row clicked : " + row);
+//        String tc = jTable1.getModel().getValueAt(row, 0).toString();
+//        int tc_id = Integer.parseInt((String)jTable1.getModel().getValueAt(row, 0));
+//        int idl = Integer.valueOf((String)jTable1.getModel().getValueAt(row, 0));
+//        System.out.println("tc_id" + tc_id + "idl" + idl);
+//        System.out.println("data at clicked row" + tc);
+//        Connection con = connectDB.getConnection();
+//        Statement stmt = null;
+//        ResultSet rs = null;
+//        //ResultSet rs = null;
+//        try {
+//            
+//            String sql = "select * from student where ID=" + tc_id;
+//            System.out.println("sql string for table row data : " + sql);
+//            stmt = con.createStatement();
+//            rs = stmt.executeQuery(sql);
+//            
+//            if (rs.next()){
+//                
+//                int id = rs.getInt("ID");
+//                String firstName = rs.getString("Firstname");
+//                String lastName = rs.getString("Surname");
+//                String email = rs.getString("Email");
+//                String progress = rs.getString("InProgress");
+//                String completed = rs.getString("CompletedActivity");
+//                String encryptpublic = rs.getString("encryptedPublicKey");
+//                String encryptpassword = rs.getString("encryptedPassword");
+//                
+//                System.out.println("row data : " + firstName + " " + lastName + " " + email + " " + progress + " " + completed + " " + encryptpublic + " " + encryptpassword);
+//            }
+//        } catch (SQLException e){
+//            JOptionPane.showMessageDialog(null, e);
+//        }
+//                
+//        finally {
+//            
+//            try{
+//                rs.close();
+//            }catch (SQLException e){
+//                JOptionPane.showMessageDialog(null, e);
+//            }
+//            
+//            try{
+//                stmt.close();
+//            }catch (SQLException e){
+//                JOptionPane.showMessageDialog(null, e);
+//            }
+//            
+//            try{
+//                con.close();
+//            }catch (SQLException e){
+//                JOptionPane.showMessageDialog(null, e);
+//            }
+//        }
     }//GEN-LAST:event_jTable1MouseClicked
 
     private void jTextField1KeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTextField1KeyReleased
