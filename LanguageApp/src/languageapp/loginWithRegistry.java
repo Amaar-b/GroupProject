@@ -19,8 +19,7 @@ import java.util.logging.Logger;
 
 /**
  *
- * @author w1776316 / w1740779
- * @author Amaar
+ * @author w1776316 / w1740779 / w1781655
  * 
  */
 
@@ -31,6 +30,9 @@ public class loginWithRegistry extends javax.swing.JFrame {
     private String securePassword;
     private Boolean isEmailExist;
     private String mySecurePassword;
+    public static String storeFname;
+    public static String storeSname;
+    public static String storeEmail;
     private int g;
 
     /**
@@ -346,6 +348,7 @@ public class loginWithRegistry extends javax.swing.JFrame {
 
     private void signupBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_signupBtnActionPerformed
         // TODO add your handling code here:
+        
         // get data from fields
         String fname = signupFname.getText();
         String lname = signupSname.getText();
@@ -444,9 +447,6 @@ public class loginWithRegistry extends javax.swing.JFrame {
 
     private void loginBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_loginBtnActionPerformed
         // TODO add your handling code here:
-//        if (loginEmail.getText().equals("") || loginPass.getText().equals("")){
-//            JOptionPane.showMessageDialog(null, "Please make sure all fields are filled in.");
-//        }
 
        // test selection INPUT "S" / "T" from selection window
        if(loginSelection.option == "S"){
@@ -476,6 +476,9 @@ public class loginWithRegistry extends javax.swing.JFrame {
                 System.out.println("securePwd: " + securePassword);
                 if(VerifyProvidedPassword(loginPass.getText())) {
                 JOptionPane.showMessageDialog(null, "Login Successful");
+                storeFname = rs.getString(2);
+                storeSname = rs.getString(3);
+                storeEmail = Email.getText();                
                 
                 profilePage emp = new profilePage();
                 emp.setVisible(true); // Opens next window 
@@ -491,7 +494,7 @@ public class loginWithRegistry extends javax.swing.JFrame {
        
         
         catch (Exception e) {
-        JOptionPane.showMessageDialog(null, "User Not Found");
+        JOptionPane.showMessageDialog(null, "User Not Found !");
         }
        }
        
@@ -521,7 +524,7 @@ public class loginWithRegistry extends javax.swing.JFrame {
                 securePassword = rs.getString("encryptedPassword");
                 System.out.println("securePwd: " + securePassword);
                 if(VerifyProvidedPassword(loginPass.getText())) {
-                JOptionPane.showMessageDialog(null, "Login GOOD");
+                JOptionPane.showMessageDialog(null, "Login Sucessful");
                 
                 profilePage emp = new profilePage();
                 emp.setVisible(true); // Opens next window 
@@ -537,7 +540,7 @@ public class loginWithRegistry extends javax.swing.JFrame {
        
         
         catch (Exception e) {
-        JOptionPane.showMessageDialog(null, "User Not Found");
+        JOptionPane.showMessageDialog(null, "User Not Found !");
         }
        
        }

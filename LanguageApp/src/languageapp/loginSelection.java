@@ -1,7 +1,10 @@
 
 package languageapp;
 
-
+/**
+ *
+ * @author w1781655 / w1776316
+ */
 public class loginSelection extends javax.swing.JFrame {
 
     /**
@@ -27,6 +30,7 @@ public class loginSelection extends javax.swing.JFrame {
         jLabel2 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setResizable(false);
 
         jButton1.setBackground(new java.awt.Color(102, 204, 255));
         jButton1.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
@@ -81,6 +85,7 @@ public class loginSelection extends javax.swing.JFrame {
         );
 
         pack();
+        setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed

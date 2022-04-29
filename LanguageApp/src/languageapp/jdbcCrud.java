@@ -14,7 +14,7 @@ import java.sql.Statement;
 
 /**
  *
- * @author Amaar
+ * @author w1781655 / w1776316
  */
 public class jdbcCrud {
     public static void insertStu() {
