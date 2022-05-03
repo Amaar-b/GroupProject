@@ -22,8 +22,6 @@ import static languageapp.loginWithRegistry.storeSname;
  */
 public class progressPage extends javax.swing.JPanel {
     
-    private String storeProgress;
-    private String storeCompleted;
     
     
     
@@ -33,36 +31,7 @@ public class progressPage extends javax.swing.JPanel {
      */
     public progressPage() {
         initComponents();
-        JFrame frame = new JFrame();
-        
-        try {
-        Connection con = connectDB.getConnection();
-            Statement stmt = null;
-            
-            System.out.println("con" + con);
-            
-            String sql = "Select * from student where Email=?";
-            PreparedStatement pst = con.prepareStatement(sql);
-            System.out.println("pst: " +pst);
-            pst.setString(4, loginWithRegistry.storeEmail);
-            System.out.println("4: " + pst);
-            
-            ResultSet rs = pst.executeQuery();
-            System.out.println("rs: " + rs.getString(1));
-            
-            storeProgress = rs.getString(6);
-            storeCompleted = rs.getString(7); 
-            
-            
-        }
-        catch (Exception e) {
-        JOptionPane.showMessageDialog(null, "User Not Found !");
-        }
-        
-        inProgressNum.setText(storeProgress);
-        completedActiv.setText(storeCompleted);
-        
-        
+        JFrame frame = new JFrame();        
         
     }
 
