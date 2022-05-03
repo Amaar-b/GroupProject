@@ -475,7 +475,7 @@ public class loginWithRegistry extends javax.swing.JFrame {
                 securePassword = rs.getString("encryptedPassword");
                 System.out.println("securePwd: " + securePassword);
                 if(VerifyProvidedPassword(loginPass.getText())) {
-                JOptionPane.showMessageDialog(null, "Login Successful");
+                JOptionPane.showMessageDialog(null, "Login Successful, Press 'OK' to continue.");
                 storeFname = rs.getString(2);
                 storeSname = rs.getString(3);
                 storeEmail = Email.getText();                
@@ -524,7 +524,7 @@ public class loginWithRegistry extends javax.swing.JFrame {
                 securePassword = rs.getString("encryptedPassword");
                 System.out.println("securePwd: " + securePassword);
                 if(VerifyProvidedPassword(loginPass.getText())) {
-                JOptionPane.showMessageDialog(null, "Login Sucessful");
+                JOptionPane.showMessageDialog(null, "Login Successful, Press 'OK' to continue.");
                 
                 profilePage emp = new profilePage();
                 emp.setVisible(true); // Opens next window 

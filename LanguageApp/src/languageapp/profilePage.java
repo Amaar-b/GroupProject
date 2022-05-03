@@ -5,6 +5,8 @@
  */
 package languageapp;
 
+import javax.swing.JOptionPane;
+
 
 /**
  *
@@ -217,9 +219,14 @@ public class profilePage extends javax.swing.JFrame {
 
     private void recordsBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_recordsBtnActionPerformed
         // TODO add your handling code here:
+        if(loginSelection.option == "T"){
         teacherPage emp = new teacherPage();
         emp.setVisible(true);
         setVisible(false); //Closes This window
+        }
+        else {
+        JOptionPane.showMessageDialog(null, "Page restricted, Staff only.");
+        }
     }//GEN-LAST:event_recordsBtnActionPerformed
 
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed

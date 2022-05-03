@@ -171,7 +171,7 @@
                       </Group>
                       <Group type="102" alignment="0" attributes="0">
                           <EmptySpace min="-2" pref="75" max="-2" attributes="0"/>
-                          <Component id="incompScenFromDatabase" min="-2" max="-2" attributes="0"/>
+                          <Component id="inProgressNum" min="-2" max="-2" attributes="0"/>
                       </Group>
                   </Group>
                   <EmptySpace max="32767" attributes="0"/>
@@ -182,7 +182,7 @@
           <Group type="103" groupAlignment="0" attributes="0">
               <Group type="102" alignment="1" attributes="0">
                   <EmptySpace pref="33" max="32767" attributes="0"/>
-                  <Component id="incompScenFromDatabase" min="-2" max="-2" attributes="0"/>
+                  <Component id="inProgressNum" min="-2" max="-2" attributes="0"/>
                   <EmptySpace max="-2" attributes="0"/>
                   <Component id="incompleteScenariosLabelSmall" min="-2" max="-2" attributes="0"/>
                   <EmptySpace max="-2" attributes="0"/>
@@ -206,7 +206,7 @@
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton2ActionPerformed"/>
           </Events>
         </Component>
-        <Component class="javax.swing.JLabel" name="incompScenFromDatabase">
+        <Component class="javax.swing.JLabel" name="inProgressNum">
           <Properties>
             <Property name="text" type="java.lang.String" value="jLabel1"/>
           </Properties>
@@ -241,7 +241,7 @@
                           <EmptySpace min="-2" pref="43" max="-2" attributes="0"/>
                       </Group>
                       <Group type="102" alignment="1" attributes="0">
-                          <Component id="scenAvailFromDatabase" min="-2" max="-2" attributes="0"/>
+                          <Component id="completedActiv" min="-2" max="-2" attributes="0"/>
                           <EmptySpace min="-2" pref="79" max="-2" attributes="0"/>
                       </Group>
                   </Group>
@@ -252,7 +252,7 @@
           <Group type="103" groupAlignment="0" attributes="0">
               <Group type="102" alignment="1" attributes="0">
                   <EmptySpace pref="33" max="32767" attributes="0"/>
-                  <Component id="scenAvailFromDatabase" min="-2" max="-2" attributes="0"/>
+                  <Component id="completedActiv" min="-2" max="-2" attributes="0"/>
                   <EmptySpace max="-2" attributes="0"/>
                   <Component id="scenariosAvailableLabelSmall" min="-2" max="-2" attributes="0"/>
                   <EmptySpace max="-2" attributes="0"/>
@@ -276,7 +276,7 @@
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton1ActionPerformed"/>
           </Events>
         </Component>
-        <Component class="javax.swing.JLabel" name="scenAvailFromDatabase">
+        <Component class="javax.swing.JLabel" name="completedActiv">
           <Properties>
             <Property name="text" type="java.lang.String" value="jLabel1"/>
           </Properties>

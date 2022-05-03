@@ -50,7 +50,6 @@ public class jdbcCrud {
 
         Connection con = connectDB.getConnection();
         Statement stmt = null;
-//        int ID = id;
         String studentFname = forename;
         String studentSname = surname;
         String studentEmail = emailaddress;

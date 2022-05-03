@@ -5,14 +5,26 @@
  */
 package languageapp;
 
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.Statement;
 import javax.swing.JFrame;
+import javax.swing.JOptionPane;
+import static languageapp.loginWithRegistry.storeEmail;
+import static languageapp.loginWithRegistry.storeFname;
+import static languageapp.loginWithRegistry.storeSname;
 
 
 /**
  *
- * @author w1787623
+ * @author Yamin Ullah - w1787623
  */
 public class progressPage extends javax.swing.JPanel {
+    
+    private String storeProgress;
+    private String storeCompleted;
+    
     
     
 
@@ -22,6 +34,38 @@ public class progressPage extends javax.swing.JPanel {
     public progressPage() {
         initComponents();
         JFrame frame = new JFrame();
+        
+        try {
+        Connection con = connectDB.getConnection();
+            Statement stmt = null;
+            
+            System.out.println("con" + con);
+            
+            String sql = "Select * from student where Email=?";
+            PreparedStatement pst = con.prepareStatement(sql);
+            System.out.println("pst: " +pst);
+            pst.setString(4, loginWithRegistry.storeEmail);
+            System.out.println("1: " + pst);
+            
+            ResultSet rs = pst.executeQuery();
+            System.out.println("rs: " + rs.getString(1));
+            
+            if(rs.next()){
+                storeProgress = rs.getString(6);
+                storeCompleted = rs.getString(7); 
+            }
+            
+        }
+        catch (Exception e) {
+        JOptionPane.showMessageDialog(null, "User Not Found !");
+        }
+        
+        inProgressNum.setText(storeProgress);
+        completedActiv.setText(storeCompleted);
+            
+        
+        
+        
 
     }
 
@@ -41,11 +85,11 @@ public class progressPage extends javax.swing.JPanel {
         incompleteScenarios = new javax.swing.JPanel();
         incompleteScenariosLabelSmall = new java.awt.Label();
         jButton2 = new javax.swing.JButton();
-        incompScenFromDatabase = new javax.swing.JLabel();
+        inProgressNum = new javax.swing.JLabel();
         scenariosAvailable = new javax.swing.JPanel();
         scenariosAvailableLabelSmall = new java.awt.Label();
         jButton1 = new javax.swing.JButton();
-        scenAvailFromDatabase = new javax.swing.JLabel();
+        completedActiv = new javax.swing.JLabel();
         scenariosLineGraph = new javax.swing.JPanel();
         scenariosAndTimeTakenLabel = new java.awt.Label();
         streakViewer = new javax.swing.JPanel();
@@ -94,7 +138,7 @@ public class progressPage extends javax.swing.JPanel {
             }
         });
 
-        incompScenFromDatabase.setText("jLabel1");
+        inProgressNum.setText("jLabel1");
 
         javax.swing.GroupLayout incompleteScenariosLayout = new javax.swing.GroupLayout(incompleteScenarios);
         incompleteScenarios.setLayout(incompleteScenariosLayout);
@@ -111,14 +155,14 @@ public class progressPage extends javax.swing.JPanel {
                         .addComponent(jButton2))
                     .addGroup(incompleteScenariosLayout.createSequentialGroup()
                         .addGap(75, 75, 75)
-                        .addComponent(incompScenFromDatabase)))
+                        .addComponent(inProgressNum)))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         incompleteScenariosLayout.setVerticalGroup(
             incompleteScenariosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, incompleteScenariosLayout.createSequentialGroup()
                 .addContainerGap(33, Short.MAX_VALUE)
-                .addComponent(incompScenFromDatabase)
+                .addComponent(inProgressNum)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(incompleteScenariosLabelSmall, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -138,7 +182,7 @@ public class progressPage extends javax.swing.JPanel {
             }
         });
 
-        scenAvailFromDatabase.setText("jLabel1");
+        completedActiv.setText("jLabel1");
 
         javax.swing.GroupLayout scenariosAvailableLayout = new javax.swing.GroupLayout(scenariosAvailable);
         scenariosAvailable.setLayout(scenariosAvailableLayout);
@@ -155,14 +199,14 @@ public class progressPage extends javax.swing.JPanel {
                         .addComponent(scenariosAvailableLabelSmall, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(43, 43, 43))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, scenariosAvailableLayout.createSequentialGroup()
-                        .addComponent(scenAvailFromDatabase)
+                        .addComponent(completedActiv)
                         .addGap(79, 79, 79))))
         );
         scenariosAvailableLayout.setVerticalGroup(
             scenariosAvailableLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, scenariosAvailableLayout.createSequentialGroup()
                 .addContainerGap(33, Short.MAX_VALUE)
-                .addComponent(scenAvailFromDatabase)
+                .addComponent(completedActiv)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(scenariosAvailableLabelSmall, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -314,10 +358,11 @@ public class progressPage extends javax.swing.JPanel {
   
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JLabel completedActiv;
     private javax.swing.JPanel completedScenarios;
     private java.awt.Label completedScenariosLabelSmall;
     private java.awt.Label dailyStreakLabel;
-    private javax.swing.JLabel incompScenFromDatabase;
+    private javax.swing.JLabel inProgressNum;
     private javax.swing.JPanel incompleteScenarios;
     private java.awt.Label incompleteScenariosLabelSmall;
     private javax.swing.JButton jButton1;
@@ -325,7 +370,6 @@ public class progressPage extends javax.swing.JPanel {
     private javax.swing.JLabel jLabel2;
     private javax.swing.JButton profilePageButtonMenu;
     private java.awt.Label progressLabel;
-    private javax.swing.JLabel scenAvailFromDatabase;
     private java.awt.Label scenariosAndTimeTakenLabel;
     private javax.swing.JPanel scenariosAvailable;
     private java.awt.Label scenariosAvailableLabelSmall;
