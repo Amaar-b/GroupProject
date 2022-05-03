@@ -80,181 +80,90 @@ public class progressPage extends javax.swing.JPanel {
     private void initComponents() {
 
         progressLabel = new java.awt.Label();
-        completedScenarios = new javax.swing.JPanel();
-        completedScenariosLabelSmall = new java.awt.Label();
-        incompleteScenarios = new javax.swing.JPanel();
-        incompleteScenariosLabelSmall = new java.awt.Label();
-        jButton2 = new javax.swing.JButton();
+        inProgressPanel = new javax.swing.JPanel();
+        inProgressTitle = new java.awt.Label();
         inProgressNum = new javax.swing.JLabel();
-        scenariosAvailable = new javax.swing.JPanel();
-        scenariosAvailableLabelSmall = new java.awt.Label();
-        jButton1 = new javax.swing.JButton();
+        completedActivityPanel = new javax.swing.JPanel();
+        completedActivityLabel = new java.awt.Label();
         completedActiv = new javax.swing.JLabel();
-        scenariosLineGraph = new javax.swing.JPanel();
-        scenariosAndTimeTakenLabel = new java.awt.Label();
-        streakViewer = new javax.swing.JPanel();
-        dailyStreakLabel = new java.awt.Label();
         smallLogoPicture = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         profilePageButtonMenu = new javax.swing.JButton();
         supportPageMenuButton = new javax.swing.JButton();
+        adminRecordButton = new javax.swing.JButton();
+        scenariosPageButton = new javax.swing.JButton();
+        signOutButton = new javax.swing.JButton();
 
         setBackground(new java.awt.Color(0, 181, 204));
 
         progressLabel.setFont(new java.awt.Font("Dialog", 1, 24)); // NOI18N
         progressLabel.setText("Progress");
 
-        completedScenarios.setBackground(new java.awt.Color(240, 240, 255));
-        completedScenarios.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        inProgressPanel.setBackground(new java.awt.Color(240, 240, 255));
+        inProgressPanel.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
-        completedScenariosLabelSmall.setText("Completed Scenarios");
-
-        javax.swing.GroupLayout completedScenariosLayout = new javax.swing.GroupLayout(completedScenarios);
-        completedScenarios.setLayout(completedScenariosLayout);
-        completedScenariosLayout.setHorizontalGroup(
-            completedScenariosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, completedScenariosLayout.createSequentialGroup()
-                .addGap(26, 26, 26)
-                .addComponent(completedScenariosLabelSmall, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addContainerGap())
-        );
-        completedScenariosLayout.setVerticalGroup(
-            completedScenariosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, completedScenariosLayout.createSequentialGroup()
-                .addContainerGap(61, Short.MAX_VALUE)
-                .addComponent(completedScenariosLabelSmall, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(40, 40, 40))
-        );
-
-        incompleteScenarios.setBackground(new java.awt.Color(240, 240, 255));
-        incompleteScenarios.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-
-        incompleteScenariosLabelSmall.setText("Incomplete Scenarios");
-
-        jButton2.setText("Check");
-        jButton2.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton2ActionPerformed(evt);
-            }
-        });
+        inProgressTitle.setText("In Progress");
 
         inProgressNum.setText("jLabel1");
 
-        javax.swing.GroupLayout incompleteScenariosLayout = new javax.swing.GroupLayout(incompleteScenarios);
-        incompleteScenarios.setLayout(incompleteScenariosLayout);
-        incompleteScenariosLayout.setHorizontalGroup(
-            incompleteScenariosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, incompleteScenariosLayout.createSequentialGroup()
-                .addContainerGap(37, Short.MAX_VALUE)
-                .addComponent(incompleteScenariosLabelSmall, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(36, 36, 36))
-            .addGroup(incompleteScenariosLayout.createSequentialGroup()
-                .addGroup(incompleteScenariosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(incompleteScenariosLayout.createSequentialGroup()
-                        .addGap(61, 61, 61)
-                        .addComponent(jButton2))
-                    .addGroup(incompleteScenariosLayout.createSequentialGroup()
+        javax.swing.GroupLayout inProgressPanelLayout = new javax.swing.GroupLayout(inProgressPanel);
+        inProgressPanel.setLayout(inProgressPanelLayout);
+        inProgressPanelLayout.setHorizontalGroup(
+            inProgressPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(inProgressPanelLayout.createSequentialGroup()
+                .addGroup(inProgressPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(inProgressPanelLayout.createSequentialGroup()
                         .addGap(75, 75, 75)
-                        .addComponent(inProgressNum)))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addComponent(inProgressNum))
+                    .addGroup(inProgressPanelLayout.createSequentialGroup()
+                        .addGap(62, 62, 62)
+                        .addComponent(inProgressTitle, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(67, Short.MAX_VALUE))
         );
-        incompleteScenariosLayout.setVerticalGroup(
-            incompleteScenariosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, incompleteScenariosLayout.createSequentialGroup()
-                .addContainerGap(33, Short.MAX_VALUE)
+        inProgressPanelLayout.setVerticalGroup(
+            inProgressPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, inProgressPanelLayout.createSequentialGroup()
+                .addContainerGap(53, Short.MAX_VALUE)
                 .addComponent(inProgressNum)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(incompleteScenariosLabelSmall, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jButton2)
-                .addContainerGap())
+                .addGap(21, 21, 21)
+                .addComponent(inProgressTitle, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(51, 51, 51))
         );
 
-        scenariosAvailable.setBackground(new java.awt.Color(240, 240, 255));
-        scenariosAvailable.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        inProgressTitle.getAccessibleContext().setAccessibleName("In Progress");
 
-        scenariosAvailableLabelSmall.setText("Scenarios Available");
+        completedActivityPanel.setBackground(new java.awt.Color(240, 240, 255));
+        completedActivityPanel.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
-        jButton1.setText("Check Available Scenarios");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
-            }
-        });
+        completedActivityLabel.setText("Completed Activity");
 
         completedActiv.setText("jLabel1");
 
-        javax.swing.GroupLayout scenariosAvailableLayout = new javax.swing.GroupLayout(scenariosAvailable);
-        scenariosAvailable.setLayout(scenariosAvailableLayout);
-        scenariosAvailableLayout.setHorizontalGroup(
-            scenariosAvailableLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(scenariosAvailableLayout.createSequentialGroup()
-                .addGap(18, 18, 18)
-                .addComponent(jButton1)
-                .addGap(18, 18, 18))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, scenariosAvailableLayout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(scenariosAvailableLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, scenariosAvailableLayout.createSequentialGroup()
-                        .addComponent(scenariosAvailableLabelSmall, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(43, 43, 43))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, scenariosAvailableLayout.createSequentialGroup()
-                        .addComponent(completedActiv)
-                        .addGap(79, 79, 79))))
-        );
-        scenariosAvailableLayout.setVerticalGroup(
-            scenariosAvailableLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, scenariosAvailableLayout.createSequentialGroup()
-                .addContainerGap(33, Short.MAX_VALUE)
+        javax.swing.GroupLayout completedActivityPanelLayout = new javax.swing.GroupLayout(completedActivityPanel);
+        completedActivityPanel.setLayout(completedActivityPanelLayout);
+        completedActivityPanelLayout.setHorizontalGroup(
+            completedActivityPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(completedActivityPanelLayout.createSequentialGroup()
+                .addGap(81, 81, 81)
                 .addComponent(completedActiv)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(scenariosAvailableLabelSmall, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jButton1)
-                .addContainerGap())
-        );
-
-        scenariosLineGraph.setBackground(new java.awt.Color(240, 240, 155));
-        scenariosLineGraph.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-
-        scenariosAndTimeTakenLabel.setText("Scenarios and time taken");
-
-        javax.swing.GroupLayout scenariosLineGraphLayout = new javax.swing.GroupLayout(scenariosLineGraph);
-        scenariosLineGraph.setLayout(scenariosLineGraphLayout);
-        scenariosLineGraphLayout.setHorizontalGroup(
-            scenariosLineGraphLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(scenariosLineGraphLayout.createSequentialGroup()
-                .addGap(172, 172, 172)
-                .addComponent(scenariosAndTimeTakenLabel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, completedActivityPanelLayout.createSequentialGroup()
+                .addContainerGap(50, Short.MAX_VALUE)
+                .addComponent(completedActivityLabel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(48, 48, 48))
         );
-        scenariosLineGraphLayout.setVerticalGroup(
-            scenariosLineGraphLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, scenariosLineGraphLayout.createSequentialGroup()
-                .addGap(0, 43, Short.MAX_VALUE)
-                .addComponent(scenariosAndTimeTakenLabel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+        completedActivityPanelLayout.setVerticalGroup(
+            completedActivityPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, completedActivityPanelLayout.createSequentialGroup()
+                .addContainerGap(53, Short.MAX_VALUE)
+                .addComponent(completedActiv)
+                .addGap(25, 25, 25)
+                .addComponent(completedActivityLabel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(47, 47, 47))
         );
 
-        streakViewer.setBackground(new java.awt.Color(240, 240, 155));
-        streakViewer.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-
-        dailyStreakLabel.setText("Daily Streak");
-
-        javax.swing.GroupLayout streakViewerLayout = new javax.swing.GroupLayout(streakViewer);
-        streakViewer.setLayout(streakViewerLayout);
-        streakViewerLayout.setHorizontalGroup(
-            streakViewerLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(streakViewerLayout.createSequentialGroup()
-                .addGap(199, 199, 199)
-                .addComponent(dailyStreakLabel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-        );
-        streakViewerLayout.setVerticalGroup(
-            streakViewerLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, streakViewerLayout.createSequentialGroup()
-                .addGap(0, 42, Short.MAX_VALUE)
-                .addComponent(dailyStreakLabel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-        );
+        completedActivityLabel.getAccessibleContext().setAccessibleName("");
+        completedActivityLabel.getAccessibleContext().setAccessibleParent(null);
 
         smallLogoPicture.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/earth-globeprofile-page.png"))); // NOI18N
         smallLogoPicture.setText("\n");
@@ -274,36 +183,55 @@ public class progressPage extends javax.swing.JPanel {
             }
         });
 
+        adminRecordButton.setText("Admin Records");
+        adminRecordButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                adminRecordButtonActionPerformed(evt);
+            }
+        });
+
+        scenariosPageButton.setText("Scenarios");
+        scenariosPageButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                scenariosPageButtonActionPerformed(evt);
+            }
+        });
+
+        signOutButton.setText("Sign Out");
+        signOutButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                signOutButtonActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                    .addComponent(profilePageButtonMenu, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(supportPageMenuButton, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(smallLogoPicture, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addGap(16, 16, 16)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(signOutButton)
                     .addGroup(layout.createSequentialGroup()
-                        .addComponent(jLabel2)
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addComponent(progressLabel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(286, 286, 286))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(74, 74, 74)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(streakViewer, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                            .addComponent(profilePageButtonMenu, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(supportPageMenuButton, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(smallLogoPicture, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(adminRecordButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(scenariosPageButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(layout.createSequentialGroup()
-                                .addComponent(completedScenarios, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 46, Short.MAX_VALUE)
-                                .addComponent(incompleteScenarios, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(39, 39, 39)
-                                .addComponent(scenariosAvailable, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addComponent(scenariosLineGraph, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                        .addGap(34, 34, 34))))
+                                .addGap(16, 16, 16)
+                                .addComponent(jLabel2))
+                            .addGroup(layout.createSequentialGroup()
+                                .addGap(43, 43, 43)
+                                .addComponent(inProgressPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(49, 49, 49)
+                                .addComponent(completedActivityPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(layout.createSequentialGroup()
+                                .addGap(169, 169, 169)
+                                .addComponent(progressLabel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))))
+                .addContainerGap(58, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -312,36 +240,31 @@ public class progressPage extends javax.swing.JPanel {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(jLabel2)
-                        .addGap(31, 31, 31)
+                        .addGap(21, 21, 21)
                         .addComponent(progressLabel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addComponent(smallLogoPicture, javax.swing.GroupLayout.PREFERRED_SIZE, 108, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(27, 27, 27)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(incompleteScenarios, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(completedScenarios, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(scenariosAvailable, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(layout.createSequentialGroup()
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                            .addComponent(inProgressPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                            .addComponent(completedActivityPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(38, 38, 38)
                         .addComponent(profilePageButtonMenu)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(adminRecordButton)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(scenariosPageButton)
                         .addGap(18, 18, 18)
                         .addComponent(supportPageMenuButton)))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 16, Short.MAX_VALUE)
-                .addComponent(streakViewer, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addComponent(scenariosLineGraph, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(72, 72, 72))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 61, Short.MAX_VALUE)
+                .addComponent(signOutButton)
+                .addContainerGap())
         );
     }// </editor-fold>//GEN-END:initComponents
-
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton1ActionPerformed
-
-    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton2ActionPerformed
 
     private void profilePageButtonMenuActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_profilePageButtonMenuActionPerformed
         // TODO add your handling code here:
@@ -354,28 +277,53 @@ public class progressPage extends javax.swing.JPanel {
 
     private void supportPageMenuButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_supportPageMenuButtonActionPerformed
         // TODO add your handling code here:
+        //Takes you to the Support page, this is aport of the menu buttons which all pages have.
+        // As the suuport page has not been implemented in to the project this section has been commented out
+        // supportPage emp = new suuportPage();
+        //emp.setVisible(true);
+        //setVisible(false); //Closes This window
     }//GEN-LAST:event_supportPageMenuButtonActionPerformed
+
+    private void adminRecordButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_adminRecordButtonActionPerformed
+        // TODO add your handling code here:
+        //Takes you to the profile page
+        teacherPage emp = new teacherPage();
+        emp.setVisible(true);
+        setVisible(false); //Closes This window        // TODO add your handling code here:
+
+    }//GEN-LAST:event_adminRecordButtonActionPerformed
+
+    private void scenariosPageButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_scenariosPageButtonActionPerformed
+        // TODO add your handling code here:
+        ScenarioPage emp = new ScenarioPage();
+        emp.setVisible(true);
+        setVisible(false); //Closes This window
+        
+    }//GEN-LAST:event_scenariosPageButtonActionPerformed
+
+    private void signOutButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_signOutButtonActionPerformed
+        // TODO add your handling code here:
+        //Takes you to the SIGNOUT page
+        loginWithRegistry emp = new loginWithRegistry();
+        emp.setVisible(true);
+        setVisible(false); //Closes This window
+    }//GEN-LAST:event_signOutButtonActionPerformed
   
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton adminRecordButton;
     private javax.swing.JLabel completedActiv;
-    private javax.swing.JPanel completedScenarios;
-    private java.awt.Label completedScenariosLabelSmall;
-    private java.awt.Label dailyStreakLabel;
+    private java.awt.Label completedActivityLabel;
+    private javax.swing.JPanel completedActivityPanel;
     private javax.swing.JLabel inProgressNum;
-    private javax.swing.JPanel incompleteScenarios;
-    private java.awt.Label incompleteScenariosLabelSmall;
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
+    private javax.swing.JPanel inProgressPanel;
+    private java.awt.Label inProgressTitle;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JButton profilePageButtonMenu;
     private java.awt.Label progressLabel;
-    private java.awt.Label scenariosAndTimeTakenLabel;
-    private javax.swing.JPanel scenariosAvailable;
-    private java.awt.Label scenariosAvailableLabelSmall;
-    private javax.swing.JPanel scenariosLineGraph;
+    private javax.swing.JButton scenariosPageButton;
+    private javax.swing.JButton signOutButton;
     private javax.swing.JLabel smallLogoPicture;
-    private javax.swing.JPanel streakViewer;
     private javax.swing.JButton supportPageMenuButton;
     // End of variables declaration//GEN-END:variables
 }
