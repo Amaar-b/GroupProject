@@ -20,9 +20,11 @@ public class profilePage extends javax.swing.JFrame {
         initComponents();
         userFname.setText("Firstname: " + loginWithRegistry.storeFname);
         userSname.setText("Surename: " + loginWithRegistry.storeSname);
-        userEmail.setText("Username: " + loginWithRegistry.storeEmail);
+        userEmail.setText("Username: : " + loginWithRegistry.storeEmail);
         
         
+        
+
     }
 
     /**
@@ -76,7 +78,7 @@ public class profilePage extends javax.swing.JFrame {
         jPanel2Layout.setHorizontalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
-                .addContainerGap(273, Short.MAX_VALUE)
+                .addContainerGap(263, Short.MAX_VALUE)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                         .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
@@ -186,7 +188,7 @@ public class profilePage extends javax.swing.JFrame {
                         .addComponent(recordsBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addComponent(jButton4, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 122, Short.MAX_VALUE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 111, Short.MAX_VALUE)
                         .addComponent(signOutBtn))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addContainerGap()
@@ -198,11 +200,15 @@ public class profilePage extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap())
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         setSize(new java.awt.Dimension(1060, 630));
@@ -233,7 +239,7 @@ public class profilePage extends javax.swing.JFrame {
 
     private void jButton_ScenariobtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_ScenariobtnActionPerformed
         // TODO add your handling code here:
-        ScenarioPage emp = new ScenarioPage();
+        LandingPage emp = new LandingPage();
         emp.setVisible(true);
         setVisible(false); //Closes This window
     }//GEN-LAST:event_jButton_ScenariobtnActionPerformed
@@ -264,6 +270,7 @@ public class profilePage extends javax.swing.JFrame {
             java.util.logging.Logger.getLogger(profilePage.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
+        //</editor-fold>
         
 
         /* Create and display the form */
@@ -278,9 +285,6 @@ public class profilePage extends javax.swing.JFrame {
     private javax.swing.JButton ProfileBtn;
     private javax.swing.JLabel imageProfileIcon;
     private javax.swing.JButton jButton4;
-    private javax.swing.JButton jButton_Scenario;
-    private javax.swing.JButton jButton_Scenario1;
-    private javax.swing.JButton jButton_Scenario2;
     private javax.swing.JButton jButton_Scenariobtn;
     private static javax.swing.JLabel jLabel1;
     private static javax.swing.JLabel jLabel2;

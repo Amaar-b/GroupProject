@@ -6,21 +6,21 @@
 package languageapp;
 
 import LevelA1.LevelA1Page;
-import LevelA2.LevelA2Page;
 import javax.swing.JFrame;
+import javax.swing.JOptionPane;
 
 
 /**
  *
  * @author w1740779
  */
-public class ScenarioPage extends javax.swing.JFrame {
+public class LandingPage extends javax.swing.JFrame {
     
     /**
      * Creates new form profilePage
      */
 private JFrame frame;
-    public ScenarioPage() {
+    public LandingPage() {
         initComponents();
     }
 
@@ -46,10 +46,8 @@ private JFrame frame;
         jPanel5 = new javax.swing.JPanel();
         jPanel1 = new javax.swing.JPanel();
         jLabel5 = new javax.swing.JLabel();
-        jPanel_LevelA4 = new javax.swing.JButton();
-        jPanel_LevelA1 = new javax.swing.JButton();
-        jPanel_LevelA3 = new javax.swing.JButton();
-        jPanel_LevelA2 = new javax.swing.JButton();
+        jComboBox_Languages = new javax.swing.JComboBox<>();
+        jButton_Submit = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Lanuage App");
@@ -110,48 +108,20 @@ private JFrame frame;
 
         jLabel5.setFont(new java.awt.Font("Segoe UI Light", 1, 24)); // NOI18N
         jLabel5.setForeground(new java.awt.Color(0, 181, 204));
-        jLabel5.setText("Select your Level");
-        jPanel1.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 30, -1, -1));
+        jLabel5.setText("Select your Language");
+        jPanel1.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 70, -1, -1));
 
-        jPanel_LevelA4.setBackground(new java.awt.Color(0, 181, 204));
-        jPanel_LevelA4.setText("Level A4");
-        jPanel_LevelA4.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 204, 204), 5, true));
-        jPanel_LevelA4.addActionListener(new java.awt.event.ActionListener() {
+        jComboBox_Languages.setEditable(true);
+        jComboBox_Languages.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Spanish", "Arabic", "Chinese", "French", "German", "Italian", "Japanese", "Russian" }));
+        jPanel1.add(jComboBox_Languages, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 150, 140, -1));
+
+        jButton_Submit.setText("Submit");
+        jButton_Submit.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jPanel_LevelA4ActionPerformed(evt);
+                jButton_SubmitActionPerformed(evt);
             }
         });
-        jPanel1.add(jPanel_LevelA4, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 290, 210, 110));
-
-        jPanel_LevelA1.setBackground(new java.awt.Color(0, 181, 204));
-        jPanel_LevelA1.setText("Level A1");
-        jPanel_LevelA1.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 204, 204), 5, true));
-        jPanel_LevelA1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jPanel_LevelA1ActionPerformed(evt);
-            }
-        });
-        jPanel1.add(jPanel_LevelA1, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 130, 210, 110));
-
-        jPanel_LevelA3.setBackground(new java.awt.Color(0, 181, 204));
-        jPanel_LevelA3.setText("Level A3");
-        jPanel_LevelA3.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 204, 204), 5, true));
-        jPanel_LevelA3.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jPanel_LevelA3ActionPerformed(evt);
-            }
-        });
-        jPanel1.add(jPanel_LevelA3, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 290, 210, 110));
-
-        jPanel_LevelA2.setBackground(new java.awt.Color(0, 181, 204));
-        jPanel_LevelA2.setText("Level A2");
-        jPanel_LevelA2.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 204, 204), 5, true));
-        jPanel_LevelA2.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jPanel_LevelA2ActionPerformed(evt);
-            }
-        });
-        jPanel1.add(jPanel_LevelA2, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 130, 210, 110));
+        jPanel1.add(jButton_Submit, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 260, -1, -1));
 
         jPanel5.add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 710, 470));
 
@@ -193,27 +163,24 @@ private JFrame frame;
         setVisible(false); //Closes This window // TODO add your handling code here:
     }//GEN-LAST:event_jButton_SignOutActionPerformed
 
-    private void jPanel_LevelA4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jPanel_LevelA4ActionPerformed
-          
-    }//GEN-LAST:event_jPanel_LevelA4ActionPerformed
+    
+    
+    private void jButton_SubmitActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_SubmitActionPerformed
+        
+                
+                if (jComboBox_Languages.getItemAt(jComboBox_Languages.getSelectedIndex()).equals("Spanish")) {
+                   ScenarioPage emp = new ScenarioPage();
+                    emp.setVisible(true);
+                    setVisible(false); //Closes This window // TODO add your handling code here:
+                }
+                else {
+                    JOptionPane.showMessageDialog(frame, "Language currently unsupported");
+                }
+            
+    }//GEN-LAST:event_jButton_SubmitActionPerformed
 
-    private void jPanel_LevelA1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jPanel_LevelA1ActionPerformed
-        //Takes you to the A1 page
-        LevelA1Page emp = new LevelA1Page();
-        emp.setVisible(true);
-        setVisible(false); //Closes This window
-    }//GEN-LAST:event_jPanel_LevelA1ActionPerformed
-
-    private void jPanel_LevelA3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jPanel_LevelA3ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jPanel_LevelA3ActionPerformed
-
-    private void jPanel_LevelA2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jPanel_LevelA2ActionPerformed
-          LevelA2Page emp = new LevelA2Page();
-        emp.setVisible(true);
-        setVisible(false); //Closes This window
-    }//GEN-LAST:event_jPanel_LevelA2ActionPerformed
-
+    
+    
     /**
      * @param args the command line arguments
      */
@@ -231,13 +198,13 @@ private JFrame frame;
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(ScenarioPage.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(LandingPage.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(ScenarioPage.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(LandingPage.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(ScenarioPage.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(LandingPage.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(ScenarioPage.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(LandingPage.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
         //</editor-fold>
@@ -255,59 +222,12 @@ private JFrame frame;
         //</editor-fold>
         //</editor-fold>
         //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
+    
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new ScenarioPage().setVisible(true);
+                new LandingPage().setVisible(true);
             }
         });
     }
@@ -316,8 +236,10 @@ private JFrame frame;
     private javax.swing.JButton jButton_Records;
     private javax.swing.JButton jButton_Scenario;
     private javax.swing.JButton jButton_SignOut;
+    private javax.swing.JButton jButton_Submit;
     private javax.swing.JButton jButton_SupportPage;
     private javax.swing.JButton jButton_profile;
+    private javax.swing.JComboBox<String> jComboBox_Languages;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
@@ -326,9 +248,5 @@ private JFrame frame;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JPanel jPanel4;
     private javax.swing.JPanel jPanel5;
-    private javax.swing.JButton jPanel_LevelA1;
-    private javax.swing.JButton jPanel_LevelA2;
-    private javax.swing.JButton jPanel_LevelA3;
-    private javax.swing.JButton jPanel_LevelA4;
     // End of variables declaration//GEN-END:variables
 }
