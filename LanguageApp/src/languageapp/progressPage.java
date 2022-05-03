@@ -45,15 +45,14 @@ public class progressPage extends javax.swing.JPanel {
             PreparedStatement pst = con.prepareStatement(sql);
             System.out.println("pst: " +pst);
             pst.setString(4, loginWithRegistry.storeEmail);
-            System.out.println("1: " + pst);
+            System.out.println("4: " + pst);
             
             ResultSet rs = pst.executeQuery();
             System.out.println("rs: " + rs.getString(1));
             
-            if(rs.next()){
-                storeProgress = rs.getString(6);
-                storeCompleted = rs.getString(7); 
-            }
+            storeProgress = rs.getString(6);
+            storeCompleted = rs.getString(7); 
+            
             
         }
         catch (Exception e) {
