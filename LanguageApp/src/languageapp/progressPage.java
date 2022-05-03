@@ -53,7 +53,6 @@ public class progressPage extends javax.swing.JPanel {
             storeProgress = rs.getString(6);
             storeCompleted = rs.getString(7); 
             
-            
         }
         catch (Exception e) {
         JOptionPane.showMessageDialog(null, "User Not Found !");
