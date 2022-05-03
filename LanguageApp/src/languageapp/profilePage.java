@@ -52,6 +52,7 @@ public class profilePage extends javax.swing.JFrame {
         jButton4 = new javax.swing.JButton();
         signOutBtn = new javax.swing.JButton();
         imageProfileIcon = new javax.swing.JLabel();
+        progressBtn = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Lanuage App");
@@ -148,6 +149,13 @@ public class profilePage extends javax.swing.JFrame {
 
         imageProfileIcon.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/earth-globeprofile-page.png"))); // NOI18N
 
+        progressBtn.setText("Progress");
+        progressBtn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                progressBtnActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
@@ -160,7 +168,8 @@ public class profilePage extends javax.swing.JFrame {
                             .addComponent(jButton_Scenariobtn, javax.swing.GroupLayout.PREFERRED_SIZE, 234, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(ProfileBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 234, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(recordsBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 234, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jButton4, javax.swing.GroupLayout.PREFERRED_SIZE, 234, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                            .addComponent(jButton4, javax.swing.GroupLayout.PREFERRED_SIZE, 234, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(progressBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 234, javax.swing.GroupLayout.PREFERRED_SIZE)))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(111, 111, 111)
                         .addComponent(imageProfileIcon)
@@ -184,13 +193,15 @@ public class profilePage extends javax.swing.JFrame {
                             .addComponent(imageProfileIcon))
                         .addGap(92, 92, 92)
                         .addComponent(ProfileBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(13, 13, 13)
+                        .addComponent(progressBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addComponent(jButton_Scenariobtn, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addComponent(recordsBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addComponent(jButton4, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 122, Short.MAX_VALUE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 68, Short.MAX_VALUE)
                         .addComponent(signOutBtn))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addContainerGap()
@@ -247,6 +258,13 @@ public class profilePage extends javax.swing.JFrame {
         setVisible(false); //Closes This window
     }//GEN-LAST:event_jButton_ScenariobtnActionPerformed
 
+    private void progressBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_progressBtnActionPerformed
+        // TODO add your handling code here:
+        progressPage emp = new progressPage();
+        emp.setVisible(true);
+        setVisible(false); //Closes This window
+    }//GEN-LAST:event_progressBtnActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -294,6 +312,7 @@ public class profilePage extends javax.swing.JFrame {
     private javax.swing.JLabel jLabelPic;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
+    private javax.swing.JButton progressBtn;
     private javax.swing.JButton recordsBtn;
     private javax.swing.JButton signOutBtn;
     private javax.swing.JLabel userEmail;
