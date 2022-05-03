@@ -260,7 +260,7 @@ public class profilePage extends javax.swing.JFrame {
 
     private void progressBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_progressBtnActionPerformed
         // TODO add your handling code here:
-        progressPage emp = new progressPage();
+        progPage emp = new progPage();
         emp.setVisible(true);
         setVisible(false); //Closes This window
     }//GEN-LAST:event_progressBtnActionPerformed

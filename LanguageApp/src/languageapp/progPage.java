@@ -233,6 +233,7 @@ public class progPage extends javax.swing.JFrame {
         );
 
         pack();
+        setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
     private void profilePageButtonMenuActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_profilePageButtonMenuActionPerformed

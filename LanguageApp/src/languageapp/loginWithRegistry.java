@@ -525,6 +525,9 @@ public class loginWithRegistry extends javax.swing.JFrame {
                 System.out.println("securePwd: " + securePassword);
                 if(VerifyProvidedPassword(loginPass.getText())) {
                 JOptionPane.showMessageDialog(null, "Login Successful, Press 'OK' to continue.");
+                storeFname = rs.getString(2);
+                storeSname = rs.getString(3);
+                storeEmail = Email.getText();
                 
                 profilePage emp = new profilePage();
                 emp.setVisible(true); // Opens next window 
