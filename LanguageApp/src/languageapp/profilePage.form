@@ -60,6 +60,7 @@
                               <Component id="ProfileBtn" min="-2" pref="234" max="-2" attributes="0"/>
                               <Component id="recordsBtn" alignment="0" min="-2" pref="234" max="-2" attributes="0"/>
                               <Component id="jButton4" alignment="0" min="-2" pref="234" max="-2" attributes="0"/>
+                              <Component id="progressBtn" alignment="0" min="-2" pref="234" max="-2" attributes="0"/>
                           </Group>
                       </Group>
                       <Group type="102" alignment="0" attributes="0">
@@ -91,13 +92,15 @@
                           </Group>
                           <EmptySpace min="-2" pref="92" max="-2" attributes="0"/>
                           <Component id="ProfileBtn" min="-2" pref="41" max="-2" attributes="0"/>
+                          <EmptySpace min="-2" pref="13" max="-2" attributes="0"/>
+                          <Component id="progressBtn" min="-2" pref="41" max="-2" attributes="0"/>
                           <EmptySpace type="unrelated" max="-2" attributes="0"/>
                           <Component id="jButton_Scenariobtn" min="-2" pref="41" max="-2" attributes="0"/>
                           <EmptySpace type="unrelated" max="-2" attributes="0"/>
                           <Component id="recordsBtn" min="-2" pref="41" max="-2" attributes="0"/>
                           <EmptySpace type="unrelated" max="-2" attributes="0"/>
                           <Component id="jButton4" min="-2" pref="41" max="-2" attributes="0"/>
-                          <EmptySpace pref="122" max="32767" attributes="0"/>
+                          <EmptySpace pref="68" max="32767" attributes="0"/>
                           <Component id="signOutBtn" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <Group type="102" attributes="0">
@@ -255,6 +258,14 @@
               <Image iconType="3" name="/images/earth-globeprofile-page.png"/>
             </Property>
           </Properties>
+        </Component>
+        <Component class="javax.swing.JButton" name="progressBtn">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Progress"/>
+          </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="progressBtnActionPerformed"/>
+          </Events>
         </Component>
       </SubComponents>
     </Container>
