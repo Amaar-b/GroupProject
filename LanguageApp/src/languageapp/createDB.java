@@ -15,7 +15,7 @@ import java.util.logging.Logger;
 
 /**
  *
- * @author Amaar
+ * @author Amaar Bhatti - w1781655
  */
 public class createDB {
 

@@ -11,7 +11,7 @@ import java.sql.Statement;
 
 /**
  *
- * @author w1781655
+ * @author Amaar Bhatti - w1781655
  */
 public class teacherTable {
     public static void main(String[] args) {

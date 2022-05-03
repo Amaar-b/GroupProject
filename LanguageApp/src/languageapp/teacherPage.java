@@ -19,7 +19,7 @@ import javax.swing.table.TableRowSorter;
 
 /**
  *
- * @author Amaar
+ * @author Amaar Bhatti - w1781655
  */
 public class teacherPage extends javax.swing.JFrame {
 
@@ -284,6 +284,7 @@ public class teacherPage extends javax.swing.JFrame {
         );
 
         pack();
+        setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
@@ -372,8 +373,8 @@ public class teacherPage extends javax.swing.JFrame {
 
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
         // TODO add your handling code here:
-        loginWithRegistry login = new loginWithRegistry();
-        login.setVisible(true);
+        loginSelection emp = new loginSelection();
+        emp.setVisible(true);
         setVisible(false); //Closes This window
     }//GEN-LAST:event_jButton4ActionPerformed
 

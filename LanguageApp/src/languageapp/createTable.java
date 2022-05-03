@@ -13,7 +13,7 @@ import java.sql.Statement;
 
 /**
  *
- * @author Amaar
+ * @author Amaar Bhatti - w1781655
  */
 public class createTable {
     public static void main(String[] args) {

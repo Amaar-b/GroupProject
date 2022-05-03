@@ -12,7 +12,7 @@ import java.sql.DriverManager;
 
 /**
  *
- * @author Amaar
+ * @author Amaar Bhatti - w1781655
  */
 public class connectDB {
     

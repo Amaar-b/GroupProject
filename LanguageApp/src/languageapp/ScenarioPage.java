@@ -12,7 +12,7 @@ import javax.swing.JFrame;
 
 /**
  *
- * @author w1740779
+ * @author Omar Omar - w1740779
  */
 public class ScenarioPage extends javax.swing.JFrame {
     

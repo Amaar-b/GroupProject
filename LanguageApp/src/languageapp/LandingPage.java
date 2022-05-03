@@ -12,7 +12,7 @@ import javax.swing.JOptionPane;
 
 /**
  *
- * @author w1740779
+ * @author Omar Omar - w1740779
  */
 public class LandingPage extends javax.swing.JFrame {
     
