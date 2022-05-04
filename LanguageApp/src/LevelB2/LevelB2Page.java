@@ -4,7 +4,8 @@
  * and open the template in the editor.
  */
 package LevelB2;
-
+import LevelB1.LevelB1Page;
+import LevelB2.LevelB2Page;
 import LevelA2.*;
 import LevelA1.*;
 import languageapp.ScenarioPage;
@@ -15,7 +16,7 @@ import languageapp.teacherPage;
 
 /**
  *
- * @author w1776316
+ * @author hari
  */
 public class LevelB2Page extends javax.swing.JFrame {
     
@@ -231,15 +232,21 @@ public class LevelB2Page extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton_profileActionPerformed
 
     private void jButton_B2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_B2ActionPerformed
-       // TODO add your handling code here:
+      LevelB2Page emp = new LevelB2Page();
+        emp.setVisible(true);
+        setVisible(false); //Closes This window
     }//GEN-LAST:event_jButton_B2ActionPerformed
 
     private void jButton_A2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_A2ActionPerformed
-        // TODO add your handling code here:
+       LevelA2Page emp = new LevelA2Page();
+        emp.setVisible(true);
+        setVisible(false); //Closes This window
     }//GEN-LAST:event_jButton_A2ActionPerformed
 
     private void jButton_B1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_B1ActionPerformed
-        // TODO add your handling code here:
+         LevelB1Page emp = new LevelB1Page();
+        emp.setVisible(true);
+        setVisible(false); //Closes This window
     }//GEN-LAST:event_jButton_B1ActionPerformed
 
     private void jButton_SignOutActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_SignOutActionPerformed
