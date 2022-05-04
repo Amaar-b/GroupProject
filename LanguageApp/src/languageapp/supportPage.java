@@ -39,7 +39,6 @@ private JFrame frame;
         jButton_profile = new javax.swing.JButton();
         jLabelPic1 = new javax.swing.JLabel();
         jButton_Scenario = new javax.swing.JButton();
-        jButton_Records = new javax.swing.JButton();
         jButton_SupportPage = new javax.swing.JButton();
         jButton_SignOut = new javax.swing.JButton();
         jLabel3 = new javax.swing.JLabel();
@@ -77,16 +76,8 @@ private JFrame frame;
         jButton_Scenario.setText("Scenario");
         jPanel4.add(jButton_Scenario, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 220, 110, 41));
 
-        jButton_Records.setText("Admin Records");
-        jButton_Records.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton_RecordsActionPerformed(evt);
-            }
-        });
-        jPanel4.add(jButton_Records, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 270, 110, 41));
-
         jButton_SupportPage.setText("Support Page");
-        jPanel4.add(jButton_SupportPage, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 320, 110, 41));
+        jPanel4.add(jButton_SupportPage, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 270, 110, 41));
 
         jButton_SignOut.setText("Sign Out");
         jButton_SignOut.addActionListener(new java.awt.event.ActionListener() {
@@ -177,18 +168,6 @@ private JFrame frame;
         emp.setVisible(true);
         setVisible(false); //Closes This window
     }//GEN-LAST:event_jButton_profileActionPerformed
-
-    private void jButton_RecordsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_RecordsActionPerformed
-        //Takes you to the profile page
-        if(loginSelection.option == "T"){
-        teacherPage emp = new teacherPage();
-        emp.setVisible(true);
-        setVisible(false); //Closes This window
-        }
-        else {
-        JOptionPane.showMessageDialog(null, "Page restricted, Staff only.");
-        }
-    }//GEN-LAST:event_jButton_RecordsActionPerformed
 
     private void jButton_SignOutActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_SignOutActionPerformed
             //Takes you to the SIGNOUT page
@@ -508,7 +487,6 @@ private JFrame frame;
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton_Records;
     private javax.swing.JButton jButton_Scenario;
     private javax.swing.JButton jButton_SignOut;
     private javax.swing.JButton jButton_SupportPage;
