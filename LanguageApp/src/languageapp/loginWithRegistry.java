@@ -97,6 +97,7 @@ public class loginWithRegistry extends javax.swing.JFrame {
         jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 20, -1, -1));
 
         jLabel3.setFont(new java.awt.Font("Segoe UI Light", 0, 14)); // NOI18N
+        jLabel3.setForeground(new java.awt.Color(255, 255, 255));
         jLabel3.setText("Email:");
         jPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 70, -1, -1));
 
@@ -108,6 +109,7 @@ public class loginWithRegistry extends javax.swing.JFrame {
         jPanel1.add(Email, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 70, 120, -1));
 
         jLabel4.setFont(new java.awt.Font("Segoe UI Light", 0, 14)); // NOI18N
+        jLabel4.setForeground(new java.awt.Color(255, 255, 255));
         jLabel4.setText("Password:");
         jPanel1.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 110, -1, -1));
         jPanel1.add(loginPass, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 110, 120, -1));
