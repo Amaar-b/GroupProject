@@ -77,7 +77,7 @@ private JFrame frame;
         jButton_Scenario.setText("Scenario");
         jPanel4.add(jButton_Scenario, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 220, 110, 41));
 
-        jButton_Records.setText("Progress");
+        jButton_Records.setText("Admin Records");
         jButton_Records.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton_RecordsActionPerformed(evt);
@@ -145,6 +145,11 @@ private JFrame frame;
         jPanel1.add(jTextField3, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 210, 480, 170));
 
         jButton1.setText("Submit");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
         jPanel1.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 400, -1, -1));
 
         jPanel5.add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 710, 470));
@@ -173,6 +178,18 @@ private JFrame frame;
         setVisible(false); //Closes This window
     }//GEN-LAST:event_jButton_profileActionPerformed
 
+    private void jButton_RecordsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_RecordsActionPerformed
+        //Takes you to the profile page
+        if(loginSelection.option == "T"){
+        teacherPage emp = new teacherPage();
+        emp.setVisible(true);
+        setVisible(false); //Closes This window
+        }
+        else {
+        JOptionPane.showMessageDialog(null, "Page restricted, Staff only.");
+        }
+    }//GEN-LAST:event_jButton_RecordsActionPerformed
+
     private void jButton_SignOutActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_SignOutActionPerformed
             //Takes you to the SIGNOUT page
         loginWithRegistry emp = new loginWithRegistry();
@@ -188,14 +205,10 @@ private JFrame frame;
         // TODO add your handling code here:
     }//GEN-LAST:event_jTextField2ActionPerformed
 
-    private void jButton_RecordsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_RecordsActionPerformed
-        //Takes you to the profile page
-        
-        progPage emp = new progPage();
-        emp.setVisible(true);
-        setVisible(false); //Closes This window
-        
-    }//GEN-LAST:event_jButton_RecordsActionPerformed
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        // TODO add your handling code here:
+        JOptionPane.showMessageDialog(this, "Message Sent!");
+    }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton_SupportPage(java.awt.event.ActionEvent evt) {                                                
         //Takes you to the profile page
