@@ -42,7 +42,6 @@ private JFrame frame;
         jLabel4 = new javax.swing.JLabel();
         jButton_ProgPage = new javax.swing.JButton();
         jButton_Scenario = new javax.swing.JButton();
-        jButton_Languages = new javax.swing.JButton();
         jButton_SupportPage = new javax.swing.JButton();
         jPanel5 = new javax.swing.JPanel();
         jPanel1 = new javax.swing.JPanel();
@@ -100,14 +99,6 @@ private JFrame frame;
             }
         });
         jPanel4.add(jButton_Scenario, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 240, 110, 41));
-
-        jButton_Languages.setText("Languages");
-        jButton_Languages.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton_LanguagesActionPerformed(evt);
-            }
-        });
-        jPanel4.add(jButton_Languages, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 460, -1, -1));
 
         jButton_SupportPage.setText("Support Page");
         jButton_SupportPage.addActionListener(new java.awt.event.ActionListener() {
@@ -206,18 +197,11 @@ private JFrame frame;
         setVisible(false); //Closes This window        // TODO add your handling code here:
     }//GEN-LAST:event_jButton_ScenarioActionPerformed
 
-    private void jButton_LanguagesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_LanguagesActionPerformed
-        //Takes you to the languagepage
-        LanguagePage emp = new LanguagePage();
-        emp.setVisible(true);
-        setVisible(false); //Closes This window // TODO add your handling code here:
-    }//GEN-LAST:event_jButton_LanguagesActionPerformed
-
     private void jButton_SupportPageActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_SupportPageActionPerformed
 
-        supportPage emp = new supportPage();
-        emp.setVisible(true);
-        setVisible(false); //Closes This window
+        supportPage sup = new supportPage();
+        sup.setVisible(true);
+        setVisible(false); //Closes This window 
 
     }//GEN-LAST:event_jButton_SupportPageActionPerformed
 
@@ -264,7 +248,6 @@ private JFrame frame;
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton_Languages;
     private javax.swing.JButton jButton_ProgPage;
     private javax.swing.JButton jButton_Scenario;
     private javax.swing.JButton jButton_SignOut;

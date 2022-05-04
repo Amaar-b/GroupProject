@@ -59,7 +59,7 @@
                               <Component id="jButton_Scenariobtn" min="-2" pref="234" max="-2" attributes="0"/>
                               <Component id="ProfileBtn" min="-2" pref="234" max="-2" attributes="0"/>
                               <Component id="recordsBtn" alignment="0" min="-2" pref="234" max="-2" attributes="0"/>
-                              <Component id="jButton4" alignment="0" min="-2" pref="234" max="-2" attributes="0"/>
+                              <Component id="supportBtn" alignment="0" min="-2" pref="234" max="-2" attributes="0"/>
                               <Component id="progressBtn" alignment="0" min="-2" pref="234" max="-2" attributes="0"/>
                           </Group>
                       </Group>
@@ -99,7 +99,7 @@
                           <EmptySpace type="unrelated" max="-2" attributes="0"/>
                           <Component id="recordsBtn" min="-2" pref="41" max="-2" attributes="0"/>
                           <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                          <Component id="jButton4" min="-2" pref="41" max="-2" attributes="0"/>
+                          <Component id="supportBtn" min="-2" pref="41" max="-2" attributes="0"/>
                           <EmptySpace pref="68" max="32767" attributes="0"/>
                           <Component id="signOutBtn" min="-2" max="-2" attributes="0"/>
                       </Group>
@@ -245,12 +245,12 @@
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="recordsBtnActionPerformed"/>
           </Events>
         </Component>
-        <Component class="javax.swing.JButton" name="jButton4">
+        <Component class="javax.swing.JButton" name="supportBtn">
           <Properties>
             <Property name="text" type="java.lang.String" value="Support Page"/>
           </Properties>
           <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton4ActionPerformed"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="supportBtnActionPerformed"/>
           </Events>
         </Component>
         <Component class="javax.swing.JButton" name="signOutBtn">

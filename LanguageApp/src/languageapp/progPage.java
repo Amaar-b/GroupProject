@@ -232,11 +232,10 @@ public class progPage extends javax.swing.JFrame {
 
     private void supportPageMenuButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_supportPageMenuButtonActionPerformed
         // TODO add your handling code here:
-        //Takes you to the Support page, this is aport of the menu buttons which all pages have.
-        // As the suuport page has not been implemented in to the project this section has been commented out
-        // supportPage emp = new suuportPage();
-        //emp.setVisible(true);
-        //setVisible(false); //Closes This window
+        //Takes you to the Support page, this is a part of the menu buttons which all pages have.
+        supportPage sup = new supportPage();
+        sup.setVisible(true);
+        setVisible(false); //Closes This window 
     }//GEN-LAST:event_supportPageMenuButtonActionPerformed
 
     

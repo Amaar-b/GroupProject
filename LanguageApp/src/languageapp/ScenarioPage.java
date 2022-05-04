@@ -246,9 +246,9 @@ private JFrame frame;
 
     private void jButton_SupportPageActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_SupportPageActionPerformed
 
-        supportPage emp = new supportPage();
-        emp.setVisible(true);
-        setVisible(false); //Closes This window
+        supportPage sup = new supportPage();
+        sup.setVisible(true);
+        setVisible(false); //Closes This window 
     }//GEN-LAST:event_jButton_SupportPageActionPerformed
 
     /**

@@ -49,7 +49,7 @@ public class profilePage extends javax.swing.JFrame {
         jLabelPic = new javax.swing.JLabel();
         jButton_Scenariobtn = new javax.swing.JButton();
         recordsBtn = new javax.swing.JButton();
-        jButton4 = new javax.swing.JButton();
+        supportBtn = new javax.swing.JButton();
         signOutBtn = new javax.swing.JButton();
         imageProfileIcon = new javax.swing.JLabel();
         progressBtn = new javax.swing.JButton();
@@ -136,10 +136,10 @@ public class profilePage extends javax.swing.JFrame {
             }
         });
 
-        jButton4.setText("Support Page");
-        jButton4.addActionListener(new java.awt.event.ActionListener() {
+        supportBtn.setText("Support Page");
+        supportBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton4ActionPerformed(evt);
+                supportBtnActionPerformed(evt);
             }
         });
 
@@ -171,7 +171,7 @@ public class profilePage extends javax.swing.JFrame {
                             .addComponent(jButton_Scenariobtn, javax.swing.GroupLayout.PREFERRED_SIZE, 234, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(ProfileBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 234, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(recordsBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 234, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jButton4, javax.swing.GroupLayout.PREFERRED_SIZE, 234, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(supportBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 234, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(progressBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 234, javax.swing.GroupLayout.PREFERRED_SIZE)))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(111, 111, 111)
@@ -203,7 +203,7 @@ public class profilePage extends javax.swing.JFrame {
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addComponent(recordsBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jButton4, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(supportBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 68, Short.MAX_VALUE)
                         .addComponent(signOutBtn))
                     .addGroup(jPanel1Layout.createSequentialGroup()
@@ -243,12 +243,17 @@ public class profilePage extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_recordsBtnActionPerformed
 
-    private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
+    private void supportBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_supportBtnActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton4ActionPerformed
+        //send to support window
+        supportPage sup = new supportPage();
+        sup.setVisible(true);
+        setVisible(false); //Closes This window 
+    }//GEN-LAST:event_supportBtnActionPerformed
 
     private void signOutBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_signOutBtnActionPerformed
         // TODO add your handling code here:
+        //send to loginSelection window
         loginSelection emp = new loginSelection();
         emp.setVisible(true);
         setVisible(false); //Closes This window
@@ -256,6 +261,7 @@ public class profilePage extends javax.swing.JFrame {
 
     private void jButton_ScenariobtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_ScenariobtnActionPerformed
         // TODO add your handling code here:
+        //send to language window
         LanguagePage emp = new LanguagePage();
         emp.setVisible(true);
         setVisible(false); //Closes This window
@@ -263,6 +269,7 @@ public class profilePage extends javax.swing.JFrame {
 
     private void progressBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_progressBtnActionPerformed
         // TODO add your handling code here:
+        //send to progress window
         progPage emp = new progPage();
         emp.setVisible(true);
         setVisible(false); //Closes This window
@@ -308,7 +315,6 @@ public class profilePage extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton ProfileBtn;
     private javax.swing.JLabel imageProfileIcon;
-    private javax.swing.JButton jButton4;
     private javax.swing.JButton jButton_Scenariobtn;
     private static javax.swing.JLabel jLabel1;
     private static javax.swing.JLabel jLabel2;
@@ -318,6 +324,7 @@ public class profilePage extends javax.swing.JFrame {
     private javax.swing.JButton progressBtn;
     private javax.swing.JButton recordsBtn;
     private javax.swing.JButton signOutBtn;
+    private javax.swing.JButton supportBtn;
     private javax.swing.JLabel userEmail;
     private javax.swing.JLabel userFname;
     private javax.swing.JLabel userSname;
