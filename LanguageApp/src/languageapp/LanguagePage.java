@@ -161,7 +161,7 @@ private JFrame frame;
 
     private void jButton_SignOutActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_SignOutActionPerformed
             //Takes you to the SIGNOUT page
-        loginWithRegistry emp = new loginWithRegistry();
+        loginSelection emp = new loginSelection();
         emp.setVisible(true);
         setVisible(false); //Closes This window // TODO add your handling code here:
     }//GEN-LAST:event_jButton_SignOutActionPerformed
