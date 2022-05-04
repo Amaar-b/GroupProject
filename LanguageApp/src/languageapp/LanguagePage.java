@@ -191,10 +191,7 @@ private JFrame frame;
     }//GEN-LAST:event_jButton_ProgPageActionPerformed
 
     private void jButton_ScenarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_ScenarioActionPerformed
-        //Takes you to the scenario page
-        ScenarioPage emp = new ScenarioPage();
-        emp.setVisible(true);
-        setVisible(false); //Closes This window        // TODO add your handling code here:
+        //TODO add your handling code here:
     }//GEN-LAST:event_jButton_ScenarioActionPerformed
 
     private void jButton_SupportPageActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_SupportPageActionPerformed

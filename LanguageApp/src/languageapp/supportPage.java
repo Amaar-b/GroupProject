@@ -77,7 +77,7 @@ private JFrame frame;
         jButton_Scenario.setText("Scenario");
         jPanel4.add(jButton_Scenario, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 220, 110, 41));
 
-        jButton_Records.setText("Admin Records");
+        jButton_Records.setText("Progress");
         jButton_Records.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton_RecordsActionPerformed(evt);
@@ -173,18 +173,6 @@ private JFrame frame;
         setVisible(false); //Closes This window
     }//GEN-LAST:event_jButton_profileActionPerformed
 
-    private void jButton_RecordsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_RecordsActionPerformed
-        //Takes you to the profile page
-        if(loginSelection.option == "T"){
-        teacherPage emp = new teacherPage();
-        emp.setVisible(true);
-        setVisible(false); //Closes This window
-        }
-        else {
-        JOptionPane.showMessageDialog(null, "Page restricted, Staff only.");
-        }
-    }//GEN-LAST:event_jButton_RecordsActionPerformed
-
     private void jButton_SignOutActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_SignOutActionPerformed
             //Takes you to the SIGNOUT page
         loginWithRegistry emp = new loginWithRegistry();
@@ -199,6 +187,15 @@ private JFrame frame;
     private void jTextField2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField2ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jTextField2ActionPerformed
+
+    private void jButton_RecordsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_RecordsActionPerformed
+        //Takes you to the profile page
+        
+        progPage emp = new progPage();
+        emp.setVisible(true);
+        setVisible(false); //Closes This window
+        
+    }//GEN-LAST:event_jButton_RecordsActionPerformed
 
     private void jButton_SupportPage(java.awt.event.ActionEvent evt) {                                                
         //Takes you to the profile page
