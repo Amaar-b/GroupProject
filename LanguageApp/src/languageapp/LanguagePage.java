@@ -178,7 +178,8 @@ private JFrame frame;
     
     
     private void jButton_SubmitActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_SubmitActionPerformed
-        
+        //selects a language within the JcomboBox  and if spanish is selected then you are moved to the scenario page
+        //else you are told language currently unavailable
                 
                 if (jComboBox_Languages.getItemAt(jComboBox_Languages.getSelectedIndex()).equals("Spanish")) {
                    ScenarioPage emp = new ScenarioPage();
