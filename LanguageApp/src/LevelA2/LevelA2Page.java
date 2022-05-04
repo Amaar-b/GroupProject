@@ -24,7 +24,7 @@ import languageapp.teacherPage;
 
 /**
  *
- * @author w1740779
+ * @author  w1740779 - omar
  */
 public class LevelA2Page extends javax.swing.JFrame {
     //stores subcombo data //subcombo stores the subcontext opions in the context and links them toether

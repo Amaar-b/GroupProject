@@ -16,7 +16,7 @@ import languageapp.teacherPage;
 
 /**
  *
- * @author w1740779
+ * @author  w1740779 - omar
  */
 public class LevelA1DescriptionOfTown extends javax.swing.JFrame {
     
