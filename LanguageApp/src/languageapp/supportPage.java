@@ -8,6 +8,7 @@ package languageapp;
 import LevelA1.LevelA1Page;
 import LevelA2.LevelA2Page;
 import javax.swing.JFrame;
+import javax.swing.JOptionPane;
 
 
 /**
@@ -174,9 +175,14 @@ private JFrame frame;
 
     private void jButton_RecordsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_RecordsActionPerformed
         //Takes you to the profile page
+        if(loginSelection.option == "T"){
         teacherPage emp = new teacherPage();
         emp.setVisible(true);
-        setVisible(false); //Closes This window        // TODO add your handling code here:
+        setVisible(false); //Closes This window
+        }
+        else {
+        JOptionPane.showMessageDialog(null, "Page restricted, Staff only.");
+        }
     }//GEN-LAST:event_jButton_RecordsActionPerformed
 
     private void jButton_SignOutActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_SignOutActionPerformed
