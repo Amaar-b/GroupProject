@@ -378,7 +378,7 @@ public class teacherPage extends javax.swing.JFrame {
 
     private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
         // Takes user to scenerio page
-        LandingPage lan = new LandingPage();
+        LanguagePage lan = new LanguagePage();
         lan.setVisible(true);
         setVisible(false); //Closes This window
     }//GEN-LAST:event_jButton5ActionPerformed

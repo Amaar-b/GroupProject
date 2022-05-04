@@ -243,7 +243,7 @@ public class progPage extends javax.swing.JFrame {
     
     private void scenariosPageButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_scenariosPageButtonActionPerformed
         // TODO add your handling code here:
-        LandingPage emp = new LandingPage();
+        LanguagePage emp = new LanguagePage();
         emp.setVisible(true);
         setVisible(false); //Closes This window
 

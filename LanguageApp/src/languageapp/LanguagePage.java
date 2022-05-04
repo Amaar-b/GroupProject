@@ -14,13 +14,13 @@ import javax.swing.JOptionPane;
  *
  * @author Omar Omar - w1740779
  */
-public class LandingPage extends javax.swing.JFrame {
+public class LanguagePage extends javax.swing.JFrame {
     
     /**
      * Creates new form profilePage
      */
 private JFrame frame;
-    public LandingPage() {
+    public LanguagePage() {
         initComponents();
     }
 
@@ -37,11 +37,13 @@ private JFrame frame;
         jPanel4 = new javax.swing.JPanel();
         jButton_profile = new javax.swing.JButton();
         jLabelPic1 = new javax.swing.JLabel();
-        jButton_Scenario = new javax.swing.JButton();
-        jButton_SupportPage = new javax.swing.JButton();
         jButton_SignOut = new javax.swing.JButton();
         jLabel3 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
+        jButton_ProgPage = new javax.swing.JButton();
+        jButton_Scenario = new javax.swing.JButton();
+        jButton_Languages = new javax.swing.JButton();
+        jButton_SupportPage = new javax.swing.JButton();
         jPanel5 = new javax.swing.JPanel();
         jPanel1 = new javax.swing.JPanel();
         jLabel5 = new javax.swing.JLabel();
@@ -66,20 +68,13 @@ private JFrame frame;
         jPanel4.add(jButton_profile, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 190, 110, 41));
         jPanel4.add(jLabelPic1, new org.netbeans.lib.awtextra.AbsoluteConstraints(111, 34, -1, 112));
 
-        jButton_Scenario.setBackground(new java.awt.Color(255, 255, 255));
-        jButton_Scenario.setText("Scenario");
-        jPanel4.add(jButton_Scenario, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 240, 110, 41));
-
-        jButton_SupportPage.setText("Support Page");
-        jPanel4.add(jButton_SupportPage, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 290, 110, 41));
-
         jButton_SignOut.setText("Sign Out");
         jButton_SignOut.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton_SignOutActionPerformed(evt);
             }
         });
-        jPanel4.add(jButton_SignOut, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 457, -1, -1));
+        jPanel4.add(jButton_SignOut, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 460, -1, -1));
 
         jLabel3.setFont(new java.awt.Font("Segoe UI Light", 1, 18)); // NOI18N
         jLabel3.setForeground(new java.awt.Color(255, 255, 255));
@@ -88,6 +83,39 @@ private JFrame frame;
 
         jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/earth-globeprofile-page.png"))); // NOI18N
         jPanel4.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 60, -1, -1));
+
+        jButton_ProgPage.setText("Progress Page");
+        jButton_ProgPage.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton_ProgPageActionPerformed(evt);
+            }
+        });
+        jPanel4.add(jButton_ProgPage, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 290, 110, 41));
+
+        jButton_Scenario.setBackground(new java.awt.Color(255, 255, 255));
+        jButton_Scenario.setText("Scenario");
+        jButton_Scenario.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton_ScenarioActionPerformed(evt);
+            }
+        });
+        jPanel4.add(jButton_Scenario, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 240, 110, 41));
+
+        jButton_Languages.setText("Languages");
+        jButton_Languages.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton_LanguagesActionPerformed(evt);
+            }
+        });
+        jPanel4.add(jButton_Languages, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 460, -1, -1));
+
+        jButton_SupportPage.setText("Support Page");
+        jButton_SupportPage.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton_SupportPageActionPerformed(evt);
+            }
+        });
+        jPanel4.add(jButton_SupportPage, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 340, 110, 41));
 
         jPanel3.add(jPanel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 200, 490));
 
@@ -163,6 +191,35 @@ private JFrame frame;
             
     }//GEN-LAST:event_jButton_SubmitActionPerformed
 
+    private void jButton_ProgPageActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_ProgPageActionPerformed
+        //Takes you to the profile page
+        progPage emp = new progPage();
+        emp.setVisible(true);
+        setVisible(false); //Closes This window        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton_ProgPageActionPerformed
+
+    private void jButton_ScenarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_ScenarioActionPerformed
+        //Takes you to the scenario page
+        ScenarioPage emp = new ScenarioPage();
+        emp.setVisible(true);
+        setVisible(false); //Closes This window        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton_ScenarioActionPerformed
+
+    private void jButton_LanguagesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_LanguagesActionPerformed
+        //Takes you to the languagepage
+        LanguagePage emp = new LanguagePage();
+        emp.setVisible(true);
+        setVisible(false); //Closes This window // TODO add your handling code here:
+    }//GEN-LAST:event_jButton_LanguagesActionPerformed
+
+    private void jButton_SupportPageActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_SupportPageActionPerformed
+
+        supportPage emp = new supportPage();
+        emp.setVisible(true);
+        setVisible(false); //Closes This window
+
+    }//GEN-LAST:event_jButton_SupportPageActionPerformed
+
     
     
     /**
@@ -182,14 +239,16 @@ private JFrame frame;
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(LandingPage.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(LanguagePage.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(LandingPage.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(LanguagePage.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(LandingPage.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(LanguagePage.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(LandingPage.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(LanguagePage.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
+        //</editor-fold>
         //</editor-fold>
         //</editor-fold>
         
@@ -198,12 +257,14 @@ private JFrame frame;
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new LandingPage().setVisible(true);
+                new LanguagePage().setVisible(true);
             }
         });
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton jButton_Languages;
+    private javax.swing.JButton jButton_ProgPage;
     private javax.swing.JButton jButton_Scenario;
     private javax.swing.JButton jButton_SignOut;
     private javax.swing.JButton jButton_Submit;

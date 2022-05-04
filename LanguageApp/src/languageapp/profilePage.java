@@ -256,7 +256,7 @@ public class profilePage extends javax.swing.JFrame {
 
     private void jButton_ScenariobtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_ScenariobtnActionPerformed
         // TODO add your handling code here:
-        LandingPage emp = new LandingPage();
+        LanguagePage emp = new LanguagePage();
         emp.setVisible(true);
         setVisible(false); //Closes This window
     }//GEN-LAST:event_jButton_ScenariobtnActionPerformed

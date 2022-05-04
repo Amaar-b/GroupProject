@@ -4,14 +4,18 @@
  * and open the template in the editor.
  */
 package LevelB2;
+import LevelA1.LevelA1Page;
 import LevelB1.*;
 import LevelB2.LevelB2Page;
 import LevelA2.LevelA2Page;
 import java.util.HashMap;
 import javax.swing.DefaultComboBoxModel;
+import languageapp.LanguagePage;
 import languageapp.ScenarioPage;
 import languageapp.loginWithRegistry;
 import languageapp.profilePage;
+import languageapp.progPage;
+import languageapp.supportPage;
 import languageapp.teacherPage;
 
 
@@ -54,15 +58,15 @@ public class LevelB2Page extends javax.swing.JFrame {
         jButton_profile = new javax.swing.JButton();
         jLabelPic1 = new javax.swing.JLabel();
         jButton_Scenario = new javax.swing.JButton();
-        jButton_SupportPage = new javax.swing.JButton();
         jButton_SignOut = new javax.swing.JButton();
         jLabel3 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
-        jButton_B2 = new javax.swing.JButton();
-        jButton_B1 = new javax.swing.JButton();
-        jButton_Records = new javax.swing.JButton();
-        jButton_B3 = new javax.swing.JButton();
         jButton_A2 = new javax.swing.JButton();
+        jButton_A1 = new javax.swing.JButton();
+        jButton_B1 = new javax.swing.JButton();
+        jButton_Languages = new javax.swing.JButton();
+        jButton_ProgPage = new javax.swing.JButton();
+        jButton_SupportPage3 = new javax.swing.JButton();
         jPanel5 = new javax.swing.JPanel();
         jPanel1 = new javax.swing.JPanel();
         jLabel5 = new javax.swing.JLabel();
@@ -104,9 +108,6 @@ public class LevelB2Page extends javax.swing.JFrame {
         });
         jPanel4.add(jButton_Scenario, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 270, 110, 41));
 
-        jButton_SupportPage.setText("Support Page");
-        jPanel4.add(jButton_SupportPage, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 530, 110, 41));
-
         jButton_SignOut.setText("Sign Out");
         jButton_SignOut.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -123,15 +124,23 @@ public class LevelB2Page extends javax.swing.JFrame {
         jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/earth-globeprofile-page.png"))); // NOI18N
         jPanel4.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 60, -1, -1));
 
-        jButton_B2.setText("B1");
-        jButton_B2.addActionListener(new java.awt.event.ActionListener() {
+        jButton_A2.setText("A2");
+        jButton_A2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton_B2ActionPerformed(evt);
+                jButton_A2ActionPerformed(evt);
             }
         });
-        jPanel4.add(jButton_B2, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 420, 50, -1));
+        jPanel4.add(jButton_A2, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 420, 50, -1));
 
-        jButton_B1.setText("A2");
+        jButton_A1.setText("A1");
+        jButton_A1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton_A1ActionPerformed(evt);
+            }
+        });
+        jPanel4.add(jButton_A1, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 340, 50, -1));
+
+        jButton_B1.setText("B1");
         jButton_B1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton_B1ActionPerformed(evt);
@@ -139,29 +148,29 @@ public class LevelB2Page extends javax.swing.JFrame {
         });
         jPanel4.add(jButton_B1, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 380, 50, -1));
 
-        jButton_Records.setText("Admin Records");
-        jButton_Records.addActionListener(new java.awt.event.ActionListener() {
+        jButton_Languages.setText("Languages");
+        jButton_Languages.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton_RecordsActionPerformed(evt);
+                jButton_LanguagesActionPerformed(evt);
             }
         });
-        jPanel4.add(jButton_Records, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 470, 110, 41));
+        jPanel4.add(jButton_Languages, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 720, -1, -1));
 
-        jButton_B3.setText("B1");
-        jButton_B3.addActionListener(new java.awt.event.ActionListener() {
+        jButton_ProgPage.setText("Progress Page");
+        jButton_ProgPage.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton_B3ActionPerformed(evt);
+                jButton_ProgPageActionPerformed(evt);
             }
         });
-        jPanel4.add(jButton_B3, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 380, 50, -1));
+        jPanel4.add(jButton_ProgPage, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 470, 110, 41));
 
-        jButton_A2.setText("A2");
-        jButton_A2.addActionListener(new java.awt.event.ActionListener() {
+        jButton_SupportPage3.setText("Support Page");
+        jButton_SupportPage3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton_A2ActionPerformed(evt);
+                jButton_SupportPage3ActionPerformed(evt);
             }
         });
-        jPanel4.add(jButton_A2, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 340, 50, -1));
+        jPanel4.add(jButton_SupportPage3, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 530, 110, 41));
 
         jPanel3.add(jPanel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 200, 760));
 
@@ -260,18 +269,6 @@ public class LevelB2Page extends javax.swing.JFrame {
         setVisible(false); //Closes This window
     }//GEN-LAST:event_jButton_profileActionPerformed
 
-    private void jButton_B2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_B2ActionPerformed
-      LevelB2Page emp = new LevelB2Page();
-        emp.setVisible(true);
-        setVisible(false); //Closes This window
-    }//GEN-LAST:event_jButton_B2ActionPerformed
-
-    private void jButton_B1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_B1ActionPerformed
-      LevelB2Page emp = new LevelB2Page();
-        emp.setVisible(true);
-        setVisible(false); //Closes This window
-    }//GEN-LAST:event_jButton_B1ActionPerformed
-
     private void jButton_SignOutActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_SignOutActionPerformed
         //Takes you to the login page
         loginWithRegistry emp = new loginWithRegistry();
@@ -285,13 +282,6 @@ public class LevelB2Page extends javax.swing.JFrame {
         emp.setVisible(true);
         setVisible(false); //Closes This window        // TODO add your handling code here:
     }//GEN-LAST:event_jButton_ScenarioActionPerformed
-
-    private void jButton_RecordsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_RecordsActionPerformed
-        //Takes you to the teacher page
-        teacherPage emp = new teacherPage();
-        emp.setVisible(true);
-        setVisible(false); //Closes This window        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton_RecordsActionPerformed
 
     private void jComboBox_ContextActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox_ContextActionPerformed
    
@@ -348,19 +338,47 @@ public class LevelB2Page extends javax.swing.JFrame {
 
     }//GEN-LAST:event_jButton_SubmitActionPerformed
 
-    private void jButton_B3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_B3ActionPerformed
-        //Takes you to the B1 Page
-        LevelB1Page emp = new LevelB1Page();
-        emp.setVisible(true);
-        setVisible(false); //Closes This window
-    }//GEN-LAST:event_jButton_B3ActionPerformed
-
     private void jButton_A2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_A2ActionPerformed
         //Takes you to the A2 Page
         LevelA2Page emp = new LevelA2Page();
         emp.setVisible(true);
         setVisible(false); //Closes This window
     }//GEN-LAST:event_jButton_A2ActionPerformed
+
+    private void jButton_A1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_A1ActionPerformed
+        //Takes you to the A2 Page
+        LevelA1Page emp = new LevelA1Page();
+        emp.setVisible(true);
+        setVisible(false); //Closes This window
+    }//GEN-LAST:event_jButton_A1ActionPerformed
+
+    private void jButton_B1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_B1ActionPerformed
+        //Takes you to the B1 Page
+        LevelB1Page emp = new LevelB1Page();
+        emp.setVisible(true);
+        setVisible(false); //Closes This window
+    }//GEN-LAST:event_jButton_B1ActionPerformed
+
+    private void jButton_LanguagesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_LanguagesActionPerformed
+        //Takes you to the languagepage
+        LanguagePage emp = new LanguagePage();
+        emp.setVisible(true);
+        setVisible(false); //Closes This window // TODO add your handling code here:
+    }//GEN-LAST:event_jButton_LanguagesActionPerformed
+
+    private void jButton_ProgPageActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_ProgPageActionPerformed
+        //Takes you to the profile page
+        progPage emp = new progPage();
+        emp.setVisible(true);
+        setVisible(false); //Closes This window        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton_ProgPageActionPerformed
+
+    private void jButton_SupportPage3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_SupportPage3ActionPerformed
+
+        supportPage emp = new supportPage();
+        emp.setVisible(true);
+        setVisible(false); //Closes This window
+    }//GEN-LAST:event_jButton_SupportPage3ActionPerformed
 
      
     /**
@@ -417,15 +435,17 @@ public class LevelB2Page extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton jButton_A1;
     private javax.swing.JButton jButton_A2;
     private javax.swing.JButton jButton_B1;
-    private javax.swing.JButton jButton_B2;
-    private javax.swing.JButton jButton_B3;
-    private javax.swing.JButton jButton_Records;
+    private javax.swing.JButton jButton_Languages;
+    private javax.swing.JButton jButton_ProgPage;
     private javax.swing.JButton jButton_Scenario;
     private javax.swing.JButton jButton_SignOut;
     private javax.swing.JButton jButton_Submit;
     private javax.swing.JButton jButton_SupportPage;
+    private javax.swing.JButton jButton_SupportPage1;
+    private javax.swing.JButton jButton_SupportPage3;
     private javax.swing.JButton jButton_profile;
     private javax.swing.JComboBox<String> jComboBox_Context;
     private javax.swing.JComboBox<String> jComboBox_SubContext;
