@@ -67,10 +67,13 @@ public class profilePage extends javax.swing.JFrame {
         jLabel1.setFont(new java.awt.Font("Georgia", 1, 14)); // NOI18N
         jLabel1.setText("Account Profile");
 
+        userFname.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         userFname.setText("Fname");
 
+        userSname.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         userSname.setText("Sname");
 
+        userEmail.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         userEmail.setText("Username:");
 
         jLabel2.setFont(new java.awt.Font("Georgia", 1, 12)); // NOI18N
@@ -104,9 +107,9 @@ public class profilePage extends javax.swing.JFrame {
                 .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(userFname)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(userSname)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGap(13, 13, 13)
                 .addComponent(userEmail)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
