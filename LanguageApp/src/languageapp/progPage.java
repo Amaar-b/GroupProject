@@ -56,28 +56,26 @@ public class progPage extends javax.swing.JFrame {
 
         inProgressTitle.setText("In Progress");
 
-        inProgressNum.setText("jLabel1");
+        inProgressNum.setForeground(new java.awt.Color(255, 0, 0));
+        inProgressNum.setText("UNAVAILABLE");
 
         javax.swing.GroupLayout inProgressPanelLayout = new javax.swing.GroupLayout(inProgressPanel);
         inProgressPanel.setLayout(inProgressPanelLayout);
         inProgressPanelLayout.setHorizontalGroup(
             inProgressPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(inProgressPanelLayout.createSequentialGroup()
+                .addGap(62, 62, 62)
                 .addGroup(inProgressPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(inProgressPanelLayout.createSequentialGroup()
-                        .addGap(75, 75, 75)
-                        .addComponent(inProgressNum))
-                    .addGroup(inProgressPanelLayout.createSequentialGroup()
-                        .addGap(62, 62, 62)
-                        .addComponent(inProgressTitle, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(67, Short.MAX_VALUE))
+                    .addComponent(inProgressNum)
+                    .addComponent(inProgressTitle, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(80, Short.MAX_VALUE))
         );
         inProgressPanelLayout.setVerticalGroup(
             inProgressPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, inProgressPanelLayout.createSequentialGroup()
-                .addContainerGap(53, Short.MAX_VALUE)
+                .addContainerGap(52, Short.MAX_VALUE)
                 .addComponent(inProgressNum)
-                .addGap(25, 25, 25)
+                .addGap(26, 26, 26)
                 .addComponent(inProgressTitle, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(47, 47, 47))
         );
@@ -87,27 +85,28 @@ public class progPage extends javax.swing.JFrame {
 
         completedActivityLabel.setText("Completed Activity");
 
-        completedActiv.setText("jLabel1");
+        completedActiv.setForeground(new java.awt.Color(255, 0, 0));
+        completedActiv.setText("UNAVAILABLE");
 
         javax.swing.GroupLayout completedActivityPanelLayout = new javax.swing.GroupLayout(completedActivityPanel);
         completedActivityPanel.setLayout(completedActivityPanelLayout);
         completedActivityPanelLayout.setHorizontalGroup(
             completedActivityPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(completedActivityPanelLayout.createSequentialGroup()
-                .addGap(81, 81, 81)
-                .addComponent(completedActiv)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, completedActivityPanelLayout.createSequentialGroup()
                 .addContainerGap(50, Short.MAX_VALUE)
                 .addComponent(completedActivityLabel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(48, 48, 48))
+            .addGroup(completedActivityPanelLayout.createSequentialGroup()
+                .addGap(63, 63, 63)
+                .addComponent(completedActiv)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         completedActivityPanelLayout.setVerticalGroup(
             completedActivityPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, completedActivityPanelLayout.createSequentialGroup()
-                .addContainerGap(53, Short.MAX_VALUE)
+                .addContainerGap(51, Short.MAX_VALUE)
                 .addComponent(completedActiv)
-                .addGap(25, 25, 25)
+                .addGap(27, 27, 27)
                 .addComponent(completedActivityLabel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(47, 47, 47))
         );
@@ -204,9 +203,12 @@ public class progPage extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 695, Short.MAX_VALUE)
+            .addGap(0, 704, Short.MAX_VALUE)
             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addComponent(jPanel1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                    .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -241,7 +243,7 @@ public class progPage extends javax.swing.JFrame {
     
     private void scenariosPageButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_scenariosPageButtonActionPerformed
         // TODO add your handling code here:
-        ScenarioPage emp = new ScenarioPage();
+        LandingPage emp = new LandingPage();
         emp.setVisible(true);
         setVisible(false); //Closes This window
 
@@ -250,7 +252,7 @@ public class progPage extends javax.swing.JFrame {
     private void signOutButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_signOutButtonActionPerformed
         // TODO add your handling code here:
         //Takes you to the SIGNOUT page
-        loginWithRegistry emp = new loginWithRegistry();
+        loginSelection emp = new loginSelection();
         emp.setVisible(true);
         setVisible(false); //Closes This window
     }//GEN-LAST:event_signOutButtonActionPerformed
