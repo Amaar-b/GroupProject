@@ -4,11 +4,11 @@
  * and open the template in the editor.
  */
 package LevelB1;
-import LevelB1.LevelB1Page;
+import LevelA1.LevelA1Page;
 import LevelB2.LevelB2Page;
 import LevelA2.LevelA2Page;
-import LevelA2.*;
-import LevelA1.*;
+import java.util.HashMap;
+import javax.swing.DefaultComboBoxModel;
 import languageapp.ScenarioPage;
 import languageapp.loginWithRegistry;
 import languageapp.profilePage;
@@ -20,6 +20,22 @@ import languageapp.teacherPage;
  * @author w1776316
  */
 public class LevelB1Page extends javax.swing.JFrame {
+    //stores subcombo data //subcombo stores the subcontext opions in the context and links them toether
+    HashMap <String, String[]> subcombo = new HashMap <String, String[]>();
+   String[] contexts = { "University life","Making travel arrangements", "Going shopping and asking for prices", "Socialising", "Weather", "Ordering food and drink",
+    "Making invitations", "Work life", "Housing conditions"};
+    
+    String[] uniOptions = {"Study plans"};
+    String[] travelOptions = {"E.ticket"};
+    String[] shoppingpricesOptions = {"Purchase of computer", "Cancel hair appointment", "Payment"};
+    String[] socialisingOptions = {"Hair cut"};
+    String[] weatherOptions = {"Rain in station"};
+    String[] orderfoodOptions = {"Ordering cocktails by barcode"};
+    String[] invitationsOptions = {"Offering help for Pink Unicorn Party"};
+    String[] workOptions = {"Job offer"};
+    String[] houseOptions = {"Delivery of packages"};;
+    
+    
     
     /**
      * Creates new form profilePage
@@ -48,18 +64,28 @@ public class LevelB1Page extends javax.swing.JFrame {
         jButton_SignOut = new javax.swing.JButton();
         jLabel3 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
-        jButton_B2 = new javax.swing.JButton();
-        jButton_A2 = new javax.swing.JButton();
-        jButton_B1 = new javax.swing.JButton();
         jButton_Records = new javax.swing.JButton();
+        jButton_A1 = new javax.swing.JButton();
+        jButton_A2 = new javax.swing.JButton();
+        jButton_B2 = new javax.swing.JButton();
         jPanel5 = new javax.swing.JPanel();
         jPanel1 = new javax.swing.JPanel();
         jLabel5 = new javax.swing.JLabel();
         jPanel_LevelB1 = new javax.swing.JPanel();
         jLabel6 = new javax.swing.JLabel();
         jButton_Submit = new javax.swing.JButton();
+        //allows me to put the relevant context topic with the subcontext
+        subcombo.put(contexts[0], uniOptions);
+        subcombo.put(contexts[1], travelOptions);
+        subcombo.put(contexts[2], shoppingpricesOptions);
+        subcombo.put(contexts[3], socialisingOptions);
+        subcombo.put(contexts[4], weatherOptions);
+        subcombo.put(contexts[5], orderfoodOptions);
+        subcombo.put(contexts[6], invitationsOptions);
+        subcombo.put(contexts[7], workOptions);
+        subcombo.put(contexts[8], houseOptions);
+        jComboBox_Context = new javax.swing.JComboBox<>(contexts);
         jComboBox_SubContext = new javax.swing.JComboBox<>();
-        jComboBox_Context = new javax.swing.JComboBox<>();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Lanuage App");
@@ -107,13 +133,21 @@ public class LevelB1Page extends javax.swing.JFrame {
         jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/earth-globeprofile-page.png"))); // NOI18N
         jPanel4.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 60, -1, -1));
 
-        jButton_B2.setText("B2");
-        jButton_B2.addActionListener(new java.awt.event.ActionListener() {
+        jButton_Records.setText("Admin Records");
+        jButton_Records.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton_B2ActionPerformed(evt);
+                jButton_RecordsActionPerformed(evt);
             }
         });
-        jPanel4.add(jButton_B2, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 420, 50, -1));
+        jPanel4.add(jButton_Records, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 470, 110, 41));
+
+        jButton_A1.setText("A1");
+        jButton_A1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton_A1ActionPerformed(evt);
+            }
+        });
+        jPanel4.add(jButton_A1, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 380, 50, -1));
 
         jButton_A2.setText("A2");
         jButton_A2.addActionListener(new java.awt.event.ActionListener() {
@@ -123,21 +157,13 @@ public class LevelB1Page extends javax.swing.JFrame {
         });
         jPanel4.add(jButton_A2, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 340, 50, -1));
 
-        jButton_B1.setText("B1");
-        jButton_B1.addActionListener(new java.awt.event.ActionListener() {
+        jButton_B2.setText("B2");
+        jButton_B2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton_B1ActionPerformed(evt);
+                jButton_B2ActionPerformed(evt);
             }
         });
-        jPanel4.add(jButton_B1, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 380, 50, -1));
-
-        jButton_Records.setText("Admin Records");
-        jButton_Records.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton_RecordsActionPerformed(evt);
-            }
-        });
-        jPanel4.add(jButton_Records, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 470, 110, 41));
+        jPanel4.add(jButton_B2, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 420, 50, -1));
 
         jPanel3.add(jPanel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 200, 760));
 
@@ -183,7 +209,22 @@ public class LevelB1Page extends javax.swing.JFrame {
         jPanel1.add(jPanel_LevelB1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 250, -1));
 
         jButton_Submit.setText("Submit");
+        jButton_Submit.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton_SubmitActionPerformed(evt);
+            }
+        });
         jPanel1.add(jButton_Submit, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 310, -1, -1));
+
+        jComboBox_Context.setEditable(true);
+        jComboBox_Context.setFont(new java.awt.Font("Segoe UI Light", 0, 14)); // NOI18N
+        jComboBox_Context.setForeground(new java.awt.Color(51, 51, 51));
+        jComboBox_Context.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jComboBox_ContextActionPerformed(evt);
+            }
+        });
+        jPanel1.add(jComboBox_Context, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 120, 210, -1));
 
         jComboBox_SubContext.setEditable(true);
         jComboBox_SubContext.setFont(new java.awt.Font("Segoe UI Light", 0, 14)); // NOI18N
@@ -194,17 +235,6 @@ public class LevelB1Page extends javax.swing.JFrame {
             }
         });
         jPanel1.add(jComboBox_SubContext, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 200, 210, -1));
-
-        jComboBox_Context.setEditable(true);
-        jComboBox_Context.setFont(new java.awt.Font("Segoe UI Light", 0, 14)); // NOI18N
-        jComboBox_Context.setForeground(new java.awt.Color(51, 51, 51));
-        jComboBox_Context.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Going shopping and asking for prices", "University life", "Making travel arrangements", "Socialising", "Weather", "Ordering food and drink", "Making invitations", "Work life", "Housing conditions" }));
-        jComboBox_Context.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jComboBox_ContextActionPerformed(evt);
-            }
-        });
-        jPanel1.add(jComboBox_Context, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 120, 290, -1));
 
         jPanel5.add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 1080, 740));
 
@@ -232,24 +262,6 @@ public class LevelB1Page extends javax.swing.JFrame {
         setVisible(false); //Closes This window
     }//GEN-LAST:event_jButton_profileActionPerformed
 
-    private void jButton_B2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_B2ActionPerformed
-      LevelB2Page emp = new LevelB2Page();
-        emp.setVisible(true);
-        setVisible(false); //Closes This window
-    }//GEN-LAST:event_jButton_B2ActionPerformed
-
-    private void jButton_A2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_A2ActionPerformed
-      LevelA2Page emp = new LevelA2Page();
-        emp.setVisible(true);
-        setVisible(false); //Closes This window
-    }//GEN-LAST:event_jButton_A2ActionPerformed
-
-    private void jButton_B1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_B1ActionPerformed
-      LevelB1Page emp = new LevelB1Page();
-        emp.setVisible(true);
-        setVisible(false); //Closes This window
-    }//GEN-LAST:event_jButton_B1ActionPerformed
-
     private void jButton_SignOutActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_SignOutActionPerformed
         //Takes you to the login page
         loginWithRegistry emp = new loginWithRegistry();
@@ -271,130 +283,109 @@ public class LevelB1Page extends javax.swing.JFrame {
         setVisible(false); //Closes This window        // TODO add your handling code here:
     }//GEN-LAST:event_jButton_RecordsActionPerformed
 
+    private void jComboBox_ContextActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox_ContextActionPerformed
+        //the item selected by the user is turned into a string
+        String item = (String)jComboBox_Context.getSelectedItem();
+        //allows you me to return 1-based position from where the item is on the stack
+        Object o = subcombo.get(item);
+
+        if (o == null) {
+            //if its null it constructs an empty Combobox
+            jComboBox_SubContext.setModel(new DefaultComboBoxModel());
+        }
+        else {
+            //if its not null it the vaulues in the subcontext options appear in the jcombo box
+            jComboBox_SubContext.setModel(new DefaultComboBoxModel((String[])o));
+        }
+    }//GEN-LAST:event_jComboBox_ContextActionPerformed
+
     private void jComboBox_SubContextActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox_SubContextActionPerformed
   
     }//GEN-LAST:event_jComboBox_SubContextActionPerformed
 
-    private void jComboBox_ContextActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox_ContextActionPerformed
-                if(jComboBox_Context.getSelectedItem().equals("Asking and giving directions"))   
-     {
-         jComboBox_SubContext.removeAllItems();
-         jComboBox_SubContext.setSelectedItem(null);
-         jComboBox_SubContext.addItem("Delivery Driver");
-         jComboBox_SubContext.addItem("Hospital Visit");
-        
-                        
-     }
-     
-     else
-          if(jComboBox_Context.getSelectedItem().equals("Exchanging personal information"))   
-     {
-         jComboBox_SubContext.removeAllItems();
-         jComboBox_SubContext.setSelectedItem(null);
-         jComboBox_SubContext.addItem("Social Media");
-         jComboBox_SubContext.addItem("Instagram");
-                        
-     }
-     else 
-       if(jComboBox_Context.getSelectedItem().equals("Ordering food and drink"))   
-     {
-         jComboBox_SubContext.removeAllItems();
-         jComboBox_SubContext.setSelectedItem(null);
-         jComboBox_SubContext.addItem("Cocktails");
-         jComboBox_SubContext.addItem("Vegan pizza");       
-         jComboBox_SubContext.addItem("Reservation");       
-         jComboBox_SubContext.addItem("Delayed drink order");       
-         jComboBox_SubContext.addItem("QR code");       
-     }  
-       
-       else 
-       if(jComboBox_Context.getSelectedItem().equals("Making Appointments"))   
-     {
-         jComboBox_SubContext.removeAllItems();
-         jComboBox_SubContext.setSelectedItem(null);
-         jComboBox_SubContext.addItem("Dentist");
-         jComboBox_SubContext.addItem("Doctor");                  
-     }  
-      
-       else 
-       if(jComboBox_Context.getSelectedItem().equals("Going shopping and asking for prices"))   
-     {
-         jComboBox_SubContext.removeAllItems();
-         jComboBox_SubContext.setSelectedItem(null);
-         jComboBox_SubContext.addItem("Payment");
-                          
-     }  
-  
-     
-       else 
-       if(jComboBox_Context.getSelectedItem().equals("Health matters"))   
-     {
-         jComboBox_SubContext.removeAllItems();
-         jComboBox_SubContext.setSelectedItem(null);
-         jComboBox_SubContext.addItem("Sick relative");
-         jComboBox_SubContext.addItem("Visiting patient");                 
-     }  
-     
-      else 
-       if(jComboBox_Context.getSelectedItem().equals("Making invitations"))   
-     {
-         jComboBox_SubContext.removeAllItems();
-         jComboBox_SubContext.setSelectedItem(null);
-         jComboBox_SubContext.addItem("Charity");
-         jComboBox_SubContext.addItem("Lunch");
-         jComboBox_SubContext.addItem("Children at wedding");
-         jComboBox_SubContext.addItem("Wedding RSVP");
-                         
-     }  
-     
-     else 
-       if(jComboBox_Context.getSelectedItem().equals("Socialising in the country"))   
-     {
-         jComboBox_SubContext.removeAllItems();
-         jComboBox_SubContext.setSelectedItem(null);
-         jComboBox_SubContext.addItem("Family size");
-         jComboBox_SubContext.addItem("Succulent");
-         
-     }
-     
-          else 
-       if(jComboBox_Context.getSelectedItem().equals("Making travel arrangements"))   
-     {
-         jComboBox_SubContext.removeAllItems();
-         jComboBox_SubContext.setSelectedItem(null);
-         jComboBox_SubContext.addItem("Expired ticket");
-        
-     }
-     
-              else 
-       if(jComboBox_Context.getSelectedItem().equals("Introductions"))   
-     {
-         jComboBox_SubContext.removeAllItems();
-         jComboBox_SubContext.setSelectedItem(null);
-         jComboBox_SubContext.addItem("Ist day in job");
-         jComboBox_SubContext.addItem("Job offer");
-     }
-          
-              else 
-       if(jComboBox_Context.getSelectedItem().equals("Cross-cultural experiences"))   
-     {
-         jComboBox_SubContext.removeAllItems();
-         jComboBox_SubContext.setSelectedItem(null);
-         jComboBox_SubContext.addItem("Omelette");
-       
-     }
+    private void jButton_SubmitActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_SubmitActionPerformed
+     //opt 1 puts any seleceted item by the user into a string
+                String opt1 = (String) jComboBox_Context.getSelectedItem();
+                //opt 2 puts any seleceted item by the user into a string
+                String opt2 = (String)  jComboBox_SubContext.getSelectedItem();
                 
-     
-              else 
-       if(jComboBox_Context.getSelectedItem().equals("Weather and weather conditions"))   
-     {
-         jComboBox_SubContext.removeAllItems();
-         jComboBox_SubContext.setSelectedItem(null);
-         jComboBox_SubContext.addItem("Clothing for weather");
-       
-     }
-   
-    }//GEN-LAST:event_jComboBox_ContextActionPerformed
+
+                    
+
+//Compares the selected items and takes the user to the relevant page
+        
+//University life 
+        if (opt1.equals(contexts[0])  && opt2.equals(uniOptions[0])){ 
+         LevelB1StudyPlans();
+        }    
+//       
+//Making Travel Arrangements
+        else if (opt1.equals(contexts[1])  && opt2.equals(travelOptions[0])){ 
+        ETicket();
+        }
+//
+//Going shopping for prices
+        else if (opt1.equals(contexts[2])  && opt2.equals(shoppingpricesOptions[0])){ 
+        LevelB1PurchaseOfComputer();
+        }
+        else if (opt1.equals(contexts[2])  && opt2.equals(shoppingpricesOptions[1])){ 
+        LeveB1CancelHairAppointment(); 
+        }
+        else if (opt1.equals(contexts[2])  && opt2.equals(shoppingpricesOptions[2])){ 
+        LevelB1Purchase(); 
+        }
+//
+//Socialising in the country    
+        else if (opt1.equals(contexts[3])  && opt2.equals(socialisingOptions[0])){ 
+            LevelB1Haircut();
+        }
+//        
+//  Weather
+        else if (opt1.equals(contexts[4])  && opt2.equals(weatherOptions[0])){ 
+            LevelB1Weather();
+        }
+//
+//  Basic employment issues
+        else if (opt1.equals(contexts[5])  && opt2.equals(orderfoodOptions[0])){ 
+            LevelB1OrderingCocktailsByBarcode();
+        }      
+//
+//Making invitations        
+          else if (opt1.equals(contexts[6])  && opt2.equals(invitationsOptions[0])){ 
+            LevelB1OfferingHelpForPinkUnicornParty();
+        }
+ //
+ //Baic employment issues
+        else if (opt1.equals(contexts[7])  && opt2.equals(workOptions[0])){ 
+            LevelB1JobOffers();
+        } 
+//
+//Housing conditions
+        else if (opt1.equals(contexts[8])  && opt2.equals(houseOptions[0])){ 
+            LevelB1DeliveryOfPackages();
+        }
+    }//GEN-LAST:event_jButton_SubmitActionPerformed
+
+    private void jButton_A1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_A1ActionPerformed
+        //Takes you to the A2 Page
+        LevelA1Page emp = new LevelA1Page();
+        emp.setVisible(true);
+        setVisible(false); //Closes This window
+    }//GEN-LAST:event_jButton_A1ActionPerformed
+
+    private void jButton_A2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_A2ActionPerformed
+        //Takes you to the A2 Page
+        LevelA2Page emp = new LevelA2Page();
+        emp.setVisible(true);
+        setVisible(false); //Closes This window
+    }//GEN-LAST:event_jButton_A2ActionPerformed
+
+    private void jButton_B2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_B2ActionPerformed
+        //Takes you to the A2 Page
+        LevelB2Page emp = new LevelB2Page();
+        emp.setVisible(true);
+        setVisible(false); //Closes This window
+    }//GEN-LAST:event_jButton_B2ActionPerformed
 
      
     /**
@@ -465,8 +456,8 @@ public class LevelB1Page extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton jButton_A1;
     private javax.swing.JButton jButton_A2;
-    private javax.swing.JButton jButton_B1;
     private javax.swing.JButton jButton_B2;
     private javax.swing.JButton jButton_Records;
     private javax.swing.JButton jButton_Scenario;
@@ -487,4 +478,69 @@ public class LevelB1Page extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel5;
     private javax.swing.JPanel jPanel_LevelB1;
     // End of variables declaration//GEN-END:variables
+
+    private void LevelB1StudyPlans() {
+
+    }
+//Takes you to the ETicket page
+    private void ETicket() {
+ LevelB1.MakingTravelArrangements.ETicket emp = new LevelB1.MakingTravelArrangements.ETicket();
+        emp.setVisible(true);
+        setVisible(false); //Closes This window 
+
+    }
+//Takes you to the LevelB1PurchaseOfComputer page
+    private void LevelB1PurchaseOfComputer() {
+ LevelB1.GoingShoppingAndAskingForPrices.LevelB1PurchaseOfComputer  emp= new LevelB1.GoingShoppingAndAskingForPrices.LevelB1PurchaseOfComputer ();
+        emp.setVisible(true);
+        setVisible(false); //Closes This window
+    }
+//Takes you to the LeveB1CancelHairAppointment page
+    private void LeveB1CancelHairAppointment() {
+ LevelB1.GoingShoppingAndAskingForPrices.LeveB1CancelHairAppointment emp = new LevelB1.GoingShoppingAndAskingForPrices.LeveB1CancelHairAppointment();
+        emp.setVisible(true);
+        setVisible(false); //Closes This window
+    }
+//Takes you to the LevelB1Purchase page
+    private void LevelB1Purchase() {
+ LevelB1.GoingShoppingAndAskingForPrices.LevelB1Purchase emp = new LevelB1.GoingShoppingAndAskingForPrices.LevelB1Purchase();
+        emp.setVisible(true);
+        setVisible(false); //Closes This window
+    }
+//Takes you to the LevelB1Haircut page
+    private void LevelB1Haircut() {
+ LevelB1.SocialisingInTheCountry.LevelB1Haircut emp = new LevelB1.SocialisingInTheCountry.LevelB1Haircut();
+        emp.setVisible(true);
+        setVisible(false); //Closes This window
+    }
+//Takes you to the LevelB1Weather page
+    private void LevelB1Weather() {
+ LevelB1.Weather.LevelB1Weather emp = new LevelB1.Weather.LevelB1Weather();
+        emp.setVisible(true);
+        setVisible(false); //Closes This window
+    }
+//Takes you to the LevelB1OrderingCocktailsByBarcode page
+    private void LevelB1OrderingCocktailsByBarcode() {
+ LevelB1.OrderingFoodAndDrink.LevelB1OrderingCocktailsByBarcode emp = new LevelB1.OrderingFoodAndDrink.LevelB1OrderingCocktailsByBarcode();
+        emp.setVisible(true);
+        setVisible(false); //Closes This window
+    }
+//Takes you to the LevelB1OfferingHelpForPinkUnicornParty page
+    private void LevelB1OfferingHelpForPinkUnicornParty() {
+ LevelB1.MakingInvitations.LevelB1OfferingHelpForPinkUnicornParty emp = new LevelB1.MakingInvitations.LevelB1OfferingHelpForPinkUnicornParty();
+        emp.setVisible(true);
+        setVisible(false); //Closes This window
+    }
+//Takes you to the LevelB1JobOffers page
+    private void LevelB1JobOffers() {
+ LevelB1.BasicEmploymentIssues.LevelB1JobOffers emp = new LevelB1.BasicEmploymentIssues.LevelB1JobOffers();
+        emp.setVisible(true);
+        setVisible(false); //Closes This window
+    }
+//Takes you to the LevelB1DeliveryOfPackages page
+    private void LevelB1DeliveryOfPackages() {
+ LevelB1.HousingConditions.LevelB1DeliveryOfPackages emp = new LevelB1.HousingConditions.LevelB1DeliveryOfPackages();
+        emp.setVisible(true);
+        setVisible(false); //Closes This window
+    }
 }

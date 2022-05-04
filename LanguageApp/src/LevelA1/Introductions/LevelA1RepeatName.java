@@ -187,7 +187,7 @@ final String RepeatNameB ="- A: ...\n" +
         jLabel6.setBackground(new java.awt.Color(255, 255, 255));
         jLabel6.setFont(new java.awt.Font("Segoe UI Light", 1, 24)); // NOI18N
         jLabel6.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel6.setText("Instagram");
+        jLabel6.setText("Repeat name ");
 
         javax.swing.GroupLayout jPanel_LevelA1Layout = new javax.swing.GroupLayout(jPanel_LevelA1);
         jPanel_LevelA1.setLayout(jPanel_LevelA1Layout);

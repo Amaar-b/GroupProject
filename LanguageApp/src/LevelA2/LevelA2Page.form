@@ -151,29 +151,29 @@
                 </Constraint>
               </Constraints>
             </Component>
-            <Component class="javax.swing.JButton" name="jButton_B2">
+            <Component class="javax.swing.JButton" name="jButton_A1">
               <Properties>
-                <Property name="text" type="java.lang.String" value="B2"/>
+                <Property name="text" type="java.lang.String" value="A1"/>
               </Properties>
               <Events>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton_B2ActionPerformed"/>
-              </Events>
-              <Constraints>
-                <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-                  <AbsoluteConstraints x="40" y="420" width="50" height="-1"/>
-                </Constraint>
-              </Constraints>
-            </Component>
-            <Component class="javax.swing.JButton" name="jButton_A2">
-              <Properties>
-                <Property name="text" type="java.lang.String" value="A2"/>
-              </Properties>
-              <Events>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton_A2ActionPerformed"/>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton_A1ActionPerformed"/>
               </Events>
               <Constraints>
                 <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
                   <AbsoluteConstraints x="40" y="340" width="50" height="-1"/>
+                </Constraint>
+              </Constraints>
+            </Component>
+            <Component class="javax.swing.JButton" name="jButton_Records">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Admin Records"/>
+              </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton_RecordsActionPerformed"/>
+              </Events>
+              <Constraints>
+                <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
+                  <AbsoluteConstraints x="40" y="470" width="110" height="41"/>
                 </Constraint>
               </Constraints>
             </Component>
@@ -190,16 +190,16 @@
                 </Constraint>
               </Constraints>
             </Component>
-            <Component class="javax.swing.JButton" name="jButton_Records">
+            <Component class="javax.swing.JButton" name="jButton_B2">
               <Properties>
-                <Property name="text" type="java.lang.String" value="Admin Records"/>
+                <Property name="text" type="java.lang.String" value="B2"/>
               </Properties>
               <Events>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton_RecordsActionPerformed"/>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton_B2ActionPerformed"/>
               </Events>
               <Constraints>
                 <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-                  <AbsoluteConstraints x="40" y="470" width="110" height="41"/>
+                  <AbsoluteConstraints x="40" y="420" width="50" height="-1"/>
                 </Constraint>
               </Constraints>
             </Component>
@@ -303,7 +303,7 @@
                         <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                           <Color blue="ff" green="ff" red="ff" type="rgb"/>
                         </Property>
-                        <Property name="text" type="java.lang.String" value="LEVEL A1"/>
+                        <Property name="text" type="java.lang.String" value="LEVEL A2"/>
                       </Properties>
                     </Component>
                   </SubComponents>
@@ -355,27 +355,13 @@
                     <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                       <Color blue="33" green="33" red="33" type="rgb"/>
                     </Property>
-                    <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
-                      <StringArray count="12">
-                        <StringItem index="0" value="Ordering food and drink"/>
-                        <StringItem index="1" value="Exchanging personal information"/>
-                        <StringItem index="2" value="Making Appointments"/>
-                        <StringItem index="3" value="Going shopping and asking for prices"/>
-                        <StringItem index="4" value="Introductions"/>
-                        <StringItem index="5" value="Basic employment issues"/>
-                        <StringItem index="6" value="Making invitations"/>
-                        <StringItem index="7" value="Socialising in the country"/>
-                        <StringItem index="8" value="Asking and giving directions"/>
-                        <StringItem index="9" value="University life"/>
-                        <StringItem index="10" value="Cross-cultural experiences"/>
-                        <StringItem index="11" value=" "/>
-                      </StringArray>
-                    </Property>
                   </Properties>
                   <Events>
                     <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jComboBox_ContextActionPerformed"/>
                   </Events>
                   <AuxValues>
+                    <AuxValue name="JavaCodeGenerator_CreateCodeCustom" type="java.lang.String" value="new javax.swing.JComboBox&lt;&gt;(contexts)"/>
+                    <AuxValue name="JavaCodeGenerator_CreateCodePre" type="java.lang.String" value="//allows me to put the relevant context topic with the subcontext&#xa;        subcombo.put(contexts[0], introOptions);&#xa;        subcombo.put(contexts[1], appointmentsOptions);&#xa;        subcombo.put(contexts[2], givedirectionsOptions);&#xa;        subcombo.put(contexts[3], invitationsOptions);&#xa;        subcombo.put(contexts[4], orderfoodOptions);&#xa;        subcombo.put(contexts[5], shoppingpricesOptions);&#xa;        subcombo.put(contexts[6], hmOptions);&#xa;        subcombo.put(contexts[7], socialisingOptions);&#xa;        subcombo.put(contexts[8], travelOptions);&#xa;        subcombo.put(contexts[9], personalInfOptions);&#xa;        subcombo.put(contexts[10], cultureOptions);&#xa;        subcombo.put(contexts[11], weatherOptions);"/>
                     <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
                   </AuxValues>
                   <Constraints>

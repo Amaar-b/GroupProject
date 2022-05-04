@@ -4,11 +4,15 @@
  * and open the template in the editor.
  */
 package LevelA2;
+
+
+
+import LevelA1.LevelA1Page;
+import LevelA2.Weather.*;
 import LevelB1.LevelB1Page;
 import LevelB2.LevelB2Page;
-import LevelA2.LevelA2Page;
-import LevelA1.*;
-import LevelA1.Ordering.LevelA1Takeaway;
+import java.util.HashMap;
+import javax.swing.DefaultComboBoxModel;
 import languageapp.ScenarioPage;
 import languageapp.loginWithRegistry;
 import languageapp.profilePage;
@@ -17,9 +21,27 @@ import languageapp.teacherPage;
 
 /**
  *
- * @author hari
+ * @author w1740779
  */
 public class LevelA2Page extends javax.swing.JFrame {
+    //stores subcombo data //subcombo stores the subcontext opions in the context and links them toether
+    HashMap <String, String[]> subcombo = new HashMap <String, String[]>();
+    String[] contexts = {"Introductions", "Making Appointments", "Asking and giving directions","Making invitations", "Ordering food and drink", "Going shopping and asking for prices", "Health matters"
+            , "Socialising in the country", "Making travel arrangements","Exchanging personal information", "Cross-cultural experiences",  "Weather and weather conditions"}; 
+    
+    String[] introOptions = {"Ist day in job", "Job offer"};
+    String[] appointmentsOptions = {"Dentist", "Doctor"};
+    String[] givedirectionsOptions = {"Hospital Visit", "Delivery Driver"};
+    String[] invitationsOptions = {"Lunch", "Charity", "Children at wedding", "Wedding RSVP"};
+    String[] orderfoodOptions = {"Delayed drink order", "QR code", "Cocktails(1)", "Cocktails(2)", "Vegan pizza", "Reservation"};
+    String[] shoppingpricesOptions = {"Payment"};
+    String[] hmOptions = {"Sick relative", "Visiting patient"};
+    String[] socialisingOptions = {"Family size", "Hobbies"};
+    String[] travelOptions = {"Expired ticket"};
+    String[] personalInfOptions = {"Age restricted"};
+    String[] cultureOptions = {"Omelette"};
+    String[] weatherOptions = {"Clothing for weather"};
+        
 
     
     /**
@@ -49,10 +71,10 @@ public class LevelA2Page extends javax.swing.JFrame {
         jButton_SignOut = new javax.swing.JButton();
         jLabel3 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
-        jButton_B2 = new javax.swing.JButton();
-        jButton_A2 = new javax.swing.JButton();
-        jButton_B1 = new javax.swing.JButton();
+        jButton_A1 = new javax.swing.JButton();
         jButton_Records = new javax.swing.JButton();
+        jButton_B1 = new javax.swing.JButton();
+        jButton_B2 = new javax.swing.JButton();
         jPanel5 = new javax.swing.JPanel();
         jPanel1 = new javax.swing.JPanel();
         jLabel5 = new javax.swing.JLabel();
@@ -60,7 +82,20 @@ public class LevelA2Page extends javax.swing.JFrame {
         jLabel6 = new javax.swing.JLabel();
         jButton_Submit = new javax.swing.JButton();
         jComboBox_SubContext = new javax.swing.JComboBox<>();
-        jComboBox_Context = new javax.swing.JComboBox<>();
+        //allows me to put the relevant context topic with the subcontext
+        subcombo.put(contexts[0], introOptions);
+        subcombo.put(contexts[1], appointmentsOptions);
+        subcombo.put(contexts[2], givedirectionsOptions);
+        subcombo.put(contexts[3], invitationsOptions);
+        subcombo.put(contexts[4], orderfoodOptions);
+        subcombo.put(contexts[5], shoppingpricesOptions);
+        subcombo.put(contexts[6], hmOptions);
+        subcombo.put(contexts[7], socialisingOptions);
+        subcombo.put(contexts[8], travelOptions);
+        subcombo.put(contexts[9], personalInfOptions);
+        subcombo.put(contexts[10], cultureOptions);
+        subcombo.put(contexts[11], weatherOptions);
+        jComboBox_Context = new javax.swing.JComboBox<>(contexts);
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Lanuage App");
@@ -108,21 +143,21 @@ public class LevelA2Page extends javax.swing.JFrame {
         jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/earth-globeprofile-page.png"))); // NOI18N
         jPanel4.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 60, -1, -1));
 
-        jButton_B2.setText("B2");
-        jButton_B2.addActionListener(new java.awt.event.ActionListener() {
+        jButton_A1.setText("A1");
+        jButton_A1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton_B2ActionPerformed(evt);
+                jButton_A1ActionPerformed(evt);
             }
         });
-        jPanel4.add(jButton_B2, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 420, 50, -1));
+        jPanel4.add(jButton_A1, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 340, 50, -1));
 
-        jButton_A2.setText("A2");
-        jButton_A2.addActionListener(new java.awt.event.ActionListener() {
+        jButton_Records.setText("Admin Records");
+        jButton_Records.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton_A2ActionPerformed(evt);
+                jButton_RecordsActionPerformed(evt);
             }
         });
-        jPanel4.add(jButton_A2, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 340, 50, -1));
+        jPanel4.add(jButton_Records, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 470, 110, 41));
 
         jButton_B1.setText("B1");
         jButton_B1.addActionListener(new java.awt.event.ActionListener() {
@@ -132,13 +167,13 @@ public class LevelA2Page extends javax.swing.JFrame {
         });
         jPanel4.add(jButton_B1, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 380, 50, -1));
 
-        jButton_Records.setText("Admin Records");
-        jButton_Records.addActionListener(new java.awt.event.ActionListener() {
+        jButton_B2.setText("B2");
+        jButton_B2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton_RecordsActionPerformed(evt);
+                jButton_B2ActionPerformed(evt);
             }
         });
-        jPanel4.add(jButton_Records, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 470, 110, 41));
+        jPanel4.add(jButton_B2, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 420, 50, -1));
 
         jPanel3.add(jPanel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 200, 760));
 
@@ -158,7 +193,7 @@ public class LevelA2Page extends javax.swing.JFrame {
         jLabel6.setBackground(new java.awt.Color(255, 255, 255));
         jLabel6.setFont(new java.awt.Font("Segoe UI Light", 1, 24)); // NOI18N
         jLabel6.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel6.setText("LEVEL A1");
+        jLabel6.setText("LEVEL A2");
 
         javax.swing.GroupLayout jPanel_LevelA1Layout = new javax.swing.GroupLayout(jPanel_LevelA1);
         jPanel_LevelA1.setLayout(jPanel_LevelA1Layout);
@@ -204,7 +239,6 @@ public class LevelA2Page extends javax.swing.JFrame {
         jComboBox_Context.setEditable(true);
         jComboBox_Context.setFont(new java.awt.Font("Segoe UI Light", 0, 14)); // NOI18N
         jComboBox_Context.setForeground(new java.awt.Color(51, 51, 51));
-        jComboBox_Context.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Ordering food and drink", "Exchanging personal information", "Making Appointments", "Going shopping and asking for prices", "Introductions", "Basic employment issues", "Making invitations", "Socialising in the country", "Asking and giving directions", "University life", "Cross-cultural experiences", " " }));
         jComboBox_Context.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jComboBox_ContextActionPerformed(evt);
@@ -238,23 +272,12 @@ public class LevelA2Page extends javax.swing.JFrame {
         setVisible(false); //Closes This window
     }//GEN-LAST:event_jButton_profileActionPerformed
 
-    private void jButton_B2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_B2ActionPerformed
-       LevelB2Page emp = new LevelB2Page();
+    private void jButton_A1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_A1ActionPerformed
+         //Takes you to the A2 Page
+        LevelA1Page emp = new LevelA1Page();
         emp.setVisible(true);
         setVisible(false); //Closes This window
-    }//GEN-LAST:event_jButton_B2ActionPerformed
-
-    private void jButton_A2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_A2ActionPerformed
-        LevelA2Page emp = new LevelA2Page();
-        emp.setVisible(true);
-        setVisible(false); //Closes This window
-    }//GEN-LAST:event_jButton_A2ActionPerformed
-
-    private void jButton_B1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_B1ActionPerformed
-     LevelB1Page emp = new LevelB1Page();
-        emp.setVisible(true);
-        setVisible(false); //Closes This window
-    }//GEN-LAST:event_jButton_B1ActionPerformed
+    }//GEN-LAST:event_jButton_A1ActionPerformed
 
     private void jButton_SignOutActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_SignOutActionPerformed
         //Takes you to the login page
@@ -282,306 +305,146 @@ public class LevelA2Page extends javax.swing.JFrame {
     }//GEN-LAST:event_jComboBox_SubContextActionPerformed
 
     private void jComboBox_ContextActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox_ContextActionPerformed
-               if(jComboBox_Context.getSelectedItem().equals("Introductions"))   
-     {
-         jComboBox_SubContext.removeAllItems();
-         jComboBox_SubContext.setSelectedItem(null);
-         jComboBox_SubContext.addItem("Ist day in job");
-         jComboBox_SubContext.addItem("Job offer");                
-      
-     }  
-     
-      else  
-        
-       if(jComboBox_Context.getSelectedItem().equals("Making Appointments"))   
-     {
-         jComboBox_SubContext.removeAllItems();
-         jComboBox_SubContext.setSelectedItem(null);
-         jComboBox_SubContext.addItem("Dentist");
-         jComboBox_SubContext.addItem("Doctor");
-       
-                        
-     }             
-                   
-       if(jComboBox_Context.getSelectedItem().equals("Asking and giving directions"))   
-     {
-         jComboBox_SubContext.removeAllItems();
-         jComboBox_SubContext.setSelectedItem(null);
-         jComboBox_SubContext.addItem("Hospital visit");
-         jComboBox_SubContext.addItem("Delivery driver");
-        
-                        
-     }             
-                       
-                                 
-        if(jComboBox_Context.getSelectedItem().equals("Making Appointments"))   
-     {
-         jComboBox_SubContext.removeAllItems();
-         jComboBox_SubContext.setSelectedItem(null);
-         jComboBox_SubContext.addItem("Lunch");
-         jComboBox_SubContext.addItem("Charity");
-         jComboBox_SubContext.addItem("Children at wedding");
-         jComboBox_SubContext.addItem("Wedding RSVP");
-                          
-     }
-     
-      
-             if(jComboBox_Context.getSelectedItem().equals("Ordering food and drink"))   
-     {
-         jComboBox_SubContext.removeAllItems();
-         jComboBox_SubContext.setSelectedItem(null);
-         jComboBox_SubContext.addItem("Delayed drink order");
-         jComboBox_SubContext.addItem("QR code");
-         jComboBox_SubContext.addItem("Cocktails-1");
-         jComboBox_SubContext.addItem("Cocktails-2");
-         jComboBox_SubContext.addItem("Vegan pizza");
-         jComboBox_SubContext.addItem("Reservation");               
-                          
-     }
-        
-             
-             if(jComboBox_Context.getSelectedItem().equals("Going shopping and asking for prices"))   
-     {
-         jComboBox_SubContext.removeAllItems();
-         jComboBox_SubContext.setSelectedItem(null);
-         jComboBox_SubContext.addItem("Payment");
-       
-                          
-     }      
-             
-              if(jComboBox_Context.getSelectedItem().equals("Health matters"))   
-     {
-         jComboBox_SubContext.removeAllItems();
-         jComboBox_SubContext.setSelectedItem(null);
-         jComboBox_SubContext.addItem("Sick relative");
-         jComboBox_SubContext.addItem("Visiting patient");
-                          
-     }          
-             
-                if(jComboBox_Context.getSelectedItem().equals("Socialising in the country"))   
-     {
-         jComboBox_SubContext.removeAllItems();
-         jComboBox_SubContext.setSelectedItem(null);
-         jComboBox_SubContext.addItem("Family size");
-         jComboBox_SubContext.addItem("Hobbies");
-         
-                          
-     }
-              
-                 if(jComboBox_Context.getSelectedItem().equals("Making travel arrangements"))   
-     {
-         jComboBox_SubContext.removeAllItems();
-         jComboBox_SubContext.setSelectedItem(null);
-         jComboBox_SubContext.addItem("Expired ticket");
-        
-                          
-     }     
-             
-        
-     else
-          if(jComboBox_Context.getSelectedItem().equals("Exchanging personal information"))   
-     {
-         jComboBox_SubContext.removeAllItems();
-         jComboBox_SubContext.setSelectedItem(null);
-         jComboBox_SubContext.addItem("Age restricted");
-         
-                        
-     }
-                 
-        else
-          if(jComboBox_Context.getSelectedItem().equals("Cross-cultural experiences"))   
-     {
-         jComboBox_SubContext.removeAllItems();
-         jComboBox_SubContext.setSelectedItem(null);
-         jComboBox_SubContext.addItem("Omelette");
-         
-                        
-     }          
-                 
-       
+         //the item selected by the user is turned into a string      
+        String item = (String)jComboBox_Context.getSelectedItem();
+        //allows you me to return 1-based position from where the item is on the stack
+            Object o = subcombo.get(item);
+
+            if (o == null) {
+                //if its null it constructs an empty Combobox
+                jComboBox_SubContext.setModel(new DefaultComboBoxModel());
+            }
+            else {
+                //if its not null it the vaulues in the subcontext options appear in the jcombo box
+                jComboBox_SubContext.setModel(new DefaultComboBoxModel((String[])o));
+            }
     }//GEN-LAST:event_jComboBox_ContextActionPerformed
         
     private void jButton_SubmitActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_SubmitActionPerformed
+                //opt 1 puts any seleceted item by the user into a string
+                String opt1 = (String) jComboBox_Context.getSelectedItem();
+                //opt 2 puts any seleceted item by the user into a string
+                String opt2 = (String)  jComboBox_SubContext.getSelectedItem();
+                
 
-        if 
-                (jComboBox_Context.getSelectedItem().equals("Introductions")  && jComboBox_SubContext.getSelectedItem().equals("Ist day in job")){ 
-    LevelA1Takeaway emp = new LevelA1Takeaway();
-        emp.setVisible(true);
-        setVisible(false); //Closes This window  
-}
-        else if  
-                (jComboBox_Context.getSelectedItem().equals("Introductions")  && jComboBox_SubContext.getSelectedItem().equals("Job offer")){ 
-    LevelA1Takeaway emp = new LevelA1Takeaway();
-        emp.setVisible(true);
-        setVisible(false); //Closes This window  
-
-    }
- ///////////////////       
-  ///////////////////////      
-         else  if    
-                 (jComboBox_Context.getSelectedItem().equals("Making Appointments")  && jComboBox_SubContext.getSelectedItem().equals("Dentist")){ 
-    LevelA1Takeaway emp = new LevelA1Takeaway();
-        emp.setVisible(true);
-        setVisible(false); //Closes This window  
-}
-          else if 
-                  (jComboBox_Context.getSelectedItem().equals("Making Appointments")  && jComboBox_SubContext.getSelectedItem().equals("Doctor")){ 
-    LevelA1Takeaway emp = new LevelA1Takeaway();
-        emp.setVisible(true);
-        setVisible(false); //Closes This window    
-          }
-     ////////////////////////////
-     
-             else  if 
-                     (jComboBox_Context.getSelectedItem().equals("Asking and giving directions")  && jComboBox_SubContext.getSelectedItem().equals("Hospital visit")){ 
-    LevelA1Takeaway emp = new LevelA1Takeaway();
-        emp.setVisible(true);
-        setVisible(false); //Closes This window  
-}
-          else if (jComboBox_Context.getSelectedItem().equals("Asking and giving directions")  && jComboBox_SubContext.getSelectedItem().equals("Doctor")){ 
-    LevelA1Takeaway emp = new LevelA1Takeaway();
-        emp.setVisible(true);
-        setVisible(false); //Closes This window  
-          }
-     //////////////////////////////
-          ////////////////////////
-          
-          
-          
-                 else  if 
-                     (jComboBox_Context.getSelectedItem().equals("Making Appointments")  && jComboBox_SubContext.getSelectedItem().equals("Lunch")){ 
-    LevelA1Takeaway emp = new LevelA1Takeaway();
-        emp.setVisible(true);
-        setVisible(false); //Closes This window  
-}
-          else if (jComboBox_Context.getSelectedItem().equals("Making Appointments")  && jComboBox_SubContext.getSelectedItem().equals("Charity")){ 
-    LevelA1Takeaway emp = new LevelA1Takeaway();
-        emp.setVisible(true);
-        setVisible(false); //Closes This window  
-          }
-               
-        else  if 
-      (jComboBox_Context.getSelectedItem().equals("Making Appointments")  && jComboBox_SubContext.getSelectedItem().equals("Children at wedding")){ 
-    LevelA1Takeaway emp = new LevelA1Takeaway();
-        emp.setVisible(true);
-        setVisible(false); //Closes This window  
-}
-    else if (jComboBox_Context.getSelectedItem().equals("Making Appointments")  && jComboBox_SubContext.getSelectedItem().equals("Wedding RSVP")){ 
-        LevelA1Takeaway emp = new LevelA1Takeaway();
-        emp.setVisible(true);
-        setVisible(false); //Closes This window  
-}
-                   
-    /////////////////////////////////
-    ////////////////////////////
-    
-         
-                 else  if 
-                     (jComboBox_Context.getSelectedItem().equals("Ordering food and drink")  && jComboBox_SubContext.getSelectedItem().equals("Delayed drink order")){ 
-    LevelA1Takeaway emp = new LevelA1Takeaway();
-        emp.setVisible(true);
-        setVisible(false); //Closes This window  
-}
-          else if (jComboBox_Context.getSelectedItem().equals("Ordering food and drink")  && jComboBox_SubContext.getSelectedItem().equals("QR code")){ 
-    LevelA1Takeaway emp = new LevelA1Takeaway();
-        emp.setVisible(true);
-        setVisible(false); //Closes This window  
-          }
-               
-        else  if 
-      (jComboBox_Context.getSelectedItem().equals("Ordering food and drink")  && jComboBox_SubContext.getSelectedItem().equals("Cocktails-1")){ 
-    LevelA1Takeaway emp = new LevelA1Takeaway();
-        emp.setVisible(true);
-        setVisible(false); //Closes This window  
-}
-    else if (jComboBox_Context.getSelectedItem().equals("Ordering food and drink")  && jComboBox_SubContext.getSelectedItem().equals("Cocktails-2")){ 
-        LevelA1Takeaway emp = new LevelA1Takeaway();
-        emp.setVisible(true);
-        setVisible(false); //Closes This window  
-}
-                 
-       else if (jComboBox_Context.getSelectedItem().equals("Ordering food and drink")  && jComboBox_SubContext.getSelectedItem().equals("Vegan pizza")){ 
-        LevelA1Takeaway emp = new LevelA1Takeaway();
-        emp.setVisible(true);
-        setVisible(false); //Closes This window  
-}
-   
                     
-       else if (jComboBox_Context.getSelectedItem().equals("Ordering food and drink")  && jComboBox_SubContext.getSelectedItem().equals("Reservation")){ 
-        LevelA1Takeaway emp = new LevelA1Takeaway();
-        emp.setVisible(true);
-        setVisible(false); //Closes This window  
-}
-   /////////////////////////////
-   ////////////////////////////
-   else if (jComboBox_Context.getSelectedItem().equals("Going shopping and asking for prices")  && jComboBox_SubContext.getSelectedItem().equals("Payment")){ 
-        LevelA1Takeaway emp = new LevelA1Takeaway();
-        emp.setVisible(true);
-        setVisible(false); //Closes This window 
-   }
-   
-   ///////////////////////////////////
-   //////////////////////////
-           else if (jComboBox_Context.getSelectedItem().equals("Health matters")  && jComboBox_SubContext.getSelectedItem().equals("Sick relative")){ 
-        LevelA1Takeaway emp = new LevelA1Takeaway();
-        emp.setVisible(true);
-        setVisible(false); //Closes This window 
-                          
-     }      
-                    else if (jComboBox_Context.getSelectedItem().equals("(Health matters")  && jComboBox_SubContext.getSelectedItem().equals("Visiting patient")){ 
-        LevelA1Takeaway emp = new LevelA1Takeaway();
-        emp.setVisible(true);
-        setVisible(false); //Closes This window 
-                          
-     }    
-     /////////////////////////////
-     ///////////////////////////////
-     
-           else if (jComboBox_Context.getSelectedItem().equals("Socialising in the country")  && jComboBox_SubContext.getSelectedItem().equals("Family size")){ 
-        LevelA1Takeaway emp = new LevelA1Takeaway();
-        emp.setVisible(true);
-        setVisible(false); //Closes This window 
-                          
-     }      
-                    else if (jComboBox_Context.getSelectedItem().equals("Socialising in the country")  && jComboBox_SubContext.getSelectedItem().equals("Hobbies")){ 
-        LevelA1Takeaway emp = new LevelA1Takeaway();
-        emp.setVisible(true);
-        setVisible(false); //Closes This window 
-                          
-     }    
-        
-    ///////////////////////////////////
-//////////////////////////////////////////    
-                            else if (jComboBox_Context.getSelectedItem().equals("Making travel arrangements")  && jComboBox_SubContext.getSelectedItem().equals("Expired ticket")){ 
-        LevelA1Takeaway emp = new LevelA1Takeaway();
-        emp.setVisible(true);
-        setVisible(false); //Closes This window 
-                          
-     }    
-           
-  /////////////////////////////////////////////////
-     ////////////////////////////////////////         
-    //////////////            
-                             else if (jComboBox_Context.getSelectedItem().equals("Exchanging personal information")  && jComboBox_SubContext.getSelectedItem().equals("Age restricted")){ 
-        LevelA1Takeaway emp = new LevelA1Takeaway();
-        emp.setVisible(true);
-        setVisible(false); //Closes This window 
-                          
-     }    
-             
-  ///////////////////////////////////////////
-   /////////////////////////////////////////                          
-                                     else if (jComboBox_Context.getSelectedItem().equals("Cross-cultural experiences")  && jComboBox_SubContext.getSelectedItem().equals("Omelette")){ 
-        LevelA1Takeaway emp = new LevelA1Takeaway();
-        emp.setVisible(true);
-        setVisible(false); //Closes This window 
-                          
-     }    
-        
-  
 
-
+//Compares the selected items and takes the user to the relevant page
+       
+//introduction section 
+        
+             if (opt1.equals(contexts[0])  && opt2.equals(introOptions[0])){ 
+         LevelA21stDayInJob();
+        }
+        else if (opt1.equals(contexts[0])  && opt2.equals(introOptions[1])){ 
+         LevelA2JobOffer();
+        }
+//       
+//Making appointments section 
+         else if (opt1.equals(contexts[1])  && opt2.equals(appointmentsOptions[0])){ 
+            LevelA2Dentist();
+        }
+        else if (opt1.equals(contexts[1])  && opt2.equals(appointmentsOptions[1])){ 
+            LevelA2Doctor(); 
+        } 
+        
+        
+//
+//Asing and giving directions section 
+        else if (opt1.equals(contexts[2])  && opt2.equals(givedirectionsOptions[0])){ 
+            LevelA2HospitalVisit(); 
+        }
+        else if (opt1.equals(contexts[2])  && opt2.equals(givedirectionsOptions[1])){ 
+            LevelA2DeliveryDriver();
+        }
+//Making invitations   section       
+        else if (opt1.equals(contexts[3])  && opt2.equals(invitationsOptions[0])){ 
+            LevelA2Lunch();
+        }
+        else if (opt1.equals(contexts[3])  && opt2.equals(invitationsOptions[1])){ 
+         LevelA2Charity(); 
+        }
+        else if (opt1.equals(contexts[3])  && opt2.equals(invitationsOptions[2])){ 
+          LevelA2ChildrenAtWedding();
+        }
+        else if (opt1.equals(contexts[3])  && opt2.equals(invitationsOptions[3])){ 
+         LevelA2WeddingRSVP(); 
+        }
+//        
+//  Ordering food and drinks section 
+        else if (opt1.equals(contexts[4])  && opt2.equals(orderfoodOptions[0])){ 
+            LevelA2DelayedDrinksOrder();
+        }
+        else if (opt1.equals(contexts[4])  && opt2.equals(orderfoodOptions[1])){ 
+            LevelA2QRCode();
+        }
+        else if (opt1.equals(contexts[4])  && opt2.equals(orderfoodOptions[2])){ 
+            LevelA2Cocktails1();
+        }
+        else if (opt1.equals(contexts[4])  && opt2.equals(orderfoodOptions[3])){ 
+            LevelA2Cocktails2();
+        }
+        else if (opt1.equals(contexts[4])  && opt2.equals(orderfoodOptions[4])){ 
+            LevelA2VeganPizza();
+        }
+        else if (opt1.equals(contexts[4])  && opt2.equals(orderfoodOptions[5])){ 
+            LevelA2Reservation();
+        }
+//
+//  Going shopping and asking for prices section 
+        else if (opt1.equals(contexts[5])  && opt2.equals(shoppingpricesOptions[0])){ 
+            LevelA2Payment();
+        } 
+//
+//Health matters     section     
+        else if (opt1.equals(contexts[6])  && opt2.equals(hmOptions[0])){ 
+            LevelA2SickRelative();
+        }
+        else if (opt1.equals(contexts[6])  && opt2.equals(hmOptions[1])){ 
+            LevelA2VisitingPatient();
+        } 
+//
+//Socialising in the country section 
+        else if (opt1.equals(contexts[7])  && opt2.equals(socialisingOptions[0])){ 
+            LevelA2FamilySize();
+        } 
+        else if (opt1.equals(contexts[7])  && opt2.equals(socialisingOptions[1])){ 
+            LevelA2Hobbies();
+        }
+//
+//Making travel arrangements section 
+        else if (opt1.equals(contexts[8])  && opt2.equals(travelOptions[0])){ 
+            LevelA2ExpiredTicket();
+        }
+//
+//Exchanging personal information section 
+         else if (opt1.equals(contexts[9])  && opt2.equals(personalInfOptions[0])){ 
+            LevelA2AgeRestricted();
+        }
+//         
+//Cross-cultural experience section 
+         else if (opt1.equals(contexts[10])  && opt2.equals(cultureOptions[0])){ 
+            LevelA2Omelette();
+        }
+ //weather 
+         else if (opt1.equals(contexts[10])  && opt2.equals(weatherOptions[0])){ 
+            LevelA2Weather();
+        }
     }//GEN-LAST:event_jButton_SubmitActionPerformed
+
+    private void jButton_B1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_B1ActionPerformed
+        //Takes you to the B1 Page
+        LevelB1Page emp = new LevelB1Page();
+        emp.setVisible(true);
+        setVisible(false); //Closes This window
+    }//GEN-LAST:event_jButton_B1ActionPerformed
+
+    private void jButton_B2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_B2ActionPerformed
+        //Takes you to the A2 Page
+        LevelB2Page emp = new LevelB2Page();
+        emp.setVisible(true);
+        setVisible(false); //Closes This window
+    }//GEN-LAST:event_jButton_B2ActionPerformed
 
      
     /**
@@ -636,7 +499,7 @@ public class LevelA2Page extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton_A2;
+    private javax.swing.JButton jButton_A1;
     private javax.swing.JButton jButton_B1;
     private javax.swing.JButton jButton_B2;
     private javax.swing.JButton jButton_Records;
@@ -658,4 +521,156 @@ public class LevelA2Page extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel5;
     private javax.swing.JPanel jPanel_LevelA1;
     // End of variables declaration//GEN-END:variables
-}
+
+    
+    //Takes you to the LevelA21stDayInJob Page 
+    private void LevelA21stDayInJob() {
+        LevelA2.Introductions.LevelA21stDayInJob emp = new LevelA2.Introductions.LevelA21stDayInJob();
+        emp.setVisible(true);
+        setVisible(false); //Closes This window 
+    }
+    //Takes you to the LevelA2JobOffer page
+    private void LevelA2JobOffer() {
+          LevelA2.Introductions.LevelA2JobOffer emp = new LevelA2.Introductions.LevelA2JobOffer();
+          emp.setVisible(true);
+          setVisible(false); //Closes This window 
+    }
+  //Takes you to the LevelA2Dentist page
+    private void LevelA2Dentist() {
+       LevelA2.MakingAppointments.LevelA2Dentist emp = new LevelA2.MakingAppointments.LevelA2Dentist();
+       emp.setVisible(true);
+       setVisible(false); //Closes This window
+    }
+//Takes you to the LevelA2Doctor page
+    private void LevelA2Doctor() {
+      LevelA2.MakingAppointments.LevelA2Doctor emp = new LevelA2.MakingAppointments.LevelA2Doctor();
+       emp.setVisible(true);
+       setVisible(false); //Closes This window
+    }
+//Takes you to the LevelA2DeliveryDriver page
+    private void LevelA2DeliveryDriver() {
+  LevelA2.AskingAndGivingDirections.LevelA2DeliveryDriver emp = new LevelA2.AskingAndGivingDirections.LevelA2DeliveryDriver();
+       emp.setVisible(true);
+       setVisible(false); //Closes This window
+    }
+//Takes you to the LevelA2HospitalVisit page
+    private void LevelA2HospitalVisit() {
+        LevelA2.AskingAndGivingDirections.LevelA2HospitalVisit emp = new LevelA2.AskingAndGivingDirections.LevelA2HospitalVisit();
+       emp.setVisible(true);
+       setVisible(false); //Closes This window
+    }
+//Takes you to the LevelA2Lunch page
+    private void LevelA2Lunch() {
+       LevelA2.MakingInvitations.LevelA2Lunch emp = new LevelA2.MakingInvitations.LevelA2Lunch();
+       emp.setVisible(true);
+       setVisible(false); //Closes This window
+    }
+//Takes you to the LevelA2Charity page
+    private void LevelA2Charity() {
+ LevelA2.MakingInvitations.LevelA2Charity emp = new LevelA2.MakingInvitations.LevelA2Charity();
+       emp.setVisible(true);
+       setVisible(false); //Closes This window
+    }
+//Takes you to the LevelA2ChildrenAtWedding page
+    private void LevelA2ChildrenAtWedding() {
+LevelA2.MakingInvitations.LevelA2ChildrenAtWedding emp = new LevelA2.MakingInvitations.LevelA2ChildrenAtWedding();
+       emp.setVisible(true);
+       setVisible(false); //Closes This window
+    }
+//Takes you to the LevelA2WeddingRSVP page
+    private void LevelA2WeddingRSVP() {
+LevelA2.MakingInvitations.LevelA2WeddingRSVP emp = new LevelA2.MakingInvitations.LevelA2WeddingRSVP();
+       emp.setVisible(true);
+       setVisible(false); //Closes This window
+    }
+//Takes you to the LevelA2DelayedDrinksOrder page
+    private void LevelA2DelayedDrinksOrder() {
+LevelA2.OrderingFoodAndDrinks.LevelA2DelayedDrinksOrder emp = new LevelA2.OrderingFoodAndDrinks.LevelA2DelayedDrinksOrder();
+       emp.setVisible(true);
+       setVisible(false); //Closes This window
+    }
+//Takes you to the LevelA2QRCode page
+    private void LevelA2QRCode() {
+        LevelA2.OrderingFoodAndDrinks.LevelA2QRCode emp = new LevelA2.OrderingFoodAndDrinks.LevelA2QRCode();
+       emp.setVisible(true);
+       setVisible(false); //Closes This window    }
+    }
+    //Takes you to the LevelA2Cocktails1 page
+    private void LevelA2Cocktails1() {
+       LevelA2.OrderingFoodAndDrinks.LevelA2Cocktails1 emp = new LevelA2.OrderingFoodAndDrinks.LevelA2Cocktails1();
+       emp.setVisible(true);
+       setVisible(false); //Closes This window
+    }
+//Takes you to the LevelA2Cocktails2 page
+    private void LevelA2Cocktails2() {
+    LevelA2.OrderingFoodAndDrinks.LevelA2Cocktails2 emp = new LevelA2.OrderingFoodAndDrinks.LevelA2Cocktails2();
+       emp.setVisible(true);
+       setVisible(false); //Closes This window
+    }
+//Takes you to the LevelA2VeganPizza page
+    private void LevelA2VeganPizza() {
+    LevelA2.OrderingFoodAndDrinks.LevelA2VeganPizza emp = new LevelA2.OrderingFoodAndDrinks.LevelA2VeganPizza();
+       emp.setVisible(true);
+       setVisible(false); //Closes This window
+    }
+       private void LevelA2Reservation() {
+LevelA2.OrderingFoodAndDrinks.LevelA2Reservation emp = new LevelA2.OrderingFoodAndDrinks.LevelA2Reservation();
+       emp.setVisible(true);
+       setVisible(false); //Closes This windo
+    }
+//Takes you to the LevelA2Payment page
+    private void LevelA2Payment() {
+LevelA2.GoingShoppingAndAskingForPrices.LevelA2Payment emp = new LevelA2.GoingShoppingAndAskingForPrices.LevelA2Payment();
+       emp.setVisible(true);
+       setVisible(false); //Closes This windo
+    }
+//Takes you to the LevelA2SickRelative page
+    private void LevelA2SickRelative() {
+LevelA2.HealthMatters.LevelA2SickRelative emp = new LevelA2.HealthMatters.LevelA2SickRelative();
+       emp.setVisible(true);
+       setVisible(false); //Closes This windo
+    }
+//Takes you to the LevelA2VisitingPatient page
+    private void LevelA2VisitingPatient() {
+LevelA2.HealthMatters.LevelA2VisitingPatient emp = new LevelA2.HealthMatters.LevelA2VisitingPatient();
+       emp.setVisible(true);
+       setVisible(false); //Closes This windo
+    }
+ //Takes you to the LevelA2FamilySize page
+    private void LevelA2FamilySize() {
+LevelA2.SocialisingInACountry.LevelA2FamilySize emp = new LevelA2.SocialisingInACountry.LevelA2FamilySize();
+       emp.setVisible(true);
+       setVisible(false); //Closes This windo
+    }
+//Takes you to the LevelA2Hobbies page
+    private void LevelA2Hobbies() {
+LevelA2.SocialisingInACountry.LevelA2Hobbies emp = new LevelA2.SocialisingInACountry.LevelA2Hobbies();
+       emp.setVisible(true);
+       setVisible(false); //Closes This windo
+    }
+//Takes you to the LevelA2ExpiredTicket page
+    private void LevelA2ExpiredTicket() {
+LevelA2.MakingTravelArrangements.LevelA2ExpiredTicket emp = new LevelA2.MakingTravelArrangements.LevelA2ExpiredTicket();
+       emp.setVisible(true);
+       setVisible(false); //Closes This windo
+    }
+//Takes you to the LevelA2AgeRestricted page
+    private void LevelA2AgeRestricted() {
+LevelA2.ExchangingPersonalInformations.LevelA2AgeRestricted emp = new LevelA2.ExchangingPersonalInformations.LevelA2AgeRestricted();
+       emp.setVisible(true);
+       setVisible(false); //Closes This windo
+    }
+//Takes you to the LevelA2Omelette page
+    private void LevelA2Omelette() {
+LevelA2.CrossCulturalExperiences.LevelA2Omelette emp = new LevelA2.CrossCulturalExperiences.LevelA2Omelette();
+       emp.setVisible(true);
+       setVisible(false); //Closes This windo
+    }
+//Takes you to the LevelA2Weather page
+    private void LevelA2Weather() {
+LevelA2.Weather.LevelA2Weather emp = new LevelA2.Weather.LevelA2Weather();
+       emp.setVisible(true);
+       setVisible(false); //Closes This windo
+    }
+
+    }

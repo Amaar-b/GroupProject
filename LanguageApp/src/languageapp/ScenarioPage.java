@@ -7,6 +7,8 @@ package languageapp;
 
 import LevelA1.LevelA1Page;
 import LevelA2.LevelA2Page;
+import LevelB1.LevelB1Page;
+import LevelB2.LevelB2Page;
 import javax.swing.JFrame;
 
 
@@ -46,9 +48,9 @@ private JFrame frame;
         jPanel5 = new javax.swing.JPanel();
         jPanel1 = new javax.swing.JPanel();
         jLabel5 = new javax.swing.JLabel();
-        jPanel_LevelA4 = new javax.swing.JButton();
+        jPanel_LevelB2 = new javax.swing.JButton();
         jPanel_LevelA1 = new javax.swing.JButton();
-        jPanel_LevelA3 = new javax.swing.JButton();
+        jPanel_LevelB1 = new javax.swing.JButton();
         jPanel_LevelA2 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -113,15 +115,15 @@ private JFrame frame;
         jLabel5.setText("Select your Level");
         jPanel1.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 30, -1, -1));
 
-        jPanel_LevelA4.setBackground(new java.awt.Color(0, 181, 204));
-        jPanel_LevelA4.setText("Level A4");
-        jPanel_LevelA4.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 204, 204), 5, true));
-        jPanel_LevelA4.addActionListener(new java.awt.event.ActionListener() {
+        jPanel_LevelB2.setBackground(new java.awt.Color(0, 181, 204));
+        jPanel_LevelB2.setText("Level B2");
+        jPanel_LevelB2.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 204, 204), 5, true));
+        jPanel_LevelB2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jPanel_LevelA4ActionPerformed(evt);
+                jPanel_LevelB2ActionPerformed(evt);
             }
         });
-        jPanel1.add(jPanel_LevelA4, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 290, 210, 110));
+        jPanel1.add(jPanel_LevelB2, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 290, 210, 110));
 
         jPanel_LevelA1.setBackground(new java.awt.Color(0, 181, 204));
         jPanel_LevelA1.setText("Level A1");
@@ -133,15 +135,15 @@ private JFrame frame;
         });
         jPanel1.add(jPanel_LevelA1, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 130, 210, 110));
 
-        jPanel_LevelA3.setBackground(new java.awt.Color(0, 181, 204));
-        jPanel_LevelA3.setText("Level A3");
-        jPanel_LevelA3.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 204, 204), 5, true));
-        jPanel_LevelA3.addActionListener(new java.awt.event.ActionListener() {
+        jPanel_LevelB1.setBackground(new java.awt.Color(0, 181, 204));
+        jPanel_LevelB1.setText("Level B1");
+        jPanel_LevelB1.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 204, 204), 5, true));
+        jPanel_LevelB1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jPanel_LevelA3ActionPerformed(evt);
+                jPanel_LevelB1ActionPerformed(evt);
             }
         });
-        jPanel1.add(jPanel_LevelA3, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 290, 210, 110));
+        jPanel1.add(jPanel_LevelB1, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 290, 210, 110));
 
         jPanel_LevelA2.setBackground(new java.awt.Color(0, 181, 204));
         jPanel_LevelA2.setText("Level A2");
@@ -193,9 +195,12 @@ private JFrame frame;
         setVisible(false); //Closes This window // TODO add your handling code here:
     }//GEN-LAST:event_jButton_SignOutActionPerformed
 
-    private void jPanel_LevelA4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jPanel_LevelA4ActionPerformed
-          
-    }//GEN-LAST:event_jPanel_LevelA4ActionPerformed
+    private void jPanel_LevelB2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jPanel_LevelB2ActionPerformed
+        //Takes you to the B2 page
+        LevelB2Page emp = new LevelB2Page();
+        emp.setVisible(true);
+        setVisible(false); //Closes This window          
+    }//GEN-LAST:event_jPanel_LevelB2ActionPerformed
 
     private void jPanel_LevelA1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jPanel_LevelA1ActionPerformed
         //Takes you to the A1 page
@@ -204,12 +209,16 @@ private JFrame frame;
         setVisible(false); //Closes This window
     }//GEN-LAST:event_jPanel_LevelA1ActionPerformed
 
-    private void jPanel_LevelA3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jPanel_LevelA3ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jPanel_LevelA3ActionPerformed
+    private void jPanel_LevelB1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jPanel_LevelB1ActionPerformed
+         //Takes you to the B1 page
+        LevelB1Page emp = new LevelB1Page();
+        emp.setVisible(true);
+        setVisible(false); //Closes This window
+    }//GEN-LAST:event_jPanel_LevelB1ActionPerformed
 
     private void jPanel_LevelA2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jPanel_LevelA2ActionPerformed
-          LevelA2Page emp = new LevelA2Page();
+        //Takes you to the A2 Page
+        LevelA2Page emp = new LevelA2Page();
         emp.setVisible(true);
         setVisible(false); //Closes This window
     }//GEN-LAST:event_jPanel_LevelA2ActionPerformed
@@ -253,56 +262,7 @@ private JFrame frame;
         //</editor-fold>
         //</editor-fold>
         //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
+
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
@@ -328,7 +288,7 @@ private JFrame frame;
     private javax.swing.JPanel jPanel5;
     private javax.swing.JButton jPanel_LevelA1;
     private javax.swing.JButton jPanel_LevelA2;
-    private javax.swing.JButton jPanel_LevelA3;
-    private javax.swing.JButton jPanel_LevelA4;
+    private javax.swing.JButton jPanel_LevelB1;
+    private javax.swing.JButton jPanel_LevelB2;
     // End of variables declaration//GEN-END:variables
 }

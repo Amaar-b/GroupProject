@@ -73,17 +73,12 @@ final String WaterforTableB ="- A: ...\n" +
         jButton_Records = new javax.swing.JButton();
         jPanel5 = new javax.swing.JPanel();
         jPanel1 = new javax.swing.JPanel();
-        jLabel5 = new javax.swing.JLabel();
         jPanel_LevelA1 = new javax.swing.JPanel();
         jLabel6 = new javax.swing.JLabel();
         jLabel7 = new javax.swing.JLabel();
-        jLabel8 = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
         jTextArea1 = new javax.swing.JTextArea();
         jCheckBox_DecaflLatte = new javax.swing.JCheckBox();
-        jCheckBox_Iced = new javax.swing.JCheckBox();
-        jCheckBox_SugarFreeSyrup = new javax.swing.JCheckBox();
-        jCheckBox_Caramel = new javax.swing.JCheckBox();
         jLabel9 = new javax.swing.JLabel();
         jScrollPane2 = new javax.swing.JScrollPane();
         jTextArea2 = new javax.swing.JTextArea();
@@ -92,10 +87,6 @@ final String WaterforTableB ="- A: ...\n" +
         jLabel10 = new javax.swing.JLabel();
         jLabel11 = new javax.swing.JLabel();
         jLabel12 = new javax.swing.JLabel();
-        jCheckBox_Caramel1 = new javax.swing.JCheckBox();
-        jCheckBox_Caramel2 = new javax.swing.JCheckBox();
-        jCheckBox_Caramel3 = new javax.swing.JCheckBox();
-        jCheckBox_Caramel4 = new javax.swing.JCheckBox();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Lanuage App");
@@ -183,16 +174,12 @@ final String WaterforTableB ="- A: ...\n" +
         jPanel1.setBackground(new java.awt.Color(255, 255, 255));
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabel5.setFont(new java.awt.Font("Segoe UI Light", 1, 24)); // NOI18N
-        jLabel5.setText("Questions");
-        jPanel1.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 40, -1, -1));
-
         jPanel_LevelA1.setBackground(new java.awt.Color(0, 181, 204));
 
         jLabel6.setBackground(new java.awt.Color(255, 255, 255));
         jLabel6.setFont(new java.awt.Font("Segoe UI Light", 1, 24)); // NOI18N
         jLabel6.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel6.setText("Coffee order");
+        jLabel6.setText("Water for table");
 
         javax.swing.GroupLayout jPanel_LevelA1Layout = new javax.swing.GroupLayout(jPanel_LevelA1);
         jPanel_LevelA1.setLayout(jPanel_LevelA1Layout);
@@ -222,11 +209,6 @@ final String WaterforTableB ="- A: ...\n" +
         jLabel7.setText("Or: ");
         jPanel1.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(700, 360, 50, -1));
 
-        jLabel8.setFont(new java.awt.Font("Segoe UI Light", 1, 24)); // NOI18N
-        jLabel8.setForeground(new java.awt.Color(0, 181, 204));
-        jLabel8.setText("Grammar/Structure: ");
-        jPanel1.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 40, -1, -1));
-
         jTextArea1.setColumns(20);
         jTextArea1.setFont(new java.awt.Font("Segoe UI Light", 0, 13)); // NOI18N
         jTextArea1.setRows(5);
@@ -235,22 +217,8 @@ final String WaterforTableB ="- A: ...\n" +
 
         jPanel1.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 150, 380, 110));
 
-        jCheckBox_DecaflLatte.setText("Decaf latte");
-        jPanel1.add(jCheckBox_DecaflLatte, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 320, 160, -1));
-
-        jCheckBox_Iced.setText("Iced");
-        jPanel1.add(jCheckBox_Iced, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 360, 160, -1));
-
-        jCheckBox_SugarFreeSyrup.setText("Sugar-free syrup");
-        jPanel1.add(jCheckBox_SugarFreeSyrup, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 400, 160, -1));
-
-        jCheckBox_Caramel.setText("Is that to have here or to go?");
-        jCheckBox_Caramel.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jCheckBox_CaramelActionPerformed(evt);
-            }
-        });
-        jPanel1.add(jCheckBox_Caramel, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 600, 170, -1));
+        jCheckBox_DecaflLatte.setText("Tap water");
+        jPanel1.add(jCheckBox_DecaflLatte, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 340, 160, -1));
 
         jLabel9.setFont(new java.awt.Font("Segoe UI Light", 1, 24)); // NOI18N
         jLabel9.setForeground(new java.awt.Color(0, 181, 204));
@@ -297,38 +265,6 @@ final String WaterforTableB ="- A: ...\n" +
         jLabel12.setForeground(new java.awt.Color(0, 181, 204));
         jLabel12.setText("Choose:");
         jPanel1.add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 360, -1, -1));
-
-        jCheckBox_Caramel1.setText("Caramel");
-        jCheckBox_Caramel1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jCheckBox_Caramel1ActionPerformed(evt);
-            }
-        });
-        jPanel1.add(jCheckBox_Caramel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 440, 160, -1));
-
-        jCheckBox_Caramel2.setText("Vanilla");
-        jCheckBox_Caramel2.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jCheckBox_Caramel2ActionPerformed(evt);
-            }
-        });
-        jPanel1.add(jCheckBox_Caramel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 480, 160, -1));
-
-        jCheckBox_Caramel3.setText("Hazelnut");
-        jCheckBox_Caramel3.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jCheckBox_Caramel3ActionPerformed(evt);
-            }
-        });
-        jPanel1.add(jCheckBox_Caramel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 520, 160, -1));
-
-        jCheckBox_Caramel4.setText("Oat milk");
-        jCheckBox_Caramel4.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jCheckBox_Caramel4ActionPerformed(evt);
-            }
-        });
-        jPanel1.add(jCheckBox_Caramel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 560, 160, -1));
 
         jPanel5.add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 1080, 740));
 
@@ -389,81 +325,48 @@ final String WaterforTableB ="- A: ...\n" +
         setVisible(false); //Closes This window        // TODO add your handling code here:
     }//GEN-LAST:event_jButton_RecordsActionPerformed
 
-     
-        
     private void jButton_PersonAActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_PersonAActionPerformed
-       //Reset textpanes content so on every button click the new content of the read file will be displayed
-       
-       JFrame frame = new JFrame("StudentA");  
-        JPanel panel = new JPanel();  
-        panel.setLayout(new FlowLayout());  
-        
+        //Reset textpanes content so on every button click the new content of the read file will be displayed
+
+        JFrame frame = new JFrame("StudentA");
+        JPanel panel = new JPanel();
+        panel.setLayout(new FlowLayout());
+
         JTextArea textArea = new JTextArea(WaterforTableA);
-        
-       
-        panel.add(textArea);   
-        frame.add(panel);  
-        frame.setSize(700, 500);  
-        frame.setLocationRelativeTo(null);  
-        
-        frame.setVisible(true);  
-      
-       
 
-                 
+        panel.add(textArea);
+        frame.add(panel);
+        frame.setSize(700, 500);
+        frame.setLocationRelativeTo(null);
 
-        
+        frame.setVisible(true);
+
     }//GEN-LAST:event_jButton_PersonAActionPerformed
 
+    private void jButton_PersonBActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_PersonBActionPerformed
+        JFrame frame2 = new JFrame("StudentB");
+        JPanel panel2 = new JPanel();
+        panel2.setLayout(new FlowLayout());
+
+        JTextArea textArea = new JTextArea(WaterforTableB);
+
+        //        JButton button = new JButton();
+        //        button.setText("Button");
+        panel2.add(textArea);
+        //        panel2.add(button);
+        frame2.add(panel2);
+        frame2.setSize(700, 500);
+        frame2.setLocationRelativeTo(null);
+        frame2.setVisible(true);
+
+    }//GEN-LAST:event_jButton_PersonBActionPerformed
+
+     
+        
    
 
     
-    
-    private void jCheckBox_CaramelActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBox_CaramelActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jCheckBox_CaramelActionPerformed
-
-    private void jButton_PersonBActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_PersonBActionPerformed
-        JFrame frame2 = new JFrame("StudentB");  
-        JPanel panel2 = new JPanel();  
-        panel2.setLayout(new FlowLayout());  
-        
-        JTextArea textArea = new JTextArea(WaterforTableB);
-        
-//        JButton button = new JButton();  
-//        button.setText("Button");  
-        panel2.add(textArea);  
-//        panel2.add(button);  
-        frame2.add(panel2);  
-       frame2.setSize(700, 500);  
-        frame2.setLocationRelativeTo(null);    
-        frame2.setVisible(true);  
-        
-        
-        
-        
-        
-        
-
-        
-    }//GEN-LAST:event_jButton_PersonBActionPerformed
-
-    private void jCheckBox_Caramel1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBox_Caramel1ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jCheckBox_Caramel1ActionPerformed
-
-    private void jCheckBox_Caramel2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBox_Caramel2ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jCheckBox_Caramel2ActionPerformed
-
-    private void jCheckBox_Caramel3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBox_Caramel3ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jCheckBox_Caramel3ActionPerformed
-
-    private void jCheckBox_Caramel4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBox_Caramel4ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jCheckBox_Caramel4ActionPerformed
- 
+     
         
     /**
      * @param args the command line arguments
@@ -575,23 +478,14 @@ final String WaterforTableB ="- A: ...\n" +
     private javax.swing.JButton jButton_SignOut;
     private javax.swing.JButton jButton_SupportPage;
     private javax.swing.JButton jButton_profile;
-    private javax.swing.JCheckBox jCheckBox_Caramel;
-    private javax.swing.JCheckBox jCheckBox_Caramel1;
-    private javax.swing.JCheckBox jCheckBox_Caramel2;
-    private javax.swing.JCheckBox jCheckBox_Caramel3;
-    private javax.swing.JCheckBox jCheckBox_Caramel4;
     private javax.swing.JCheckBox jCheckBox_DecaflLatte;
-    private javax.swing.JCheckBox jCheckBox_Iced;
-    private javax.swing.JCheckBox jCheckBox_SugarFreeSyrup;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel12;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
-    private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
-    private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
     private javax.swing.JLabel jLabelPic1;
     private javax.swing.JPanel jPanel1;

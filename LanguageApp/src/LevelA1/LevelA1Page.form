@@ -355,27 +355,13 @@
                     <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                       <Color blue="33" green="33" red="33" type="rgb"/>
                     </Property>
-                    <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
-                      <StringArray count="12">
-                        <StringItem index="0" value="Ordering food and drink"/>
-                        <StringItem index="1" value="Exchanging personal information"/>
-                        <StringItem index="2" value="Making Appointments"/>
-                        <StringItem index="3" value="Going shopping and asking for prices"/>
-                        <StringItem index="4" value="Introductions"/>
-                        <StringItem index="5" value="Basic employment issues"/>
-                        <StringItem index="6" value="Making invitations"/>
-                        <StringItem index="7" value="Socialising in the country"/>
-                        <StringItem index="8" value="Asking and giving directions"/>
-                        <StringItem index="9" value="University life"/>
-                        <StringItem index="10" value="Cross-cultural experiences"/>
-                        <StringItem index="11" value=" "/>
-                      </StringArray>
-                    </Property>
                   </Properties>
                   <Events>
                     <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jComboBox_ContextActionPerformed"/>
                   </Events>
                   <AuxValues>
+                    <AuxValue name="JavaCodeGenerator_CreateCodeCustom" type="java.lang.String" value="new javax.swing.JComboBox&lt;&gt;(contexts)"/>
+                    <AuxValue name="JavaCodeGenerator_CreateCodePre" type="java.lang.String" value="//allows me to put the relevant context topic with the subcontext&#xa;        subcombo.put(contexts[0], foodanddrinkOptions);&#xa;        subcombo.put(contexts[1], personalinformationOptions);&#xa;        subcombo.put(contexts[2], appointmentsOptions);&#xa;        subcombo.put(contexts[3], shoppingpricesOptions);&#xa;        subcombo.put(contexts[4], introductionsOptions);&#xa;        subcombo.put(contexts[5], employmentOptions);&#xa;        subcombo.put(contexts[6], invitationsOptions);&#xa;        subcombo.put(contexts[7], socialisingOptions);&#xa;        subcombo.put(contexts[8], directionsOptions);&#xa;        subcombo.put(contexts[9], unilifeOptions);&#xa;        subcombo.put(contexts[10], crosscultureOptions);"/>
                     <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
                   </AuxValues>
                   <Constraints>
